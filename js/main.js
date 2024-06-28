@@ -27,6 +27,7 @@ window.onload = function() {
     function create ()
     {
         this.add.image(400, 300, 'sky');
+        this.add.image(400, 300, 'star');
     }
     
     function update ()
