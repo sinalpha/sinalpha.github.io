@@ -46,7 +46,7 @@ function create ()
     let systemManager = new SystemManager(this)
 
     playerManager.init(this);
-    platformManger.init(this);
+    platformManager.init(this);
     bombManager.init(this);
     starManager.init(this);
     systemManager.init(this);
