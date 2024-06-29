@@ -6,6 +6,10 @@ export default class BombManager{
         this.bombs = phaser.physics.add.group();
     }
 
+    init(phaser){
+        
+    }
+
     hitBomb (player, bomb)
     {
         this.physics.pause();
