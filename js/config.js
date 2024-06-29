@@ -36,6 +36,9 @@ function preload ()
 function create ()
 {
     this.add.image(400, 300, 'sky');
+    var score = 0;
+    var scoreText;
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
     PlatformManager.init();
     PlayerManager.init();
@@ -46,49 +49,8 @@ function create ()
     this.physics.add.collider(StarManager.stars, PlatformManager.platforms);
     this.physics.add.collider(BombManager.bomb, PlatformManager.platforms);
     this.physics.add.collider(PlayerManager.player, BombManager.bombs, hitBomb, null, this);
-    this.physics.add.overlap(PlayerManager.player, StarManager.stars, collectStar, null, this);
+    this.physics.add.overlap(PlayerManager.player, StarManager.stars, StarManager.collectStar, null, this);
 
-    function collectStar (player, star)
-    {
-        star.disableBody(true, true);
-
-        score += 10;
-        scoreText.setText('Score: ' + score);
-    
-        if (stars.countActive(true) === 0)
-        {
-            stars.children.iterate(function (child) {
-    
-                child.enableBody(true, child.x, 0, true, true);
-    
-            });
-    
-            var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
-    
-            var bomb = bombs.create(x, 16, 'bomb');
-            bomb.setBounce(1);
-            bomb.setCollideWorldBounds(true);
-            bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
-    
-        }
-    }
-
-    function hitBomb (player, bomb)
-    {
-        this.physics.pause();
-
-        player.setTint(0xff0000);
-
-        player.anims.play('turn');
-
-        gameOver = true;
-    }
-
-
-
-    var score = 0;
-    var scoreText;
-    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 }
 
 function update ()

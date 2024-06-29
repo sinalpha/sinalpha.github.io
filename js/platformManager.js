@@ -1,4 +1,4 @@
-export class PlatformManager{
+export default class PlatformManager{
 
     platforms = this.physics.add.staticGroup();
 

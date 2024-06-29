@@ -1,4 +1,4 @@
-export class PlayerManager{
+export default class PlayerManager{
     
     player = this.physics.add.sprite(100, 450, 'dude');
 
