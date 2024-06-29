@@ -1,7 +1,7 @@
-import { PlayerManager }    from './playerManager.js'
-import { StarManager }      from './starManager.js'
-import { PlatformManager }  from './platformManager.js'
-import { BombManager }      from './bombManager.js'
+import PlayerManager    from './playerManager.js'
+import StarManager      from './starManager.js'
+import PlatformManager  from './platformManager.js'
+import BombManager      from './bombManager.js'
 
 export var config = {
     type: Phaser.AUTO,
