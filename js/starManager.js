@@ -11,8 +11,8 @@ export default class StarManager{
 
     }
 
-    init(Phaser){
-        this.stars.children.iterate(function (child) {
+    init(this_){
+        this_.stars.children.iterate(function (child) {
     
             child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
         
