@@ -1,6 +1,10 @@
 export default class PlatformManager{
 
-    platforms = this.physics.add.staticGroup();
+    platforms
+    
+    constructor(this){
+        platforms = his.physics.add.staticGroup(); 
+    }
 
     init(){
         platforms.create(400, 568, 'ground').setScale(2).refreshBody();
