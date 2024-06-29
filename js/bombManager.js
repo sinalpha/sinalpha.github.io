@@ -2,12 +2,12 @@ export default class BombManager{
     
     bombs
 
-    constructor(phaser){
-        this.bombs = phaser.physics.add.group();
+    constructor(this_){
+        this.bombs = this_.physics.add.group();
     }
 
     init(phaser){
-        
+
     }
 
     hitBomb (player, bomb)

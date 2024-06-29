@@ -22,11 +22,11 @@ export var config = {
     }
 };
 
-let playerManager = new PlayerManager(this)
-let platformManager = new PlatformManager(this)
-let bombManager = new BombManager(this)
-let starManager = new StarManager(this)
-let systemManager = new SystemManager(this)
+let playerManager = new PlayerManager(this);
+let platformManager = new PlatformManager(this);
+let bombManager = new BombManager(this);
+let starManager = new StarManager(this);
+let systemManager = new SystemManager(this);
 
 function preload ()
 {
@@ -44,9 +44,6 @@ function create ()
 {
     this.add.image(400, 300, 'sky');
     
-
-
-
     playerManager.init(this);
     platformManager.init(this);
     bombManager.init(this);
