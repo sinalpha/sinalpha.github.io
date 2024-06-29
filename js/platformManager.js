@@ -2,8 +2,8 @@ export default class PlatformManager{
 
     platforms
 
-    constructor(this){
-        platforms = this.physics.add.staticGroup(); 
+    constructor(phaser){
+        platforms = phaser.physics.add.staticGroup(); 
     }
 
     init(){
