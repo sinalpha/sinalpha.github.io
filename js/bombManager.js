@@ -1,4 +1,5 @@
 export default class BombManager{
+    
     bombs
 
     constructor(phaser){
