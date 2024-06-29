@@ -1,9 +1,9 @@
 export default class PlatformManager{
 
     platforms
-    
+
     constructor(this){
-        platforms = his.physics.add.staticGroup(); 
+        platforms = this.physics.add.staticGroup(); 
     }
 
     init(){
