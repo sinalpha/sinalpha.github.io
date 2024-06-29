@@ -1,6 +1,6 @@
 import Phaser from "./lib/phaser.js";
-import game from "./game.js"
-import gameover from "./gameover.js"
+import Game from "./game.js"
+import Gameover from "./gameover.js"
 
 const config = {
     width: 600,
