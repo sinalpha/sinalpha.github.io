@@ -45,11 +45,11 @@ function create ()
     let starManager = new StarManager(this)
     let systemManager = new SystemManager(this)
 
-    playerManager.init();
-    platformManger.init();
-    bombManager.init();
-    starManager.init();
-    systemManager.init();
+    playerManager.init(phaser);
+    platformManger.init(phaser);
+    bombManager.init(phaser);
+    starManager.init(phaser);
+    systemManager.init(phaser);
 
     this.physics.add.collider(playerManager.player, platformManager.platform);
     this.physics.add.collider(starManager.stars, platformManager.platforms);
