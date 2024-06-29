@@ -1,6 +1,8 @@
 export default class PlayerManager{
-    
-    player = this.physics.add.sprite(100, 450, 'dude');
+
+    constructor(phaser){
+        player = this.physics.add.sprite(100, 450, 'dude');
+    }
 
     init(){
         player.setBounce(0.2);

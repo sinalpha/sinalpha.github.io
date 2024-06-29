@@ -2,6 +2,7 @@ import PlayerManager    from './playerManager.js'
 import StarManager      from './starManager.js'
 import PlatformManager  from './platformManager.js'
 import BombManager      from './bombManager.js'
+import SystemManager    from './systemManager.js'
 
 export var config = {
     type: Phaser.AUTO,
@@ -36,22 +37,25 @@ function preload ()
 function create ()
 {
     this.add.image(400, 300, 'sky');
-    var score = 0;
-    var scoreText;
-    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+    
 
     playerManager = new PlayerManager(this)
+    platformManager = new PlatformManager(this)
+    bombManager = new BombManager(this)
+    starManager = new StarManager(this)
+    systemManager = new SystemManager(this)
 
     playerManager.init();
-    PlatformManager.init();
-    BombManager.init();
-    StarManager.init();
+    platformManger.init();
+    bombManager.init();
+    starManager.init();
+    systemManager.init();
 
-    this.physics.add.collider(PlayerManager.player, PlatformManager.platform);
-    this.physics.add.collider(StarManager.stars, PlatformManager.platforms);
-    this.physics.add.collider(BombManager.bomb, PlatformManager.platforms);
-    this.physics.add.collider(PlayerManager.player, BombManager.bombs, hitBomb, null, this);
-    this.physics.add.overlap(PlayerManager.player, StarManager.stars, StarManager.collectStar, null, this);
+    this.physics.add.collider(playerManager.player, platformManager.platform);
+    this.physics.add.collider(starManager.stars, platformManager.platforms);
+    this.physics.add.collider(bombManager.bomb, platformManager.platforms);
+    this.physics.add.collider(playerManager.player, bombManager.bombs, hitBomb, null, this);
+    this.physics.add.overlap(playerManager.player, starManager.stars, starManager.collectStar, null, this);
 
 }
 
@@ -61,25 +65,25 @@ function update ()
 
     if (cursors.left.isDown)
         {
-            PlayerManager.player.setVelocityX(-160);
+            playerManager.player.setVelocityX(-160);
         
-            PlayerManager.player.anims.play('left', true);
+            playerManager.player.anims.play('left', true);
         }
         else if (cursors.right.isDown)
         {
-            PlayerManager.player.setVelocityX(160);
+            playerManager.player.setVelocityX(160);
         
-            PlayerManager.player.anims.play('right', true);
+            playerManager.player.anims.play('right', true);
         }
         else
         {
-            PlayerManager.player.setVelocityX(0);
+            playerManager.player.setVelocityX(0);
         
-            PlayerManager.player.anims.play('turn');
+            playerManager.player.anims.play('turn');
         }
         
-        if (cursors.up.isDown && PlayerManager.player.body.touching.down)
+        if (cursors.up.isDown && playerManager.player.body.touching.down)
         {
-            PlayerManager.player.setVelocityY(-330);
+            playerManager.player.setVelocityY(-330);
         }
 }

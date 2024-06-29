@@ -1,10 +1,15 @@
 export default class StarManager{
     
-    stars = this.physics.add.group({
-        key: 'star',
-        repeat: 11,
-        setXY: { x: 12, y: 0, stepX: 70 }
-    });
+    stars;
+
+    constructor(phaser){
+        stars = phaser.physics.add.group({
+            key: 'star',
+            repeat: 11,
+            setXY: { x: 12, y: 0, stepX: 70 }
+        });
+        
+    }
 
     init(){
         stars.children.iterate(function (child) {
