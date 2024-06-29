@@ -30,6 +30,7 @@ function preload ()
 }
 
 var platforms;
+var player;
 
 function create ()
 {
