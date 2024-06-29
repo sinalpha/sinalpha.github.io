@@ -60,7 +60,7 @@ function create ()
 
 function update ()
 {
-    cursors = this.input.keyboard.createCursorKeys();
+    let cursors = this.input.keyboard.createCursorKeys();
 
     if (cursors.left.isDown)
         {
