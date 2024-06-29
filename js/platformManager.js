@@ -3,14 +3,14 @@ export default class PlatformManager{
     platforms
 
     constructor(phaser){
-        platforms = phaser.physics.add.staticGroup(); 
+        this.platforms = phaser.physics.add.staticGroup(); 
     }
 
     init(){
-        platforms.create(400, 568, 'ground').setScale(2).refreshBody();
-        platforms.create(600, 400, 'ground');
-        platforms.create(50, 250, 'ground');
-        platforms.create(750, 220, 'ground');
+        this.platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+        this.platforms.create(600, 400, 'ground');
+        this.platforms.create(50, 250, 'ground');
+        this.platforms.create(750, 220, 'ground');
     }
 
     getPlatforms(){
