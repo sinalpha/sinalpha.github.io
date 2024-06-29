@@ -3,7 +3,7 @@ export default class PlayerManager{
     player
 
     constructor(phaser){
-        player = phaser.physics.add.sprite(100, 450, 'dude');
+        this.player = phaser.physics.add.sprite(100, 450, 'dude');
     }
 
     init(){
