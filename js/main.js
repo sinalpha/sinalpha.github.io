@@ -89,9 +89,18 @@ window.onload = function() {
         function collectStar (player, star)
         {
             star.disableBody(true, true);
+
+            score += 10;
+            scoreText.setText('Score: ' + score);
+
         }
 
         this.physics.add.overlap(player, stars, collectStar, null, this);
+    
+        var score = 0;
+        var scoreText;
+
+        scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
     }
     
     function update ()
