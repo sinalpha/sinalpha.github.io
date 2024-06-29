@@ -7,8 +7,8 @@ export default class PlayerManager{
     }
 
     init(phaser){
-        player.setBounce(0.2);
-        player.setCollideWorldBounds(true);
+        this.player.setBounce(0.2);
+        this.player.setCollideWorldBounds(true);
 
         phaser.anims.create({
             key: 'left',
