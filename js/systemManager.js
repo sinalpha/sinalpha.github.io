@@ -8,4 +8,8 @@ export default class SystemManager{
         this.scoreText = phaser.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
     }
 
+    init(this_){
+        
+    }
+
 }
