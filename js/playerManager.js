@@ -1,7 +1,7 @@
 export default class PlayerManager{
 
     constructor(phaser){
-        player = this.physics.add.sprite(100, 450, 'dude');
+        player = phaser.physics.add.sprite(100, 450, 'dude');
     }
 
     init(){
