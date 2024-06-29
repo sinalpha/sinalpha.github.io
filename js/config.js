@@ -1,3 +1,7 @@
+import { PlayerManager }    from './playerManager.js'
+import { StarManager }      from './starManager.js'
+import { PlatformManager }  from './platformManager.js'
+import { BombManager }      from './bombManager.js'
 
 export var config = {
     type: Phaser.AUTO,
@@ -29,67 +33,20 @@ function preload ()
 );
 }
 
-var platforms;
-var player;
-
 function create ()
 {
     this.add.image(400, 300, 'sky');
 
-    platforms = this.physics.add.staticGroup();
+    PlatformManager.init();
+    PlayerManager.init();
+    BombManager.init();
+    StarManager.init();
 
-    platforms.create(400, 568, 'ground').setScale(2).refreshBody();
-
-    platforms.create(600, 400, 'ground');
-    platforms.create(50, 250, 'ground');
-    platforms.create(750, 220, 'ground');
-
-    player = this.physics.add.sprite(100, 450, 'dude');
-
-    player.setBounce(0.2);
-    player.setCollideWorldBounds(true);
-
-    this.physics.add.collider(player, platforms);
-
-    this.anims.create({
-        key: 'left',
-        frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
-        frameRate: 10,
-        repeat: -1
-    }); 
-
-    this.anims.create({
-        key: 'turn',
-        frames: [ { key: 'dude', frame: 4 } ],
-        frameRate: 20
-    });
-
-    this.anims.create({
-        key: 'right',
-        frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
-        frameRate: 10,
-        repeat: -1
-    });
-
-    stars = this.physics.add.group({
-        key: 'star',
-        repeat: 11,
-        setXY: { x: 12, y: 0, stepX: 70 }
-    });
-    
-    stars.children.iterate(function (child) {
-    
-        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
-    
-    });
-
-    this.physics.add.collider(stars, platforms);
-
-    bombs = this.physics.add.group();
-
-    this.physics.add.collider(bombs, platforms);
-
-    this.physics.add.collider(player, bombs, hitBomb, null, this);
+    this.physics.add.collider(PlayerManager.player, PlatformManager.platform);
+    this.physics.add.collider(StarManager.stars, PlatformManager.platforms);
+    this.physics.add.collider(BombManager.bomb, PlatformManager.platforms);
+    this.physics.add.collider(PlayerManager.player, BombManager.bombs, hitBomb, null, this);
+    this.physics.add.overlap(PlayerManager.player, StarManager.stars, collectStar, null, this);
 
     function collectStar (player, star)
     {
@@ -116,15 +73,6 @@ function create ()
         }
     }
 
-    this.physics.add.overlap(player, stars, collectStar, null, this);
-
-    var score = 0;
-    var scoreText;
-
-    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
-
-    
-    
     function hitBomb (player, bomb)
     {
         this.physics.pause();
@@ -136,6 +84,11 @@ function create ()
         gameOver = true;
     }
 
+
+
+    var score = 0;
+    var scoreText;
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 }
 
 function update ()
@@ -144,25 +97,25 @@ function update ()
 
     if (cursors.left.isDown)
         {
-            player.setVelocityX(-160);
+            PlayerManager.player.setVelocityX(-160);
         
-            player.anims.play('left', true);
+            PlayerManager.player.anims.play('left', true);
         }
         else if (cursors.right.isDown)
         {
-            player.setVelocityX(160);
+            PlayerManager.player.setVelocityX(160);
         
-            player.anims.play('right', true);
+            PlayerManager.player.anims.play('right', true);
         }
         else
         {
-            player.setVelocityX(0);
+            PlayerManager.player.setVelocityX(0);
         
-            player.anims.play('turn');
+            PlayerManager.player.anims.play('turn');
         }
         
-        if (cursors.up.isDown && player.body.touching.down)
+        if (cursors.up.isDown && PlayerManager.player.body.touching.down)
         {
-            player.setVelocityY(-330);
+            PlayerManager.player.setVelocityY(-330);
         }
 }
