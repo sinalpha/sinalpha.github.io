@@ -86,6 +86,12 @@ window.onload = function() {
 
         this.physics.add.collider(stars, platforms);
 
+        bombs = this.physics.add.group();
+
+        this.physics.add.collider(bombs, platforms);
+
+        this.physics.add.collider(player, bombs, hitBomb, null, this);
+
         function collectStar (player, star)
         {
             star.disableBody(true, true);
@@ -118,11 +124,7 @@ window.onload = function() {
 
         scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
     
-        bombs = this.physics.add.group();
-
-        this.physics.add.collider(bombs, platforms);
-
-        this.physics.add.collider(player, bombs, hitBomb, null, this);
+        
         
         function hitBomb (player, bomb)
         {
