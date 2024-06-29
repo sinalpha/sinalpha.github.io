@@ -54,9 +54,8 @@ function create ()
     this.physics.add.collider(playerManager.player, platformManager.platform);
     this.physics.add.collider(starManager.stars, platformManager.platforms);
     this.physics.add.collider(bombManager.bomb, platformManager.platforms);
-    this.physics.add.collider(playerManager.player, bombManager.bombs, hitBomb, null, this);
+    this.physics.add.collider(playerManager.player, bombManager.bombs, bombManager.hitBomb, null, this);
     this.physics.add.overlap(playerManager.player, starManager.stars, starManager.collectStar, null, this);
-
 }
 
 function update ()
