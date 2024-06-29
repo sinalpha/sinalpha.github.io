@@ -40,7 +40,7 @@ function create ()
     var scoreText;
     scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
-    playerManager = new PlayerManager()
+    playerManager = new PlayerManager(this)
 
     playerManager.init();
     PlatformManager.init();
