@@ -39,11 +39,11 @@ function create ()
     this.add.image(400, 300, 'sky');
     
 
-    playerManager = new PlayerManager(this)
-    platformManager = new PlatformManager(this)
-    bombManager = new BombManager(this)
-    starManager = new StarManager(this)
-    systemManager = new SystemManager(this)
+    let playerManager = new PlayerManager(this)
+    let platformManager = new PlatformManager(this)
+    let bombManager = new BombManager(this)
+    let starManager = new StarManager(this)
+    let systemManager = new SystemManager(this)
 
     playerManager.init();
     platformManger.init();
