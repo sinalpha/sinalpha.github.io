@@ -75,6 +75,8 @@ window.onload = function() {
     
     function update ()
     {
+        cursors = this.input.keyboard.createCursorKeys();
+
         if (cursors.left.isDown)
             {
                 player.setVelocityX(-160);
