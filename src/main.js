@@ -5,7 +5,7 @@ import BootLoader from './scenes/bootLoader.js';
 const config = {
     
     scale: {
-        mode: Phaser.Scale.FIT,
+        mode: Phaser.Scale.RESIZE,
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
     parent: "container",
