@@ -3,7 +3,7 @@ const config = {
     height: 300,
     parent: "container",
     type: Phaser.CANVAS,   
-    scene: [GameScene]
+    scene: [Splash]
 }
 
 new Phaser.Game(config);
