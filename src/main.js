@@ -1,3 +1,5 @@
+import Splash from './scens/splash.js'
+
 const config = {
     widht: 400,
     height: 300,

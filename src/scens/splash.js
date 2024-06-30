@@ -1,7 +1,6 @@
-class Splash extends Phaser.Scene {
+export default class Splash extends Phaser.Scene {
     constructor(){
         super({ key : "splash" });
     }
 
-    
 }
