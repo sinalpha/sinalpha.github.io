@@ -6,8 +6,7 @@ const config = {
     
     scale: {
         mode: Phaser.Scale.FIT,
-        widht: 400,
-        height: 850,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
     },
     parent: "container",
     scene: [BootLoader, Splash, Game]
