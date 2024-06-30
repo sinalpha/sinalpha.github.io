@@ -7,6 +7,11 @@ export default class BootLoader extends Phaser.Scene {
 
         this.createBars();
         this.setLoadEvents();
+        this.loadFonts();
+        this.loadImages();
+        this.loadAudios();
+        this.loadSpritesheets();
+        this.setRegistry();
     }
 
     createBars() {
@@ -46,5 +51,23 @@ export default class BootLoader extends Phaser.Scene {
         );
     }
 
-    
+    loadFonts(){
+
+    }
+
+    loadImages(){
+        this.load.image("uniguri-splash", "../../assets/img/uniguri.png")
+    }
+
+    loadAudios(){
+
+    }
+
+    loadSpritesheets(){
+
+    }
+
+    setRegistry(){
+
+    }
 }
