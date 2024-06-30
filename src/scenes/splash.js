@@ -15,7 +15,7 @@ export default class Splash extends Phaser.Scene {
         this.center_width = this.width / 2;
         this.center_height = this.height / 2;
         this.cameras.main.setBackgroundColor(0x000000);
-        this.physics.add.sprite(640, 450, 'uniguri-splash')
+        this.gameLogo = this.add.image(this. center_width, this.center_height, "uniguri-splash");
 
         this.input.keyboard.on("keydown-SPACE", this.startGame, this);
     }
