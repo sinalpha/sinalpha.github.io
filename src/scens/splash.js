@@ -9,7 +9,7 @@ export default class Splash extends Phaser.Scene {
 
     create(){
 
-        this.cameras.main.setBackgroundColor(0x87ceeb);
+        this.cameras.main.setBackgroundColor(0x000000);
 
         this.input.keyboard.on("keydown-SPACE", this.startGame, this);
     }
