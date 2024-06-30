@@ -1,12 +1,16 @@
-import Splash from './scens/splash.js'
-import Game from './scens/game.js'
+import Splash from './scenes/splash.js'
+import Game from './scenes/game.js'
+import BootLoader from './scenes/bootLoader.js';
 
 const config = {
     widht: 400,
     height: 300,
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+    },
     parent: "container",
-    type: Phaser.CANVAS,   
-    scene: [Splash, Game]
+    scene: [BootLoader, Splash, Game]
 }
 
 new Phaser.Game(config);
