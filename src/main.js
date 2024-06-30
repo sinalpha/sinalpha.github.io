@@ -4,7 +4,7 @@ import BootLoader from './scenes/bootLoader.js';
 
 const config = {
     widht: 400,
-    height: 300,
+    height: 850,
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
