@@ -3,8 +3,12 @@ import Game from './scenes/game.js'
 import BootLoader from './scenes/bootLoader.js';
 
 const config = {
-    width: window.innerWidth,
-    height: window.innerHeight,
+    scale: {
+        mode: Phaser.Scale.ENVELOP,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 1920,
+        height: 1080,
+    },
     parent: "container",
     scene: [BootLoader, Splash, Game]
 }
