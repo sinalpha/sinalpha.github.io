@@ -3,10 +3,8 @@ import Game from './scenes/game.js'
 import BootLoader from './scenes/bootLoader.js';
 
 const config = {
-    scale: {
-        mode: Phaser.Scale.RESIZE,
-        autoCenter: Phaser.Scale.CENTER_BOTH,
-    },
+    width: window.innerWidth,
+    height: window.innerHeight,
     parent: "container",
     scene: [BootLoader, Splash, Game]
 }
