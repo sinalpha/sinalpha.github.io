@@ -21,6 +21,6 @@ const config = {
     scene: [BootLoader, Splash, Game]
 }
 
-game = new Phaser.Game(config);
+const game = new Phaser.Game(config);
 
 game.hellohelloheloo
