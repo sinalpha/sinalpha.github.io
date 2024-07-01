@@ -3,14 +3,24 @@ import Game from './scenes/game.js'
 import BootLoader from './scenes/bootLoader.js';
 
 const config = {
+    type: Phaser.AUTO,
     scale: {
-        mode: Phaser.Scale.ENVELOP,
-        autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: 1920,
-        height: 1080,
+        mode: Phaser.Scale.RESIZE,
+        parent: "container",
+        width: 640,
+        height: 960,
+        min: {
+            width: 320,
+            height: 480
+        },
+        max: {
+            width: 1400,
+            height:1200
+        }
     },
-    parent: "container",
     scene: [BootLoader, Splash, Game]
 }
 
-new Phaser.Game(config);
+game = new Phaser.Game(config);
+
+game.hellohelloheloo
