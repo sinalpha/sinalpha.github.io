@@ -22,7 +22,9 @@ export default class Splash extends Phaser.Scene {
         this.uniguri = this.add.image(center.x,center.y,'uniguri-splash');
 
         //scene change trigger
-        this.input.once('pointerdown', ()=>{new SceneEffect(this).simpleClose(this.startGame.bind(this));}, this );
+        this.input.once('pointerdown', () => {
+            new SceneEffect(this).simpleClose(this.startGame.bind(this));
+        });
 
     }
 
@@ -31,6 +33,6 @@ export default class Splash extends Phaser.Scene {
     }
 
     startGame() {
-        this.scene.start("game");
+        this.time.delayedCall(2000, () => this.scene.start("game"), null, this);
     }
 }
