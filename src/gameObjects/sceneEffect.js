@@ -5,12 +5,12 @@ export default class SceneEffect{
 
     simpleClose(callback){
 
-        const rectangleWidth = this.cameras.main.width / 2;
+        const rectangleWidth = this.scene.cameras.main.width / 2;
         const  rectangle1 = this.scene.add.rectangle(
             0 - rectangleWidth,
             0,
-            this.cameras.main.width,
-            this.cameras.main.height,
+            this.scene.cameras.main.width,
+            this.scene.cameras.main.height,
             0x000000
         ).setOrigin(0.5, 0);
 
