@@ -10,12 +10,13 @@ export default class Splash extends Phaser.Scene {
     }
 
     create(){
-        this.width = this.sys.game.config.width;
-        this.height = this.sys.game.config.height;
-        this.center_width = this.width / 2;
-        this.center_height = this.height / 2;
-        this.cameras.main.setBackgroundColor(0x000000);
-        this.gameLogo = this.add.image(this. center_width, this.center_height, "uniguri-splash");
+        const {x,y,width,height} = this.cameras.main;
+        this.background = this.add.tileSprite(x,y,width,height,alias,'background-splash').
+        setOrigin(0).setScrollFactor(0,1);
+        const center = {
+            x: x+widht/2, y: y+height/2
+        }
+        this.uniguri = this.add.image(center.x,center.y,'uniguri-splash');
 
         this.input.keyboard.on("keydown-SPACE", this.startGame, this);
     }
