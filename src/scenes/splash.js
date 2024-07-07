@@ -18,14 +18,14 @@ export default class Splash extends Phaser.Scene {
         }
         this.uniguri = this.add.image(center.x,center.y,'uniguri-splash');
 
-        this.input.keyboard.on("keydown-SPACE", this.startGame, this);
+        this.input.once('pointerdown', ()=>{
+            this.scene.transition({target:"game",duration:500});
+        })
     }
 
     update(){
         
     }
 
-    startGame(){
-        this.scene.start("game");
-    }
+
 }
