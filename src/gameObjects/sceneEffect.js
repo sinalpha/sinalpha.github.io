@@ -1,16 +1,18 @@
 export default class SceneEffect{
     constructor(scene){
         this.scene = scene;
+        this.scene.width = this.scene.cameras.main.width;
+        this.scene.height = this.scene.cameras.main.height;
     }
 
     simpleClose(callback){
 
-        const rectangleWidth = this.scene.cameras.main.width / 2;
+        const rectangleWidth = this.scenewidth / 2;
         const  rectangle1 = this.scene.add.rectangle(
             0 - rectangleWidth,
             0,
-            this.scene.cameras.main.width,
-            this.scene.cameras.main.height,
+            this.scene.width,
+            this.scene.height,
             0x000000
         ).setOrigin(0.5, 0);
 
