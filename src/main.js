@@ -47,7 +47,7 @@ const config = {
     width:width,
     height:height,
     parent: 'container',
-    scene: [Bootloader, Splash, Game]
+    scene: [BootLoader, Splash, Game]
 }
 
 const game = new Phaser.game();
