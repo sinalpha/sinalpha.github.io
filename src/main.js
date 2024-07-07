@@ -50,4 +50,4 @@ const config = {
     scene: [BootLoader, Splash, Game]
 }
 
-const game = new Phaser.game(config);
+const game = new Phaser.Game(config);
