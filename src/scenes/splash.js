@@ -11,7 +11,7 @@ export default class Splash extends Phaser.Scene {
 
     create(){
         const {x,y,width,height} = this.cameras.main;
-        this.background = this.add.tileSprite(x,y,width,height,alias,'background-splash').
+        this.background = this.add.tileSprite(x,y,width,height,'background-splash').
         setOrigin(0).setScrollFactor(0,1);
         const center = {
             x: x+widht/2, y: y+height/2
