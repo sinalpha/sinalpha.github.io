@@ -7,7 +7,7 @@ export default class SceneEffect{
 
     simpleClose(callback){
 
-        const rectangleWidth = this.scenewidth / 2;
+        const rectangleWidth = this.scene.width / 2;
         const  rectangle1 = this.scene.add.rectangle(
             0 - rectangleWidth,
             0,
