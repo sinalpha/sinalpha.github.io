@@ -47,6 +47,12 @@ const config = {
     width:width,
     height:height,
     parent: 'container',
+    scale:{
+        mode:Phaser.Scale.FIT,
+        autoCenter:Phaser.Scale.CENTER_BOTH,
+        width:width,
+        height:height
+    },
     scene: [BootLoader, Splash, Game]
 }
 
