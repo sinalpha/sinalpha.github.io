@@ -11,21 +11,35 @@ export default class Splash extends Phaser.Scene {
 
     create(){
         const {x,y,width,height} = this.cameras.main;
-        this.background = this.add.tileSprite(x,y,width,height,'background-splash').
-        setOrigin(0).setScrollFactor(0,1);
         const center = {
             x: x+width/2, y: y+height/2
         }
+
+        //add sprite
+        this.background = this.add.tileSprite(x,y,width,height,'background-splash')
+            .setOrigin(0)
+            .setScrollFactor(0,1);
         this.uniguri = this.add.image(center.x,center.y,'uniguri-splash');
 
-        this.input.once('pointerdown', ()=>{
-            this.scene.transition({target:"game",duration:500});
-        })
+        //scene change trigger
+        this.input.once('pointerdown', this.transitionToChange() );
+
     }
 
     update(){
         
     }
 
+    transitionToChange(){
+        new SceneEffect(this).simpleClose(this.startGame.bind(this));
+    }
 
+    startGame() {
+        this.scene.start("transition", {
+            next: "game",
+            name: "STAGE",
+            number: 1,
+            time: 30    
+        });
+    }
 }

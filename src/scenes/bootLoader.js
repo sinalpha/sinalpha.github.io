@@ -56,8 +56,8 @@ export default class BootLoader extends Phaser.Scene {
     }
 
     loadImages(){
-        this.load.image("uniguri-splash", "../../assets/uniguri-splash.png");
-        this.load.image("background-splash", "../../assets/background-splash.png");
+        this.load.image("uniguri-splash", "../../assets/img/uniguri-splash.png");
+        this.load.image("background-splash", "../../assets/img/background-splash.png");
     }
 
     loadAudios(){
