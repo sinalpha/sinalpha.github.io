@@ -43,7 +43,7 @@ import BootLoader from './scenes/bootLoader.js';
 const width = window.innerWidth;
 const height = window.innerHeight;
 const config = {
-    type:Phaser.Auto,
+    type:Phaser.AUTO,
     width:width,
     height:height,
     parent: 'container',
