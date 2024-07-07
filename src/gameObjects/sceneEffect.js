@@ -22,8 +22,6 @@ export default class SceneEffect{
                 callback();
             }
         });
-
-        console.log(this.scene.width)
     }
 
     simpleOpen(callback){
