@@ -33,6 +33,6 @@ export default class Splash extends Phaser.Scene {
     }
 
     startGame() {
-        this.time.delayedCall(2000, () => this.scene.start("game"), null, this);
+        this.time.delayedCall(500, () => this.scene.start("game"), null, this);
     }
 }
