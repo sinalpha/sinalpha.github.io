@@ -14,7 +14,7 @@ export default class Splash extends Phaser.Scene {
         this.background = this.add.tileSprite(x,y,width,height,'background-splash').
         setOrigin(0).setScrollFactor(0,1);
         const center = {
-            x: x+widht/2, y: y+height/2
+            x: x+width/2, y: y+height/2
         }
         this.uniguri = this.add.image(center.x,center.y,'uniguri-splash');
 
