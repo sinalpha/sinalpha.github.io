@@ -18,7 +18,7 @@ export default class SceneEffect{
             duration: 500,
             x: { from: -rectangleWidth / 2, to: rectangleWidth },
             onComplete: ()=>{
-                new SceneEffect(this).simpleClose(this.bind(this));
+                callback();
             }
         });
     }
