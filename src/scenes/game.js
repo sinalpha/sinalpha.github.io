@@ -11,15 +11,26 @@ export default class Game extends Phaser.Scene {
 
     create(){
         this.cameras.main.setBackgroundColor(0x87ceeb);
-        this.createMenu();
+        this.divideScreen();
+        
     }
 
     update(){
 
     }
 
-    createMenu(){
+    divideScreen(){
         
+        //set physics bound
+        const bound = { 
+            height:this.cameras.main.height / 2,
+            width:this.cameras.main.width / 2
+        };
+        this.physics.world.setBounds(
+            0, 0, bound.width, bound.height
+        );
+
+        //create menu
         const menuSize = { 
             height:this.cameras.main.height / 2,
             width:this.cameras.main.width / 2
