@@ -19,6 +19,7 @@ export default class Game extends Phaser.Scene {
     createMenu(){
         const menuSize = { height:this.cameras.main.height / 2, width:this.cameras.main.widht / 2};
         this.menuZone = this.add.zone(0, menuSize.height, menuSize.width, menuSize.height ).setInteractive().setOrigin(0);
+        console.log(menuSize);
         this.scene.launch("menu", this.menuZone);
     }
 }
