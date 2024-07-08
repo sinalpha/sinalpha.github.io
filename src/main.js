@@ -1,6 +1,7 @@
 import Splash from './scenes/splash.js'
 import Game from './scenes/game.js'
 import BootLoader from './scenes/bootLoader.js';
+import Menu from './scenes/menu.js'
 
 const width = window.innerWidth;
 const height = window.innerHeight;
@@ -15,7 +16,7 @@ const config = {
         width:width,
         height:height
     },
-    scene: [BootLoader, Splash, Game]
+    scene: [BootLoader, Splash, Game, Menu]
 }
 
 const game = new Phaser.Game(config);
