@@ -1,4 +1,5 @@
 import Menu from "./menu.js"
+import Uniguri from "../gameObjects/uniguri.js"
 
 export default class Game extends Phaser.Scene {
     constructor(){
@@ -6,13 +7,16 @@ export default class Game extends Phaser.Scene {
     }
 
     preload(){
-    
+        
     }
 
     create(){
         this.cameras.main.setBackgroundColor(0x87ceeb);
         this.divideScreen();
         
+        this.add.existing(new Uniguri(this, 264, 250));
+        this.add.physics.add.existing(this);
+        ;
     }
 
     update(){
