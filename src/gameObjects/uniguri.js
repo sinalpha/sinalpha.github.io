@@ -8,6 +8,8 @@ export default class Uniguri extends Phaser.GameObjects.Sprite{
     
         scene.add.existing(this);
         scene.physics.add.existing(this);
+        this.setCollideWorldBounds(true);
+        this.body.setGravityY(300);
     }
 
 

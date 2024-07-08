@@ -13,6 +13,8 @@ export default class Game extends Phaser.Scene {
     create(){
         this.cameras.main.setBackgroundColor(0x87ceeb);
         this.divideScreen();
+
+        this.uniguri = new Uniguri(this, 0, 0);
     }
 
     update(){
@@ -45,5 +47,8 @@ export default class Game extends Phaser.Scene {
         this.menu = new Menu(this.menuZone);
 
         this.scene.add("menu", this.menu, true);
+    
+        //change game scene size
+        this.scale.resize(menuSize.width, menuSize.height);
     }
 }
