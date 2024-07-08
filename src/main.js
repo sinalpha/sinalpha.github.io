@@ -13,8 +13,6 @@ const config = {
     scale:{
         mode:Phaser.Scale.FIT,
         autoCenter:Phaser.Scale.CENTER_BOTH,
-        width:width,
-        height:height
     },
     scene: [BootLoader, Splash, Game, Menu]
 }

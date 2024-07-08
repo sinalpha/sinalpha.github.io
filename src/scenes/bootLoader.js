@@ -69,20 +69,6 @@ export default class BootLoader extends Phaser.Scene {
     }
 
     setRegistry(){
-        this.registry.set("anger", 0);
-        this.registry.set("happiness", 0);
-        this.registry.set("coin", 0);
-        this.registry.set("red", 0);
-        this.registry.set("yellow", 0);
-        this.registry.set("blue", 0);
-        this.registry.set("black", 0);
-        this.registry.set("white", 0);
-        this.registry.set("purple", 0);
-        this.registry.set("hunger", 0);
-        this.registry.set("tiredness", 0);
-        this.registry.set("21-22", false);
-        this.registry.set("22-23", false);
-        this.registry.set("23-24", false);
         
     }
 }
