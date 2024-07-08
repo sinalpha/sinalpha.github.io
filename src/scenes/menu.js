@@ -3,7 +3,7 @@ export default class Menu extends Phaser.Scene{
     constructor(parent){
         super({key:"menu"});
 
-        this.parent = parnet;
+        this.parent = parent;
     }
 
     preload(){
