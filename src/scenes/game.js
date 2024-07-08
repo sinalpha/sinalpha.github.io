@@ -5,12 +5,7 @@ export default class Game extends Phaser.Scene {
     constructor(){
         super({ key : "game" });
 
-        this.bound = { 
-            height:this.cameras.main.height / 2,
-            width:this.cameras.main.width
-        };
 
-        this.menuSize = bound;
     }
 
     preload(){
@@ -32,14 +27,17 @@ export default class Game extends Phaser.Scene {
     }
 
     divideScreen(){
-        
-        //set sub-screen size
-        
 
-        //set physics bound&game scene camera
+        this.bound = { 
+            height:this.cameras.main.height / 2,
+            width:this.cameras.main.width
+        };
+        
+        this.menuSize = bound;
+        
+        //set game scene camera
         this.cameras.main.width = this.bound.width;
         this.cameras.main.height = this.bound.height;      
-
 
 
         //create menu
