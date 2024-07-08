@@ -4,6 +4,13 @@ import Uniguri from "../gameObjects/uniguri.js"
 export default class Game extends Phaser.Scene {
     constructor(){
         super({ key : "game" });
+
+        this.bound = { 
+            height:this.cameras.main.height / 2,
+            width:this.cameras.main.width
+        };
+
+        this.menuSize = bound;
     }
 
     preload(){
@@ -13,9 +20,11 @@ export default class Game extends Phaser.Scene {
     create(){
         this.cameras.main.setBackgroundColor(0x87ceeb);
         this.divideScreen();
-
-        this.uniguri = new Uniguri(this, this.cameras.main.width / 2, 0
+        this.physics.world.setBounds(
+            0, 0, this.bound.width, 100
         );
+
+        this.uniguri = new Uniguri(this, this.cameras.main.width / 2, 0);
     }
 
     update(){
@@ -25,24 +34,20 @@ export default class Game extends Phaser.Scene {
     divideScreen(){
         
         //set sub-screen size
-        const bound = { 
-            height:this.cameras.main.height / 2,
-            width:this.cameras.main.width
-        };
+        
 
-        const menuSize = bound;
+        //set physics bound&game scene camera
+        this.cameras.main.width = this.bound.width;
+        this.cameras.main.height = this.bound.height;      
 
-        //set physics bound
-        this.physics.world.setBounds(
-            0, 0, bound.width, 100
-        );
+
 
         //create menu
         this.menuZone = this.add.zone(
             0,
-            menuSize.height,
-            menuSize.width,
-            menuSize.height
+            this.menuSize.height,
+            this.menuSize.width,
+            this.menuSize.height
         ).setInteractive().setOrigin(0);
     
         this.menu = new Menu(this.menuZone);
