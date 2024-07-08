@@ -16,7 +16,7 @@ const config = {
         width:width,
         height:height
     },
-    scene: [BootLoader, Splash, Game]
+    scene: [BootLoader, Splash, Game, Menu]
 }
 
 const game = new Phaser.Game(config);

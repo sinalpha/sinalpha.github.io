@@ -6,8 +6,9 @@ export default class Game extends Phaser.Scene {
     preload(){
 
 
-        this.menu = this.add.zone(0, this.scene.height / 2, this.scene.width, this.scene.height).setInteractive().setOrigin(0);
-
+        this.menuZone = this.add.zone(0, this.scene.height / 2, this.scene.width, this.scene.height).setInteractive().setOrigin(0);
+        this.menu = new Phaser.Scene("menu");
+        this.scene.add(menu, this.menu, true);
     }
 
     create(){

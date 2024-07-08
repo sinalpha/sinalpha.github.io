@@ -1,7 +1,9 @@
 export default class Menu extends Phaser.Scene{
 
-    constructor(){
+    constructor(parent){
         super({key:"menu"});
+
+        this.parent = parnet;
     }
 
     preload(){
