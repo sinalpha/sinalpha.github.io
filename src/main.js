@@ -14,7 +14,13 @@ const config = {
         mode:Phaser.Scale.FIT,
         autoCenter:Phaser.Scale.CENTER_BOTH,
     },
-    scene: [BootLoader, Splash, Game]
+    scene: [BootLoader, Splash, Game],
+    physics:{
+        default: 'arcade',
+        arcade: {
+            debug: false
+        }
+    }
 }
 
 const game = new Phaser.Game(config);
