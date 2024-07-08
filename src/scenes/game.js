@@ -15,6 +15,7 @@ export default class Game extends Phaser.Scene {
         this.divideScreen();
 
         this.uniguri = new Uniguri(this, this.cameras.main.width / 2, 0);
+        this.uniguri.setCollideWorldBounds(true);
     }
 
     update(){
