@@ -24,7 +24,7 @@ export default class Game extends Phaser.Scene {
         //set sub-screen size
         const bound = { 
             height:this.cameras.main.height / 2,
-            width:this.cameras.main.width / 2
+            width:this.cameras.main.width
         };
 
         const menuSize = bound;
