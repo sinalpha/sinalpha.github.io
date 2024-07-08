@@ -9,6 +9,7 @@ export default class Game extends Phaser.Scene {
 
     create(){
         this.cameras.main.setBackgroundColor(0x87ceeb);
+        this.scene.launch('menu');
     }
 
     update(){
