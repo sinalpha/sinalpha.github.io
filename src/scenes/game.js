@@ -1,8 +1,6 @@
 export default class Game extends Phaser.Scene {
     constructor(){
         super({ key : "game" });
-        this.scene.width = this.scene.cameras.main.width;
-        this.scene.height = this.scene.cameras.main.height;
     }
 
     preload(){
