@@ -21,21 +21,20 @@ export default class Game extends Phaser.Scene {
 
     divideScreen(){
         
-        //set physics bound
+        //set sub-screen size
         const bound = { 
             height:this.cameras.main.height / 2,
             width:this.cameras.main.width / 2
         };
+
+        const menuSize = bound;
+
+        //set physics bound
         this.physics.world.setBounds(
             0, 0, bound.width, bound.height
         );
 
         //create menu
-        const menuSize = { 
-            height:this.cameras.main.height / 2,
-            width:this.cameras.main.width / 2
-        };
-        
         this.menuZone = this.add.zone(
             0,
             menuSize.height,
