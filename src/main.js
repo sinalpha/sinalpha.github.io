@@ -14,7 +14,7 @@ const config = {
         mode:Phaser.Scale.FIT,
         autoCenter:Phaser.Scale.CENTER_BOTH,
     },
-    scene: [BootLoader, Splash, Game, Menu]
+    scene: [BootLoader, Splash, Menu, Game]
 }
 
 const game = new Phaser.Game(config);
