@@ -14,7 +14,7 @@ export default class Game extends Phaser.Scene {
         this.cameras.main.setBackgroundColor(0x87ceeb);
         this.divideScreen();
 
-        this.uniguri = new Uniguri(this, this.cameras.main.width / 2, 0);
+        this.uniguri = new Uniguri(this, this.cameras.main.width / 2, this.cameras.main.height / 2);
     }
 
     update(){
@@ -33,7 +33,7 @@ export default class Game extends Phaser.Scene {
 
         //set physics bound
         this.physics.world.setBounds(
-            0, 0, bound.width, bound.height
+            0, 0, bound.width, 100
         );
 
         //create menu
