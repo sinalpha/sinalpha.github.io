@@ -32,6 +32,8 @@ export default class Game extends Phaser.Scene {
             menuSize.height
         ).setInteractive().setOrigin(0);
     
-        this.scene.add("menu", Menu, true);
+        this.menu = new Menu(this.menuZone);
+
+        this.scene.add("menu", this.menu, true);
     }
 }
