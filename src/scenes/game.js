@@ -1,5 +1,3 @@
-import Menu from "./menu";
-
 export default class Game extends Phaser.Scene {
     constructor(){
         super({ key : "game" });
