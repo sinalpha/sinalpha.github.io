@@ -14,7 +14,8 @@ export default class Game extends Phaser.Scene {
         this.cameras.main.setBackgroundColor(0x87ceeb);
         this.divideScreen();
 
-        this.uniguri = new Uniguri(this, this.cameras.main.width / 2, this.cameras.main.height / 2);
+        this.uniguri = new Uniguri(this, this.cameras.main.width / 2, 0
+        );
     }
 
     update(){
