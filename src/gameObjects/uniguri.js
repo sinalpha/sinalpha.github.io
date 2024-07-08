@@ -6,8 +6,10 @@ export default class Uniguri extends Phaser.GameObjects.Sprite{
         this.setTexture('uniguri-default');
         this.setPosition( x, y);
     
-        this.setCollideWorldBounds(true);
+        scene.add.existing(this);
+        scene.physics.add.existing(this);
     }
+
 
 
 }
