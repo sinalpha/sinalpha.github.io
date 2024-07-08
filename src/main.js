@@ -1,7 +1,7 @@
 import Splash from './scenes/splash.js'
 import Game from './scenes/game.js'
 import BootLoader from './scenes/bootLoader.js';
-import Menu from './scenes/menu.js'
+
 
 const width = window.innerWidth;
 const height = window.innerHeight;
@@ -14,7 +14,7 @@ const config = {
         mode:Phaser.Scale.FIT,
         autoCenter:Phaser.Scale.CENTER_BOTH,
     },
-    scene: [BootLoader, Splash, Menu, Game]
+    scene: [BootLoader, Splash, Game]
 }
 
 const game = new Phaser.Game(config);
