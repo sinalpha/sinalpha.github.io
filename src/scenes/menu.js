@@ -10,17 +10,17 @@ export default class Menu extends Phaser.Scene {
 
     create(){
 
-        this.menuOrigin = {
-            x:this.parent.x,
-            y:this.parent.y
-        };
+        // this.menuOrigin = {
+        //     x:this.parent.x,
+        //     y:this.parent.y
+        // };
 
-        this.buttonSize = {
-            width: this.parent.width / 5,
-            height: this.parent.height / 4,
-            blankWidth: this.parent.width / 25,
-            blankHeight: this.parent.height / 16
-        }
+        // this.buttonSize = {
+        //     width: this.parent.width / 5,
+        //     height: this.parent.height / 4,
+        //     blankWidth: this.parent.width / 25,
+        //     blankHeight: this.parent.height / 16
+        // }
 
         this.setMenuBackground();
         this.setMenuCamera();
