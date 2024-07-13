@@ -28,7 +28,7 @@ export default class Game extends Phaser.Scene {
         this.player = this.add.rectangle(400, 300, 64, 64, 0xffffff);
         this.physics.add.existing(this.player, false);
         this.player.body.setCollideWorldBounds(true);
-        this.physics.world.gravitiy.y = 150;
+        this.physics.world.gravity.y = 150;
     }
 
     divideScreen(){
