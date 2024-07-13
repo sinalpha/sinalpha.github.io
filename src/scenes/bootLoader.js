@@ -68,7 +68,7 @@ export default class BootLoader extends Phaser.Scene {
     }
 
     loadSpritesheets(){
-        this.load.spritesheets("testbuttonn", "../../assets/img/testbutton.png", {frameWidth: 50, frameHeight: 50, endFrame: 1});
+        this.load.spritesheet("testbuttonn", "../../assets/img/testbutton.png", {frameWidth: 50, frameHeight: 50, endFrame: 1});
     }
 
     setRegistry(){
