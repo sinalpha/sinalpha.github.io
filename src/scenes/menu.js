@@ -5,14 +5,15 @@ export default class Menu extends Phaser.Scene {
     }
 
     preload(){
+        this.buttons = {}
         this.scene.bringToTop();
     }
 
     create(){
 
         this.menuOrigin = {
-            x:this.parent.x,
-            y:this.parent.y
+            x:0,
+            y:this.parent.height
         };
 
         this.buttonSize = {
@@ -34,7 +35,7 @@ export default class Menu extends Phaser.Scene {
     setMenuCamera(){
         this.cameras.main.setViewport(
             this.parent.x, 
-            this.parent.height/2, 
+            this.parent.height, 
             this.parent.width, 
             this.parent.height
         );
@@ -43,9 +44,13 @@ export default class Menu extends Phaser.Scene {
     
     addButtons(){
         
+        this.buttons.push(this.createButton(
+            this.menuOrigin.x, this.menuOrigin.y, 'testButton', 0));
 
     }
     
-    createButton(name, img){
+    createButton(x, y, img, frame){
+        return NineSlice(this, x, y, img, frame,
+            this.buttonSize.width, this.buttonSize.height);
     }
 }
