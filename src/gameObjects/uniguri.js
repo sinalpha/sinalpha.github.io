@@ -10,7 +10,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     create(){
-        this.setCollideWorldBounds(true);
+        
     }
 
     preupdate(){
