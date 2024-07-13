@@ -43,7 +43,7 @@ export default class Menu extends Phaser.Scene {
     
     addButtons(){
         buttons = [
-            this.reateButton('status','testbutton'),
+            this.createButton('status','testbutton'),
             this.createButton('clean','testbutton'),
             this.createButton('sleep','testbutton'),
             this.createButton('work','testbutton'),
