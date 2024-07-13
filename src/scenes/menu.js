@@ -40,6 +40,11 @@ export default class Menu extends Phaser.Scene {
         );
     }
 
+    createButton(name, img){
+        return  this.add.nineslice(this.buttonSize.width, this.buttonSize.height,
+            name, img);
+    }
+
     addButtons(){
         buttons = [
             createButton('status','testbutton'),
@@ -64,8 +69,5 @@ export default class Menu extends Phaser.Scene {
         }
     }
 
-    createButton(name, img){
-        return  this.add.nineslice(this.buttonSize.width, this.buttonSize.height,
-            name, img);
-    }
+  
 }
