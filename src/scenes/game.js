@@ -28,19 +28,19 @@ export default class Game extends Phaser.Scene {
 
     divideScreen(){
 
-        this.bound = { 
-            height:this.cameras.main.height / 2,
-            width:this.cameras.main.width
-        };
+        // this.bound = { 
+        //     height:this.cameras.main.height / 2,
+        //     width:this.cameras.main.width
+        // };
         
         // this.menuSize = this.bound;
         
         // set physics bounds&game scene camera
-        this.cameras.main.width = this.bound.width;
-        this.cameras.main.height = this.bound.height;      
-        this.physics.world.setBounds(
-            0, 0, this.bound.width, 100
-        );
+        // this.cameras.main.width = this.bound.width;
+        // this.cameras.main.height = this.bound.height;      
+        // this.physics.world.setBounds(
+        //     0, 0, this.bound.width, 100
+        // );
 
 
         //create menu

@@ -9,6 +9,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     create(){
+
         this.cameras.main.setBackgroundColor(0x111111);
         this.cameras.main.setViewport(
             this.parent.x, 
@@ -16,6 +17,7 @@ export default class Menu extends Phaser.Scene {
             this.parent.width, 
             this.parent.height
         );
+        
     }
 
 }
