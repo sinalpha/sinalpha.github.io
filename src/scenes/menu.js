@@ -1,7 +1,7 @@
 export default class Menu extends Phaser.Scene {
     constructor(parent){
         super({ key : "menu" });
-        this.parent = parent;
+        // this.parent = parent;
     }
 
     preload(){
@@ -33,39 +33,39 @@ export default class Menu extends Phaser.Scene {
 
     setMenuCamera(){
         this.cameras.main.setViewport(
-            this.parent.x, 
-            this.parent.y, 
-            this.parent.width, 
-            this.parent.height
+            0, 
+            this.cameras.main.height / 2, 
+            0, 
+            this.cameras.main.height / 2
         );
     }
 
-    addButtons(){
-        buttons = [
-            createButton('status','testbutton'),
-            createButton('clean','testbutton'),
-            createButton('sleep','testbutton'),
-            createButton('work','testbutton'),
-            createButton('shop','testbutton'),
-            createButton('food','testbutton'),
-            createButton('play','testbutton'),
-            createButton('concert','testbutton'),
-            createButton('lib','testbutton'),
-            createButton('badge','testbutton'),
-            createButton('credit','testbutton'),
-            createButton('config','testbutton'),
-        ];
+    // addButtons(){
+    //     buttons = [
+    //         createButton('status','testbutton'),
+    //         createButton('clean','testbutton'),
+    //         createButton('sleep','testbutton'),
+    //         createButton('work','testbutton'),
+    //         createButton('shop','testbutton'),
+    //         createButton('food','testbutton'),
+    //         createButton('play','testbutton'),
+    //         createButton('concert','testbutton'),
+    //         createButton('lib','testbutton'),
+    //         createButton('badge','testbutton'),
+    //         createButton('credit','testbutton'),
+    //         createButton('config','testbutton'),
+    //     ];
 
-        for (let i = 0; i < 9; i++){
-            buttons[i].setPosition(
-                this.menuOrigin.x + this.buttonSize.blankWidth,
-                this.menuOrigin.y + this.buttonSize.blankHeight
-            );
-        }
-    }
+    //     for (let i = 0; i < 9; i++){
+    //         buttons[i].setPosition(
+    //             this.menuOrigin.x + this.buttonSize.blankWidth,
+    //             this.menuOrigin.y + this.buttonSize.blankHeight
+    //         );
+    //     }
+    // }
 
-    createButton(name, img){
-        return  this.add.nineslice(this.buttonSize.width, this.buttonSize.height,
-            name, img);
-    }
+    // createButton(name, img){
+    //     return  this.add.nineslice(this.buttonSize.width, this.buttonSize.height,
+    //         name, img);
+    // }
 }

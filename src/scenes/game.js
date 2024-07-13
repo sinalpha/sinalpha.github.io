@@ -43,16 +43,17 @@ export default class Game extends Phaser.Scene {
     }
 
     createMenu(){
-        this.menuZone = this.add.zone(
-            0,
-            0,
-            this.menuSize.width,
-            this.menuSize.height
-        ).setInteractive().setOrigin(0);
+        // this.menuZone = this.add.zone(
+        //     0,
+        //     0,
+        //     this.menuSize.width,
+        //     this.menuSize.height
+        // ).setInteractive().setOrigin(0);
         
-        this.menu = new Menu(this.menuZone);
+        // this.menu = new Menu(this.menuZone);
 
-        this.scene.add("menu", this.menu, true);
+        // this.scene.add("menu", this.menu, true);
+        this.scene.launch("mneu");
     }
 
     setGameBackground(){
