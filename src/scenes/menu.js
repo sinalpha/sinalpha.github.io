@@ -34,7 +34,7 @@ export default class Menu extends Phaser.Scene {
     setMenuCamera(){
         this.cameras.main.setViewport(
             this.parent.x, 
-            this.parent.y, 
+            this.parent.height/2, 
             this.parent.width, 
             this.parent.height
         );
