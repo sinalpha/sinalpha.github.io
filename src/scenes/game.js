@@ -12,11 +12,11 @@ export default class Game extends Phaser.Scene {
 
     create(){
         
-        this.cameras.main.setBackgroundColor(0x87ceeb);
+        
         
         this.divideScreen();
         this.addUniguri();
-
+        this.setGameBackground();
 
     }
 
@@ -60,5 +60,9 @@ export default class Game extends Phaser.Scene {
 
         // this.scene.add("menu", this.menu, true);
     
+    }
+
+    setGameBackground(){
+        this.cameras.main.setBackgroundColor(0x87ceeb);
     }
 }
