@@ -28,7 +28,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     setMenuBackground(){
-        this.cameras.main.setBackgroundColor(0x110011);
+        this.cameras.main.setBackgroundColor(0x000000);
     }
 
     setMenuCamera(){
