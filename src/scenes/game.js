@@ -17,7 +17,7 @@ export default class Game extends Phaser.Scene {
             width:this.cameras.main.width
         };
 
-        this.menuSize = bound;
+        this.menuSize = this.bound;
 
         this.adjustCamera();
         this.setWorld();
