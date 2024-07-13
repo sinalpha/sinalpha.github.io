@@ -53,9 +53,9 @@ export default class Game extends Phaser.Scene {
     
     setWorld(){
         this.physics.world.gravity.y = 150;
-        // this.physics.world.setBounds(
-        //     0, 0, this.bound.width, 100
-        // );
+        this.physics.world.setBounds(
+            0, 0, this.bound.width, this.bound.height
+        );
     }
 
     setGameBackground(){
