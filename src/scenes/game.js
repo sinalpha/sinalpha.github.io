@@ -30,8 +30,8 @@ export default class Game extends Phaser.Scene {
     
     adjustCamera(){
         
-        this.cameras.main.width = this.bound.width;
-        this.cameras.main.height = this.bound.height;      
+        // this.cameras.main.width = this.bound.width;
+        // this.cameras.main.height = this.bound.height;      
     
     }
     
