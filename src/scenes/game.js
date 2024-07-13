@@ -23,11 +23,7 @@ export default class Game extends Phaser.Scene {
     }
 
     addUniguri(){
-        this.player = this.add.rectangle(400, 300, 64, 64, 0xffffff);
-        this.physics.add.existing(this.player, false);
-        this.player.body.setCollideWorldBounds(true);
-        this.player.setGravity(0, 300);
-        this.physics.world.gravity.y = 150;
+        this.uniguri = new Uniguri(this, 100, 100);
     }
 
     divideScreen(){

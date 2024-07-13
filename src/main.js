@@ -10,13 +10,16 @@ const config = {
     width:width,
     height:height,
     parent: 'container',
+    scene: [BootLoader, Splash, Game],
+    
     scale:{
         mode:Phaser.Scale.FIT,
         autoCenter:Phaser.Scale.CENTER_BOTH,
     },
-    scene: [BootLoader, Splash, Game],
+    
     physics:{
         default: 'arcade',
+        
         arcade: {
             debug: false
         }
