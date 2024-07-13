@@ -40,25 +40,21 @@ export default class Menu extends Phaser.Scene {
         );
     }
 
-    createButton(name, img){
-        return  this.add.nineslice(this.buttonSize.width, this.buttonSize.height,
-            name, img);
-    }
-
+    
     addButtons(){
         buttons = [
-            createButton('status','testbutton'),
-            createButton('clean','testbutton'),
-            createButton('sleep','testbutton'),
-            createButton('work','testbutton'),
-            createButton('shop','testbutton'),
-            createButton('food','testbutton'),
-            createButton('play','testbutton'),
-            createButton('concert','testbutton'),
-            createButton('lib','testbutton'),
-            createButton('badge','testbutton'),
-            createButton('credit','testbutton'),
-            createButton('config','testbutton'),
+            this.reateButton('status','testbutton'),
+            this.createButton('clean','testbutton'),
+            this.createButton('sleep','testbutton'),
+            this.createButton('work','testbutton'),
+            this.createButton('shop','testbutton'),
+            this.createButton('food','testbutton'),
+            this.createButton('play','testbutton'),
+            this.createButton('concert','testbutton'),
+            this.createButton('lib','testbutton'),
+            this.createButton('badge','testbutton'),
+            this.createButton('credit','testbutton'),
+            this.createButton('config','testbutton'),
         ];
 
         for (let i = 0; i < 9; i++){
@@ -67,7 +63,11 @@ export default class Menu extends Phaser.Scene {
                 this.menuOrigin.y + this.buttonSize.blankHeight
             );
         }
-    }
 
-  
+    }
+    
+    createButton(name, img){
+        return  this.add.nineslice(this.buttonSize.width, this.buttonSize.height,
+            name, img);
+    }
 }
