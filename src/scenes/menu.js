@@ -42,15 +42,17 @@ export default class Menu extends Phaser.Scene {
     }
 
     
-    // addButtons(){
+    addButtons(){
         
-    //     this.buttons.push(this.createButton(
-    //         this.menuOrigin.x, this.menuOrigin.y, 'testButton', 0));
+        this.buttons.push(this.createButton(
+            this.menuOrigin.x, this.menuOrigin.y, 'testButton', 0));
 
-    // }
+    }
     
-    // createButton(x, y, img, frame){
-    //     return Phaser.GameObjects.NineSlice(this, x, y, img, frame,
-    //         this.buttonSize.width, this.buttonSize.height);
-    // }
+    createButton(x, y, img, frame){
+        return Phaser.GameObjects.NineSlice(this, x, y, img,
+            width=this.buttonSize.width,
+            height=this.buttonSize.height
+        );
+    }
 }
