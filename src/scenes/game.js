@@ -14,10 +14,10 @@ export default class Game extends Phaser.Scene {
         this.cameras.main.setBackgroundColor(0x87ceeb);
         this.divideScreen();
 
-        this.uniguri = new Uniguri(this, this.cameras.main.width / 2, 0);
+        this.uniguri = new Uniguri(this, this.cameras.main.width / 2, 100);
         this.physics.add.existing(this.uniguri, false);
         this.uniguri.body.setCollideWorldBounds(true);
-        this.uniguri.body.setGravityY(300);
+        this.uniguri.body.setGravityY(3);
     }
 
     update(){
