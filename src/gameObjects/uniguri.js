@@ -7,7 +7,6 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         scene.add.existing(this);
 
         // scene.physics.add.existing(this);
-        this.body.setVelocityY(300);
     }
 
     create(){

@@ -17,6 +17,7 @@ export default class Game extends Phaser.Scene {
         this.uniguri = new Uniguri(this, this.cameras.main.width / 2, 0);
         this.physics.add.existing(this.uniguri, false);
         this.uniguri.body.setCollideWorldBounds(true);
+        this.uniguri.body.setGravity(300);
     }
 
     update(){
