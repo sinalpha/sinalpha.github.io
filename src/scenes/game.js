@@ -32,8 +32,8 @@ export default class Game extends Phaser.Scene {
             this.menuSize = this.bound;
             
         // set physics bounds&game scene camera
-        this.cameras.main.width = this.bound.width;
-        this.cameras.main.height = this.bound.height;      
+        // this.cameras.main.width = this.bound.width;
+        // this.cameras.main.height = this.bound.height;      
 
             
             
