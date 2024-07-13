@@ -5,7 +5,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     preload(){
-
+        this.scene.bringToTop();
     }
 
     create(){
