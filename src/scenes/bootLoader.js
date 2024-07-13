@@ -60,6 +60,7 @@ export default class BootLoader extends Phaser.Scene {
         this.load.image("uniguri-splash", "../../assets/img/uniguri-splash.png");
         this.load.image("background-splash", "../../assets/img/background-splash.png");
         this.load.image("testbutton", "../../assets/img/testbutton.png");
+        this.load.spritesheets("testbutton", "../../assets/img/testbutton.png");
     }
 
     loadAudios(){
@@ -67,7 +68,7 @@ export default class BootLoader extends Phaser.Scene {
     }
 
     loadSpritesheets(){
-
+        this.load.spritesheets("testbuttonn", "../../assets/img/testbutton.png", {frameWidth: 50, frameHeight: 50, endFrame: 1});
     }
 
     setRegistry(){

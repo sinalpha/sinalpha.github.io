@@ -44,13 +44,20 @@ export default class Menu extends Phaser.Scene {
     
     addButtons(){
         
+        const testButton = {
+            key: 'testButton1',
+            frames: 'testButtonn',
+            frameRate: 20,
+            repeat: -1
+        };
+
         this.buttons.push(this.createButton(
-            this.menuOrigin.x, this.menuOrigin.y, 'testButton', 0));
+            this.menuOrigin.x, this.menuOrigin.y, 'testButton', 'testButton1'));
 
     }
     
     createButton(x, y, img, frame){
-        return Phaser.GameObjects.NineSlice(this, x, y, img, null,
+        return Phaser.GameObjects.NineSlice(this, x, y, img, frame,
             this.buttonSize.width,
             this.buttonSize.height
         );
