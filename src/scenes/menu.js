@@ -50,7 +50,7 @@ export default class Menu extends Phaser.Scene {
     }
     
     createButton(x, y, img, frame){
-        return NineSlice(this, x, y, img, frame,
+        return Phaser.GameObjects.NineSlice(this, x, y, img, frame,
             this.buttonSize.width, this.buttonSize.height);
     }
 }
