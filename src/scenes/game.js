@@ -13,9 +13,9 @@ export default class Game extends Phaser.Scene {
     create(){
         
         this.divideScreen();
+        this.setWorld();
         this.addUniguri();
         this.setGameBackground();
-
     }
 
     update(){
@@ -23,7 +23,9 @@ export default class Game extends Phaser.Scene {
     }
 
     addUniguri(){
+        
         this.uniguri = new Uniguri(this, 100, 100);
+    
     }
 
     divideScreen(){
@@ -55,6 +57,10 @@ export default class Game extends Phaser.Scene {
 
         // this.scene.add("menu", this.menu, true);
     
+    }
+
+    setWorld(){
+        this.physics.world.gravity.y = 150;
     }
 
     setGameBackground(){
