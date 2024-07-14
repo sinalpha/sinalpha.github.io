@@ -44,19 +44,74 @@ export default class Menu extends Phaser.Scene {
     
     addButtons(){
 
+        btnFn = [
+            this.activeStatus, this.activeClean, this.activeSleep, this.activeWork,
+            this.active
+        ]
+
         for(let i = 0; i < 12; i++){
             const xi = this.buttonSize.width * ( i % 4 ) + this.buttonSize.blankWidth * ( 1 + (i % 4));
             const yi = this.buttonSize.height * ( Math.floor(i / 4) ) + this.buttonSize.blankHeight * ( 1 + Math.floor(i / 4)); 
 
             this.buttons[i] = this.createButton(xi, yi, 'testButton');
+            this.buttons[i].setInteractive();
+            this.buttons[i].on('pointerdown', btnFn[i]);
             this.container.add(this.buttons[i]);
         }
     }
 
-    
     createButton(x, y, img){
         return this.add.nineslice( x, y, img)
             .setSize(this.buttonSize.width, 200)
             .setOrigin(0, 0);
     }
+
+    activeStatus(){
+
+    }
+
+    activeClean(){
+
+    }
+
+    activeSleep(){
+        console.log('done');
+    }
+
+    activeWork(){
+
+    }
+
+    activeStore(){
+
+    }
+
+    activeFood(){
+
+    }
+
+    activePlay(){
+
+    }
+
+    activeConcert(){
+
+    }
+
+    activeLib(){
+
+    }
+    
+    activeBadge(){
+
+    }
+
+    activeCredit(){
+
+    }
+
+    activeConfig(){
+
+    }
+
 }
