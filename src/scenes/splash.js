@@ -7,9 +7,13 @@ export default class Splash extends Phaser.Scene {
 
     preload(){
         const {x,y,width,height} = this.cameras.main;
-        const center = {
+        this.center = {
             x: x+width/2, y: y+height/2
-        }
+        };
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
     }
 
     create(){
@@ -33,11 +37,7 @@ export default class Splash extends Phaser.Scene {
     }
 
     setBackground(){
-        this.background = this.add.tileSprite(x,y,width,height,'background-splash')
-            .setOrigin(0)
-            .setScrollFactor(0,1);
-        this.background.width = width;
-        this.background.height = height;
+        this.add.image(this.width, this.height, 'background-splash');
         this.uniguri = this.add.image(center.x,center.y,'uniguri-splash');
     }
 }
