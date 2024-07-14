@@ -44,10 +44,24 @@ export default class Menu extends Phaser.Scene {
     
     addButtons(){
 
+        // for(let j = 0; j < 4; j++){
+        //     for(let k = 0; k < 16; k++){
+        //         const xi = this.buttonSize.width * ( i % 4 ) + this.buttonSize.blankWidth * ( 1 + (i % 4)) 
+        //         const 
+
+        //         this.addButtons.push(
+        //             this.createButton(xi, yi, 'testButton'));
+        //     }
+        // }
+        this.buttons[0] = this.createButton(0, 0, 'testButton');
+        this.container.add(this.buttons[0]);
+
     }
 
     
     createButton(x, y, img){
-        
+        return this.add.nineslice( x, y, img)
+            .setSize(50, 50)
+            .setOrigin(0, 0);
     }
 }
