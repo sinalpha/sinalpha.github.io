@@ -5,7 +5,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     preload(){
-        this.container = this.add.container(this.parent.width, 0);
+        this.container = this.add.container(0, 0);
         this.buttons = [];
         this.scene.bringToTop();
     }
@@ -53,9 +53,11 @@ export default class Menu extends Phaser.Scene {
         //     'testButton'));
         this.buttons.push(
             this.add.nineslice( 0, 0, 'testButton'));
+
         this.buttons[0].setSize(
             this.buttonSize.width,
-            this.buttonSize.height).setOrigin(0,0);
+            this.buttonSize.height).
+            setOrigin(0,0);
 
         this.container.add(this.buttons[0]);
     }
