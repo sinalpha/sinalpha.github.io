@@ -46,7 +46,7 @@ export default class Menu extends Phaser.Scene {
 
         for(let i = 0; i < 12; i++){
             const xi = this.buttonSize.width * ( i % 4 ) + this.buttonSize.blankWidth * ( 1 + (i % 4));
-            const yi = this.buttonSize.height * ( Math.floor(i / 3) ) + this.buttonSize.blankHeight * ( 1 + Math.floor(i / 3)); 
+            const yi = this.buttonSize.height * ( Math.floor(i / 4) ) + this.buttonSize.blankHeight * ( 1 + Math.floor(i / 4)); 
 
             this.buttons[i] = this.createButton(xi, yi, 'testButton');
             this.container.add(this.buttons[i]);
