@@ -38,6 +38,6 @@ export default class Splash extends Phaser.Scene {
 
     setBackground(){
         this.add.image(this.width, this.height, 'background-splash');
-        this.uniguri = this.add.image(center.x,center.y,'uniguri-splash');
+        this.uniguri = this.add.image(this.center.x,thiscenter.y,'uniguri-splash');
     }
 }
