@@ -48,8 +48,8 @@ export default class Menu extends Phaser.Scene {
 
 
         this.buttons.push(this.createButton(
-            this.menuOrigin.x + this.buttonSize.width,
-            this.menuOrigin.y + this.buttonSize.height, 
+            0,
+            0, 
             'testButton').setOrigin(1, 0));
 
         this.container.add(this.buttons[0]);
@@ -57,7 +57,7 @@ export default class Menu extends Phaser.Scene {
 
     
     createButton(x, y, img){
-        return this.addButtons.nineslice(x, y, 
+        return this.add.nineslice(x, y, 
             this.buttonSize.width,
             this.buttonSize.height,
             img,
