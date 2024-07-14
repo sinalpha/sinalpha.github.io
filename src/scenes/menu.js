@@ -50,7 +50,7 @@ export default class Menu extends Phaser.Scene {
         this.buttons.push(this.createButton(
             0,
             0, 
-            'testButton').setOrigin(1, 0));
+            'testButton'));
 
         this.container.add(this.buttons[0]);
     }
@@ -62,6 +62,6 @@ export default class Menu extends Phaser.Scene {
             this.buttonSize.height,
             img,
             24
-        );
+        ).setOrigin(1, 0);
     }
 }
