@@ -46,7 +46,7 @@ export default class Menu extends Phaser.Scene {
         
         const testButton = {
             key: 'testButton1',
-            frames: 'testButton-sptrite',
+            frames: 'testbutton-sptrite',
             frameRate: 20,
             repeat: -1
         };
