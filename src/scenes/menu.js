@@ -5,6 +5,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     preload(){
+        this.container = this.add.container(this.parent.width, 0);
         this.buttons = [];
         this.scene.bringToTop();
     }
@@ -44,19 +45,23 @@ export default class Menu extends Phaser.Scene {
     
     addButtons(){
         
-        const testButton = {
-            key: 'testButton1',
-            frames: 'testbutton-sprite',
-            frameRate: 20,
-            repeat: -1
-        };
+
 
         this.buttons.push(this.createButton(
             this.menuOrigin.x + this.buttonSize.width,
-            this.menuOrigin.y + this.buttonSize.height, 'testButton', 'testButton1'));
+            this.menuOrigin.y + this.buttonSize.height, 
+            'testButton').setOrigin(1, 0));
+
+        this.container.add(this.buttons[0]);
     }
+
     
-    createButton(x, y, img, frame){
-        return new Phaser.GameObjects.NineSlice(this, x, y, img);
+    createButton(x, y, img){
+        return this.addButtons.nineslice(x, y, 
+            this.buttonSize.width,
+            this.buttonSize.height,
+            img,
+            24
+        );
     }
 }
