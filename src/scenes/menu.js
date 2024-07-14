@@ -14,10 +14,10 @@ export default class Menu extends Phaser.Scene {
         };
 
         this.buttonSize = {
-            width: this.parent.width / 4,
-            height: this.parent.height / 5,
-            blankWidth: this.parent.width / 16,
-            blankHeight: this.parent.height / 25
+            width: this.parent.width / 5,
+            height: this.parent.height / 4,
+            blankWidth: this.parent.width / 25,
+            blankHeight: this.parent.height / 16
         }
     }
 
@@ -46,7 +46,7 @@ export default class Menu extends Phaser.Scene {
 
         for(let i = 0; i < 16; i++){
             const xi = this.buttonSize.width * ( i % 4 ) + this.buttonSize.blankWidth * ( 1 + (i % 4));
-            const yi = this.buttonSize.width * ( Math.floor(i / 4) ) + this.buttonSize.blankHeight * ( 1 + Math.floor(i / 4)); 
+            const yi = this.buttonSize.height * ( Math.floor(i / 3) ) + this.buttonSize.blankHeight * ( 1 + Math.floor(i / 3)); 
 
             this.buttons[i] = this.createButton(xi, yi, 'testButton');
             this.container.add(this.buttons[i]);

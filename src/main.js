@@ -2,7 +2,6 @@ import Splash from './scenes/splash.js'
 import Game from './scenes/game.js'
 import BootLoader from './scenes/bootLoader.js';
 
-
 const width = window.innerWidth;
 const height = window.innerHeight;
 const config = {
