@@ -15,9 +15,9 @@ export default class Menu extends Phaser.Scene {
 
         this.buttonSize = {
             width: this.parent.width / 5,
-            height: this.parent.height / 6,
+            height: this.parent.height / 5,
             blankWidth: this.parent.width / 25,
-            blankHeight: this.parent.height / 36
+            blankHeight: this.parent.height / 25
         }
     }
 
