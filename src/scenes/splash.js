@@ -38,7 +38,7 @@ export default class Splash extends Phaser.Scene {
 
     setBackground(){
 
-        img = this.add.image( this.width, this.height, 'background-splash');
+        let img = this.add.image( this.width, this.height, 'background-splash');
         let scaleX = this.width / img.width;
         let scaleY = this.height / img.height;
         let scale = Math.max(scaleX, scaleY);
