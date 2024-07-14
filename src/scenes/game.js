@@ -24,7 +24,6 @@ export default class Game extends Phaser.Scene {
         this.addUniguri();
         this.setGameBackground();
         this.createMenu();
-        this.add.nineslice( 0, 0, 'testButton').setSize(100, 100);
     }
 
     update(){
