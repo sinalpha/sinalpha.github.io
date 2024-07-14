@@ -19,7 +19,7 @@ export default class Game extends Phaser.Scene {
         
        // this.adjustCamera();
        // this.setWorld();
-        this.add.nineslice( 100, 100, 'uniguri-default').setOrigin(0,0);
+        this.add.nineslice( 100, 100, 'uniguri-default');
        // this.addUniguri();
        // this.setGameBackground();
        // this.createMenu();
