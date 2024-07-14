@@ -47,10 +47,16 @@ export default class Menu extends Phaser.Scene {
         
 
 
-        this.buttons.push(this.createButton(
-            0,
-            0, 
-            'testButton'));
+        // this.buttons.push(this.createButton(
+        //     0,
+        //     0, 
+        //     'testButton'));
+        this.buttons.push(this.add.nineslice(0,0,
+            this.buttonSize.width,
+            this.buttonSize.height,
+            'testButton',
+            24
+        ).setOrigin(1, 0));
 
         this.container.add(this.buttons[0]);
     }
