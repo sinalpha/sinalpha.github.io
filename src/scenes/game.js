@@ -7,18 +7,16 @@ export default class Game extends Phaser.Scene {
     }
 
     preload(){
-        
-    }
-
-    create(){
-        
         this.bound = { 
             height:this.cameras.main.height / 2,
             width:this.cameras.main.width
         };
 
         this.menuSize = this.bound;
+    }
 
+    create(){
+        
         this.adjustCamera();
         this.setWorld();
         this.add.nineslice( 100, 100, 'testButton');
