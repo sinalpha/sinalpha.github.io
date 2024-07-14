@@ -46,8 +46,9 @@ export default class Menu extends Phaser.Scene {
 
         const btnFn = [
             this.activeStatus, this.activeClean, this.activeSleep, this.activeWork,
-            this.active
-        ]
+            this.activeStore, this.activeFood, this.activePlay, this.activeConcert,
+            this.activeLib, this.activeBadge, this.activeCredit, this.activeConfig
+        ];
 
         for(let i = 0; i < 12; i++){
             const xi = this.buttonSize.width * ( i % 4 ) + this.buttonSize.blankWidth * ( 1 + (i % 4));
