@@ -5,7 +5,6 @@ export default class Game extends Phaser.Scene {
     constructor(){
         super({ key : "game" });
 
-        this.timer = new Phaser.Time.Clock(this);
     }
 
     preload(){
