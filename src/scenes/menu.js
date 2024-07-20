@@ -76,6 +76,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     activeSleep(){
+        
         console.log('done');
     }
 

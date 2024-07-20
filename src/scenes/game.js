@@ -4,6 +4,8 @@ import Uniguri from "../gameObjects/uniguri.js"
 export default class Game extends Phaser.Scene {
     constructor(){
         super({ key : "game" });
+
+        this.timer = new Phaser.Time.Clock(this);
     }
 
     preload(){
@@ -22,7 +24,6 @@ export default class Game extends Phaser.Scene {
         this.addUniguri();
         this.setGameBackground();
         this.createMenu();
-
     }
 
     update(){
@@ -63,5 +64,6 @@ export default class Game extends Phaser.Scene {
         this.uniguri = new Uniguri(this, 100, 100);
         this.uniguri.setCollideWorldBounds(true);
     }
+
 
 }
