@@ -1,4 +1,4 @@
-import STATE from './uniguri-state.js'
+import { STATE } from './uniguri-state.js'
 
 export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
