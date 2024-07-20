@@ -1,4 +1,4 @@
-import { STATE } from './uniguri-state.js'
+import { STATE } from '../gameObjects/uniguri-state.js'
 
 export default class Menu extends Phaser.Scene {
     constructor(parent){
