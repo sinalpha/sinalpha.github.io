@@ -4,7 +4,7 @@ export default class Menu extends Phaser.Scene {
     constructor(parent){
         super({ key : "menu" });
         this.parent = parent;
-        this.game = this.scene.get('game');
+
     }
 
     preload(){
@@ -26,6 +26,7 @@ export default class Menu extends Phaser.Scene {
 
     create(){
 
+        this.game = this.scene.get('game');
         this.setMenuBackground();
         this.setMenuCamera();
         this.addButtons();
