@@ -1,7 +1,10 @@
+import { STATE } from './uniguri-state.js'
+
 export default class Menu extends Phaser.Scene {
     constructor(parent){
         super({ key : "menu" });
         this.parent = parent;
+        this.game = this.getScene('game');
     }
 
     preload(){
@@ -76,7 +79,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     activeSleep(){
-        
+        this.game.uniguri.state = STATE["SLEEP"];
         console.log('done');
     }
 
