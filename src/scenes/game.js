@@ -1,6 +1,6 @@
 import Menu from "./menu.js"
 import Uniguri from "../gameObjects/uniguri.js"
-import STATE from "../gameObjects/uniguri-state.js"
+import { STATE } from "../gameObjects/uniguri-state.js"
 import eventsCenter from "./eventsCenter.js";
 
 
