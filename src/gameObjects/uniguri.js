@@ -16,7 +16,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     create(){
     }
 
-    preupdate(){
+    update(){
 
         switch(this.state){
             case STATE["WAKE"]:
