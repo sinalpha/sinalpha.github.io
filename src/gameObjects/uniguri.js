@@ -37,7 +37,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
     setSleepState(){
 
-        if (this.tiredness == 10)
+        if (this.tiredness >= 10)
             return;
 
         this.setTexture("uniguri-sleep");
@@ -47,7 +47,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
             callback: ()=>{ 
                 this.tiredness++;
 
-                if(this.tiredness == 10){
+                if(this.tiredness >= 10){
                     this.scene.sleepTimer.remove();
                     this.state = STATE["WAKE"];
                 }
