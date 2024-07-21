@@ -1,4 +1,5 @@
 import { STATE } from '../gameObjects/uniguri-state.js'
+import eventsCenter from './eventsCenter.js';
 
 export default class Menu extends Phaser.Scene {
     constructor(parent){
@@ -80,7 +81,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     activeSleep(){
-        this.game.uniguri.state = STATE["SLEEP"];
+        eventsCenter.emit('sleep');
         console.log('done');
     }
 

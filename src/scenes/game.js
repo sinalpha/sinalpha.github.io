@@ -1,5 +1,6 @@
 import Menu from "./menu.js"
 import Uniguri from "../gameObjects/uniguri.js"
+import eventsCenter from "./eventsCenter.js";
 
 export default class Game extends Phaser.Scene {
     constructor(){
@@ -23,6 +24,7 @@ export default class Game extends Phaser.Scene {
         this.addUniguri();
         this.setGameBackground();
         this.createMenu();
+        this.addEvent();
     }
 
     update(){
@@ -64,5 +66,12 @@ export default class Game extends Phaser.Scene {
         this.uniguri.setCollideWorldBounds(true);
     }
 
+    addEvent(){
+        eventsCenter.on('sleep', this.updateUniguri, this);
+    }
+
+    updateUniguri(){
+        this.uniguri.state = STATE["SLEEP"];
+    }
 
 }
