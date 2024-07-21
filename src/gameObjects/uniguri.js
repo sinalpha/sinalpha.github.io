@@ -34,6 +34,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     sleep(){
+        console.log("sleep");
         this.setTexture("uniguri-sleep");
     }
 }
