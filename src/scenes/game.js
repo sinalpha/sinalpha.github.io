@@ -73,6 +73,7 @@ export default class Game extends Phaser.Scene {
     }
 
     updateUniguri(){
+        console.log("sleep");
         this.uniguri.state = STATE["SLEEP"];
     }
 
