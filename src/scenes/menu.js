@@ -77,7 +77,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     activeClean(){
-
+        eventsCenter.emit('clean');
     }
 
     activeSleep(){
