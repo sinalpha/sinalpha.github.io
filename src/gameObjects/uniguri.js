@@ -23,6 +23,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
                 this.wake();
                 break;
             case STATE["SLEEP"]:
+                console.log("sleep");
                 this.sleep();
                 break;
         }

@@ -82,7 +82,6 @@ export default class Menu extends Phaser.Scene {
 
     activeSleep(){
         eventsCenter.emit('sleep');
-        console.log('done');
     }
 
     activeWork(){
