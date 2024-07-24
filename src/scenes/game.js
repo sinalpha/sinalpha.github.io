@@ -79,8 +79,8 @@ export default class Game extends Phaser.Scene {
     }
 
     addEvent(){
-        eventsCenter.on('sleep', this.updateUniguri, this);
-        eventsCenter.on('clean', this.uniguri.clean, this);
+        eventsCenter.on('sleep', this.updateUniguri.bind(), this);
+        eventsCenter.on('clean', this.uniguri.clean.bind(), this);
     }
 
     updateUniguri(){
