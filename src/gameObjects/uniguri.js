@@ -8,7 +8,8 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.scene = scene;
         this.tiredness = 10;
         this.state = STATE["WAKE"]
-        this.isSleep = false;
+
+        console.log(this.tiredness);
 
         scene.physics.add.existing(this);
         scene.add.existing(this);
@@ -36,7 +37,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     setSleepState(){
-        //need to fix
+
         if (this.tiredness >= 10)
             return;
 
