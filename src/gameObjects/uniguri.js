@@ -40,10 +40,12 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
         //check uniguri state
         if (this.tiredness >= 10){
+            //debug
             console.log("tiredness is max");
             return;
         }
         if (this.isDoing){
+            //debug
             console.log("already doing something");
             return 
         }
@@ -79,13 +81,15 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     clean(){
     
         if(this.isDoing){
+            //debug
             console.log("already doing something");
             return
         }
 
-        console.log(this.tiredness);
-
         this.tiredness-=1;
+        
+        //debug
+        console.log(this.tiredness);
     }
 
 
