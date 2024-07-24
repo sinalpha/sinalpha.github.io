@@ -53,6 +53,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
                 if (this.tiredness >= 10){
                     this.scene.sleepTimer.destroy();
                     this.state = STATE["WAKE"];
+                    this.updateState();
                 }
             },
             delay: 10000,
