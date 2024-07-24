@@ -72,6 +72,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     unsetSleep(){
         this.scene.sleepTimer.destroy();
         this.state = STATE["WAKE"];
+        this.isDoing = false;
         this.updateState();
     }
 

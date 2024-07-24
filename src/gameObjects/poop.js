@@ -1,3 +1,3 @@
-export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
-    
+export default class Poop extends Phaser.Physics.Arcade.Sprite{
+
 }
