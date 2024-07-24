@@ -32,10 +32,6 @@ export default class Game extends Phaser.Scene {
 
     update(){
 
-        if( this.uniguri.state == STATE["SLEEP"])
-            this.uniguri.tiredness++;
-
-
     }
     
     adjustCamera(){
