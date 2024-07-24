@@ -46,7 +46,9 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
         this.scene.sleepTimer = this.scene.time.addEvent({
             callback: ()=>{
-                console.log(this.tiredness);
+                //왜 600이 더해지는지 모르겠음.
+                this.tiredness-=600;
+                this.tiredness--;
             },
             delay: 10000,
             loop: true
