@@ -49,6 +49,11 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
                 //왜 600이 더해지는지 모르겠음.
                 this.tiredness-=600;
                 this.tiredness--;
+
+                if (this.tiredness >= 10){
+                    this.scene.sleepTimer.destroy();
+                    this.state = STATE["WAKE"];
+                }
             },
             delay: 10000,
             loop: true
