@@ -70,7 +70,8 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
     clean(){
     
-        if(isDoing){
+        if(this.isDoing){
+            console.log("already doing something");
             return
         }
 
