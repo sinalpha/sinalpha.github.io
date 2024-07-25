@@ -31,7 +31,7 @@ export default class Game extends Phaser.Scene {
     }
 
     update(){
-
+        this.uniguri.updateMove();
     }
     
     adjustCamera(){
