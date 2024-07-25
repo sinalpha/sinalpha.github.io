@@ -23,10 +23,9 @@ export default class Game extends Phaser.Scene {
         
         this.adjustCamera();
         this.setWorld();
-        this.addUniguri();
-        this.addPoopGenerator();
         this.setGameBackground();
         this.createMenu();
+        this.addObjects();
         this.addEvent();
     }
 
@@ -65,6 +64,11 @@ export default class Game extends Phaser.Scene {
         this.cameras.main.setBackgroundColor(0x87ceeb);
     }
 
+    addObjects(){
+        this.addPoopGenerator();
+        this.addUniguri();
+    }
+
     addPoopGenerator(){
 
     }
@@ -87,6 +91,8 @@ export default class Game extends Phaser.Scene {
 
     checkTiredness(){
         if(!this.uniguri.isDoing){
+            //debug
+            console.log("test");
             if(this.uniguri.tiredness <= 0){
                 this.uniguri.state = STATE["SLEEP"];
                 this.uniguri.updateState();
