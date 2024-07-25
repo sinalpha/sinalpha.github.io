@@ -48,6 +48,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
             Phaser.Math.Between(1, 40),
             this.nextMoveTime
         );
+        this.setVelocityY(0);
 
         this.setMoveTimer(this.nextMoveTime);
     }
