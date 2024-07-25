@@ -8,9 +8,9 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.scene = scene;
         this.sceneSize = sceneSize;
         this.tiredness = 10;
+        this.nextMoveTime = 2000;
         this.state = STATE["WAKE"]
         this.isDoing = false;
-        this.nextMoveTime = 2000;
 
         scene.physics.add.existing(this);
         scene.add.existing(this);
@@ -32,7 +32,10 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
     setTirednessTimer(){
         this.scene.TirednessTimer = this.scene.time.addEvent({
-            callback: ()=>{ this.tiredness-- },
+            callback: ()=>{ 
+                //debug
+                console.log("dec");
+                this.tiredness-- },
             delay: 30000,
             loop:true
         });
