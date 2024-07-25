@@ -6,10 +6,6 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         super(scene, x, y, 'uniguri-default');
 
         this.scene = scene;
-        this.sceneSize = {
-            x:scene.camera.main.width,
-            y:scene.camera.main.height
-        }
         this.tiredness = 10;
         this.state = STATE["WAKE"]
         this.isDoing = false;
@@ -20,6 +16,10 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     create(){
+        this.sceneSize = {
+            x: scene.camera.main.width,
+            y: scene.camera.main.height
+        }
     }
 
     updateMove(){
