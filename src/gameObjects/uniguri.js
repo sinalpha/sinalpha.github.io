@@ -78,6 +78,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     resumeAll(){
         this.setMoveTimer(this.nextMoveTime);
         this.setTirednessTimer();
+        this.stopTirednessTimer();
     }
 
     updateState(){

@@ -83,6 +83,7 @@ export default class Game extends Phaser.Scene {
         eventsCenter.on('clean', this.uniguri.clean.bind(this.uniguri), this);
     }
 
+    //need to refac
     updateUniguri(){
         this.uniguri.state = STATE["SLEEP"];
 
@@ -90,13 +91,9 @@ export default class Game extends Phaser.Scene {
     }
 
     checkTiredness(){
-        if(this.uniguri.isDoing){
-            //debug
-            console.log("test");
             if(this.uniguri.tiredness <= 0){
                 this.uniguri.state = STATE["SLEEP"];
                 this.uniguri.updateState();
             }
-        }
     }
 }
