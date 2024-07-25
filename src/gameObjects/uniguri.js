@@ -19,7 +19,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     create(){
-        const firstTime = 0; 
+        const firstTime = 2000; 
         this.setMoveTimer(firstTime);
     }
 
