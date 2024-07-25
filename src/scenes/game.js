@@ -86,9 +86,11 @@ export default class Game extends Phaser.Scene {
     }
 
     checkTiredness(){
-        if(this.uniguri.tiredness <= 0){
-            this.uniguri.state = STATE["SLEEP"];
-            this.uniguri.updateState();
+        if(!this.uniguri.isDoing){
+            if(this.uniguri.tiredness <= 0){
+                this.uniguri.state = STATE["SLEEP"];
+                this.uniguri.updateState();
+            }
         }
     }
 }
