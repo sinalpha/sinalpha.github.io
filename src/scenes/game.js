@@ -90,7 +90,7 @@ export default class Game extends Phaser.Scene {
     }
 
     checkTiredness(){
-        if(!this.uniguri.isDoing){
+        if(this.uniguri.isDoing){
             //debug
             console.log("test");
             if(this.uniguri.tiredness <= 0){
