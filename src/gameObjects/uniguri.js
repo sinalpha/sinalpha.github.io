@@ -22,6 +22,8 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     setMoveTimer(time){
+        //debug
+        console.log("set MoveTimer");
         this.scene.moveTimer = this.scene.time.addEvent({
             callback: this.updateMove.bind(this),
             delay: time,
