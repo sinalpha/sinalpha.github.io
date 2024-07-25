@@ -28,7 +28,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
         this.scene.physics.moveTo(
             this,
-            Phaser.Math.Between(40, scene.camera.main.width - 40),
+            Phaser.Math.Between(40, this.scene.camera.main.width - 40),
             this.getCenter.y,
             Phaser.Math.Between(1, 40)
         );
