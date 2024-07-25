@@ -2,14 +2,16 @@ import { STATE, MOVINGDIRC } from './uniguri-state.js'
 
 export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
-    constructor(scene, x, y){
+    constructor(scene, x, y, sceneSize){
         super(scene, x, y, 'uniguri-default');
 
         this.scene = scene;
+        this.sceneSize = sceneSize;
         this.tiredness = 10;
         this.state = STATE["WAKE"]
         this.isDoing = false;
         this.movingDirc = MOVINGDIRC["RIGHT"];
+
 
         scene.physics.add.existing(this);
         scene.add.existing(this);
@@ -28,7 +30,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
         this.scene.physics.moveTo(
             this,
-            Phaser.Math.Between(40, this.scene.camera.main.width - 40),
+            Phaser.Math.Between(40, this.sceneSize.width - 40),
             this.getCenter.y,
             Phaser.Math.Between(1, 40)
         );

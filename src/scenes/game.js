@@ -70,7 +70,7 @@ export default class Game extends Phaser.Scene {
     }
     
     addUniguri(){
-        this.uniguri = new Uniguri(this, 100, 100);
+        this.uniguri = new Uniguri(this, 100, 100, this.bound);
         this.uniguri.setCollideWorldBounds(true);
     }
 
