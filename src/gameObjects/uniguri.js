@@ -40,14 +40,11 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
             return;
         }
 
-        //debug
-        console.log(this.sceneSize.width);
-
         this.nextMoveTime = Phaser.Math.Between(5000, 10000);
         this.scene.physics.moveTo(
             this,
-            Phaser.Math.Between(40, this.sceneSize.width - 40),
-            50,
+            Phaser.Math.Between(0, this.sceneSize.width),
+            0,
             Phaser.Math.Between(1, 40),
             this.nextMoveTime
         );
@@ -118,6 +115,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.state = STATE["WAKE"];
         this.isDoing = false;
         this.updateState();
+        this.setMoveTimer(this.nextMoveTime);
     }
 
     clean(){
