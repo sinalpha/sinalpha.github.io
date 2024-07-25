@@ -10,7 +10,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.tiredness = 10;
         this.state = STATE["WAKE"]
         this.isDoing = false;
-        this.nextMoveTime = 0;
+        this.nextMoveTime = 2000;
 
         scene.physics.add.existing(this);
         scene.add.existing(this);
@@ -19,16 +19,22 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     create(){
-        const firstTime = 2000; 
-        this.setMoveTimer(firstTime);
+        this.resumeAll();
     }
 
     setMoveTimer(time){
-        //debug
-        console.log("set MoveTimer");
+
         this.scene.moveTimer = this.scene.time.addEvent({
             callback: this.updateMove.bind(this),
             delay: time,
+        });
+    }
+
+    setTirednessTimer(){
+        this.scene.TirednessTimer = this.scene.time.addEvent({
+            callback: ()=>{ this.tiredness-- },
+            delay: 30000,
+            loop:true
         });
     }
 
@@ -55,6 +61,20 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
     stopMove(){
         this.setVelocityX(0);
+    }
+
+    stopTirednessTimer(){
+        this.scene.tirednessTimer.destroy();
+    }
+
+    stopAll(){
+        this.stopMove();
+        this.stopTirednessTimer();
+    }
+
+    resumeAll(){
+        this.setMoveTimer(this.nextMoveTime);
+        this.setTirednessTimer();
     }
 
     updateState(){
@@ -94,7 +114,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.isDoing = true;
         this.setTexture("uniguri-sleep");
         this.setSize(80, 100);
-        this.stopMove();
+        this.stopAll();
 
         //fullfill tiredness
         this.scene.sleepTimer = this.scene.time.addEvent({
@@ -116,7 +136,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.state = STATE["WAKE"];
         this.isDoing = false;
         this.updateState();
-        this.setMoveTimer(this.nextMoveTime);
+        this.resumeAll();
     }
 
     clean(){
