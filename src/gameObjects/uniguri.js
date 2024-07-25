@@ -16,10 +16,6 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     create(){
-        this.sceneSize = {
-            x: scene.camera.main.width,
-            y: scene.camera.main.height
-        }
     }
 
     updateMove(){
@@ -32,7 +28,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
         this.scene.physics.moveTo(
             this,
-            Phaser.Math.Between(40, this.sceneSize.x - 40),
+            Phaser.Math.Between(40, scene.camera.main.width - 40),
             this.getCenter.y,
             Phaser.Math.Between(1, 40)
         );
