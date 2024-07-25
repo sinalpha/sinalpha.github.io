@@ -112,7 +112,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.isDoing = false;
         this.updateState();
         this.scene.physics.moveTo(
-            this, 100, 100);
+            this, 200, 100);
     }
 
     clean(){
