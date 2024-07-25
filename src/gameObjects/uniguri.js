@@ -10,8 +10,6 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.tiredness = 10;
         this.state = STATE["WAKE"]
         this.isDoing = false;
-        this.isMoving = false;
-        this.movingDirc = MOVINGDIRC["RIGHT"];
 
 
         scene.physics.add.existing(this);
@@ -19,6 +17,15 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     create(){
+        setMoveTimer();
+    }
+
+    setMoveTimer(){
+        this.scene.moveTimer = this.scene.time.addEvent({
+            callback: this.updateMove.bind(this),
+            delay: 10000,
+            loop: true
+        });
     }
 
     updateMove(){
@@ -32,20 +39,13 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         //debug
         console.log(this.sceneSize.width);
 
-        if (!isMoving){
+        this.scene.physics.moveTo(
+            this,
+            Phaser.Math.Between(40, this.sceneSize.width - 40),
+            this.getCenter.y,
+            Phaser.Math.Between(1, 40)
+        );
 
-            isMoving = true;
-
-            this.scene.physics.moveTo(
-                this,
-                Phaser.Math.Between(40, this.sceneSize.width - 40),
-                this.getCenter.y,
-                Phaser.Math.Between(1, 40)
-            );
-
-        }
-
-        
     }
 
     stopMove(){
