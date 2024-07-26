@@ -4,18 +4,18 @@ import eventsCenter from './eventsCenter.js';
 export default class Menu extends Phaser.Scene {
     constructor(){
         super({ key : "menu" });
-        this.gameScene = game.scene.getScene('game');;
-
+     
+		const gameSceneSize = {
+			widht: this.cameras.main.width,
+			height: this.camera.main.height
+		};
     }
 
     preload(){
         this.container = this.add.container(0, 0);
         this.buttons = [];
         this.scene.bringToTop();
-        		const gameSceneSize = {
-			widht: this.gameScene.cameras.main.width,
-			height: this.gameScene.cameras.main.height
-		};
+        		
 		this.menuOrigin = {
             x:0,
             y:this.gameSceneSize.height
