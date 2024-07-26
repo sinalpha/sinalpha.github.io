@@ -5,7 +5,7 @@ export default class Menu extends Phaser.Scene {
     constructor(gameScene){
         super({ key : "menu" });
         this.gameScene = gameScene;
-
+		console.log(gameScene);
     }
 
     preload(){
