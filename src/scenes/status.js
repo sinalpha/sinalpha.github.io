@@ -1,7 +1,7 @@
 export default class Status extends Phaser.Scene {
-	constructor(parent) {
+	constructor() {
 		super({ key: 'status' });
-		this.parent = parent;
+		//this.parent = parent;
 	}
 	
 	preload(){
@@ -18,11 +18,11 @@ export default class Status extends Phaser.Scene {
 	}
 	
 	setStatusCamera(){
-        this.cameras.main.setViewport(
-            this.parent.x, 
-            this.parent.height, 
-            this.parent.width, 
-            this.parent.height
-        );;
+        //this.cameras.main.setViewport(
+           // this.parent.x, 
+           // this.parent.height, 
+            //this.parent.width, 
+            //this.parent.height
+       // );;
     }
 }
