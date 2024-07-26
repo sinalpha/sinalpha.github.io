@@ -4,18 +4,17 @@ import eventsCenter from './eventsCenter.js';
 export default class Menu extends Phaser.Scene {
     constructor(){
         super({ key : "menu" });;
-     
-		
     }
 
     preload(){
         this.container = this.add.container(0, 0);
         this.buttons = [];
-        this.scene.bringToTop();
+		
         this.gameSceneSize = {
 			widht: this.cameras.main.width,
 			height: this.cameras.main.height
 		};
+		
 		this.menuOrigin = {
             x:0,
             y:this.gameSceneSize.height
@@ -38,10 +37,12 @@ export default class Menu extends Phaser.Scene {
     }
 
     setMenuBackground(){
+		
         this.cameras.main.setBackgroundColor(0xff0000);
     }
 
     setMenuCamera(){
+		this.scene.bringToTop();
         this.cameras.main.setViewport(
             0, //the coner of top left
             this.gameSceneSize.height, 
