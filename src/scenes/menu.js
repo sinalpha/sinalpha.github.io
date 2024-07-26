@@ -34,7 +34,7 @@ export default class Menu extends Phaser.Scene {
         this.game = this.game.scene.getScene('game');
         this.setMenuBackground();
         this.setMenuCamera();
-        this.addButtons();
+        this.addButtons();;
     }
 
     setMenuBackground(){
