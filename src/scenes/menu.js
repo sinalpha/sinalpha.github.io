@@ -1,22 +1,21 @@
 import { STATE } from '../gameObjects/uniguri-state.js'
 import eventsCenter from './eventsCenter.js';
-//import Status from './status.js'
 
 export default class Menu extends Phaser.Scene {
     constructor(gameScene){
         super({ key : "menu" });
         this.gameScene = gameScene;
-		const gameSceneSize = {
-			widht: gameScene.cameras.main.width,
-			height: gameScene.cameras.main.height
-		};
+
     }
 
     preload(){
         this.container = this.add.container(0, 0);
         this.buttons = [];
         this.scene.bringToTop();
-        
+        		const gameSceneSize = {
+			widht: gameScene.cameras.main.width,
+			height: gameScene.cameras.main.height
+		};
 		this.menuOrigin = {
             x:0,
             y:this.gameSceneSize.height
@@ -44,7 +43,7 @@ export default class Menu extends Phaser.Scene {
 
     setMenuCamera(){
         this.cameras.main.setViewport(
-            0, 
+            0, //the coner of top left
             this.gameSceneSize.height, 
             this.gameSceneSize.width, 
             this.gameSceneSize.height
