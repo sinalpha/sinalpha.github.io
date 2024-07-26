@@ -3,7 +3,7 @@ import eventsCenter from './eventsCenter.js';
 
 export default class Menu extends Phaser.Scene {
     constructor(){
-        super({ key : "menu" });
+        super({ key : "menu" });;
      
 		
     }
