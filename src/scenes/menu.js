@@ -3,26 +3,30 @@ import eventsCenter from './eventsCenter.js';
 //import Status from './status.js'
 
 export default class Menu extends Phaser.Scene {
-    constructor(parent){
+    constructor(gameScene){
         super({ key : "menu" });
-        this.parent = parent;
-
+        this.gameScene = gameScene;
+		const gameSceneSize = {
+			widht: gameScene.cameras.main.width,
+			height: gameScene.cameras.main.height
+		};
     }
 
     preload(){
         this.container = this.add.container(0, 0);
         this.buttons = [];
         this.scene.bringToTop();
-        this.menuOrigin = {
+        
+		this.menuOrigin = {
             x:0,
-            y:this.parent.height
+            y:this.gameSceneSize.height
         };
 
         this.buttonSize = {
-            width: this.parent.width / 5,
-            height: this.parent.height / 4,
-            blankWidth: this.parent.width / 25,
-            blankHeight: this.parent.height / 16
+            width: this.gameSceneSize.width / 5,
+            height: this.gameSceneSize.height / 4,
+            blankWidth: this.gameSceneSize.width / 25,
+            blankHeight: this.gameSceneSize.height / 16
         }
     }
 
@@ -40,10 +44,10 @@ export default class Menu extends Phaser.Scene {
 
     setMenuCamera(){
         this.cameras.main.setViewport(
-            this.parent.x, 
-            this.parent.height, 
-            this.parent.width, 
-            this.parent.height
+            0, 
+            this.gameSceneSize.height, 
+            this.gameSceneSize.width, 
+            this.gameSceneSize.height
         );
     }
 
