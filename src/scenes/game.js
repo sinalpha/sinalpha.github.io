@@ -2,7 +2,7 @@ import Menu from "./menu.js"
 import Uniguri from "../gameObjects/uniguri.js"
 import eventsCenter from "./eventsCenter.js";
 import { STATE } from "../gameObjects/uniguri-state.js"
-import { FIGURES } from "./figures.js"
+import { FIGURES } from "./gameFigures.js"
 
 export default class Game extends Phaser.Scene {
     constructor(){
