@@ -1,6 +1,3 @@
-import Menu from "./menu.js"
-//debug
-import Status from "./status.js"
 import Uniguri from "../gameObjects/uniguri.js"
 import eventsCenter from "./eventsCenter.js";
 import { STATE } from "../gameObjects/uniguri-state.js"
@@ -51,16 +48,7 @@ export default class Game extends Phaser.Scene {
     }
 
     createMenu(){
-        this.menuZone = this.add.zone(
-            0,
-            0,
-            this.menuSize.width,
-            this.menuSize.height
-        ).setInteractive().setOrigin(0);
-        
-        this.menu = new Menu(this.menuZone);
-
-        this.scene.add("menu", this.menu, true);
+        this.scene.launch("menu", this);
     }
 
     setGameBackground(){
