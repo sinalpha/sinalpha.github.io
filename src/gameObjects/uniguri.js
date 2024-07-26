@@ -1,4 +1,4 @@
-import { STATE, MOVINGDIRC } from './uniguri-state.js'
+import { STATE } from './uniguri-state.js'
 import { FIGURES } from '../gameFigures.js'
 
 export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
