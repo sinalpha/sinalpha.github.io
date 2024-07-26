@@ -1,4 +1,5 @@
 import { STATE, MOVINGDIRC } from './uniguri-state.js'
+import FIGURES from '../gameFigures.js'
 
 export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
@@ -7,8 +8,8 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
         this.scene = scene;
         this.sceneSize = sceneSize;
-        this.tiredness = 10;
-        this.nextMoveTime = 2000;
+        this.tiredness = FIGURES['MAX_TIREDNESS'];
+        this.nextMoveTime = FIGURES['FIRST_MOVE_TIME'];
         this.state = STATE["WAKE"]
         this.isDoing = false;
 
@@ -31,10 +32,8 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     setTirednessTimer(){
-        this.TirednessTimer = this.scene.time.addEvent({
+        this.scene.TirednessTimer = this.scene.time.addEvent({
             callback: ()=>{ 
-                //debug
-                console.log("dec");
                 this.tiredness-- },
             delay: 30000,
             loop:true
@@ -67,7 +66,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     stopTirednessTimer(){
-        this.tirednessTimer.destroy();
+        this.scene.tirednessTimer.remove();
     }
 
     stopAll(){
@@ -135,7 +134,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     }
 
     unsetSleepState(){
-        this.scene.sleepTimer.destroy();
+        this.scene.sleepTimer.remove();
         this.state = STATE["WAKE"];
         this.isDoing = false;
         this.updateState();
