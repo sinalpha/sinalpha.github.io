@@ -13,8 +13,8 @@ export default class Menu extends Phaser.Scene {
         this.buttons = [];
         this.scene.bringToTop();
         		const gameSceneSize = {
-			widht: gameScene.cameras.main.width,
-			height: gameScene.cameras.main.height
+			widht: this.gameScene.cameras.main.width,
+			height: this.gameScene.cameras.main.height
 		};
 		this.menuOrigin = {
             x:0,
