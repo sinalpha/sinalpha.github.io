@@ -22,13 +22,14 @@ export default class Game extends Phaser.Scene {
     }
 
     create(){
-		this.scene.launch('status', this);
+		
         this.adjustCamera();
         this.setWorld();
         this.setGameBackground();
         this.createMenu();
         this.addObjects();
         this.addEvent();
+		this.scene.launch('status', this);
     }
 
     update(){
