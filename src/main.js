@@ -1,6 +1,8 @@
 import Splash from './scenes/splash.js'
 import Game from './scenes/game.js'
 import BootLoader from './scenes/bootLoader.js';
+import Status from './scene/status.js'
+import Menu from './scene/menu.js'
 
 const game_width = window.innerWidth;
 const game_height = window.innerHeight;
@@ -9,7 +11,7 @@ const config = {
     width:game_width,
     height:game_height,
     parent: 'container',
-    scene: [BootLoader, Splash, Game],
+    scene: [BootLoader, Splash, Game, Status, Menu],
     
     scale:{
         mode:Phaser.Scale.FIT,
