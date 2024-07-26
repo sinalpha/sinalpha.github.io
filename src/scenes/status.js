@@ -23,6 +23,6 @@ export default class Status extends Phaser.Scene {
            // this.parent.height, 
             //this.parent.width, 
             //this.parent.height
-       // );;
+       // );
     }
 }
