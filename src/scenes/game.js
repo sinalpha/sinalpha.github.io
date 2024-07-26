@@ -79,14 +79,12 @@ export default class Game extends Phaser.Scene {
     }
 
     addEvent(){
-        eventsCenter.on('sleep', this.updateUniguri, this);
+        eventsCenter.on('sleep', this.detectSleep, this);
         eventsCenter.on('clean', this.uniguri.clean.bind(this.uniguri), this);
     }
 
-    //need to refac
-    updateUniguri(){
+    detectSleep(){
         this.uniguri.state = STATE["SLEEP"];
-
         this.uniguri.updateState();
     }
 
