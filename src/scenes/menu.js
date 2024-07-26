@@ -73,7 +73,9 @@ export default class Menu extends Phaser.Scene {
     }
 
     activeStatus(){
-
+		this.scene.launch('status', this);
+		this.scene.pause('menu');
+	
     }
 
     activeClean(){
