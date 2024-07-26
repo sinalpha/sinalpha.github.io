@@ -153,6 +153,9 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         
         //debug
         console.log(this.tiredness);
+		
+		//debug
+		this.stopTirednessTimer();
     }
 
 
