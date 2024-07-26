@@ -22,6 +22,7 @@ export default class Game extends Phaser.Scene {
     }
 
     create(){
+		this.scene.launch('status', this);
         this.adjustCamera();
         this.setWorld();
         this.setGameBackground();
