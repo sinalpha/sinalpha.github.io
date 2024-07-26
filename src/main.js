@@ -1,8 +1,8 @@
 import Splash from './scenes/splash.js'
 import Game from './scenes/game.js'
 import BootLoader from './scenes/bootLoader.js';
-import Status from './scene/status.js'
-import Menu from './scene/menu.js'
+import Status from './scenes/status.js'
+import Menu from './scenes/menu.js'
 
 const game_width = window.innerWidth;
 const game_height = window.innerHeight;
