@@ -1,4 +1,6 @@
 import Menu from "./menu.js"
+//debug
+import Status from "/status.js"
 import Uniguri from "../gameObjects/uniguri.js"
 import eventsCenter from "./eventsCenter.js";
 import { STATE } from "../gameObjects/uniguri-state.js"
@@ -20,7 +22,6 @@ export default class Game extends Phaser.Scene {
     }
 
     create(){
-        
         this.adjustCamera();
         this.setWorld();
         this.setGameBackground();

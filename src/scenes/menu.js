@@ -1,5 +1,6 @@
 import { STATE } from '../gameObjects/uniguri-state.js'
 import eventsCenter from './eventsCenter.js';
+//import Status from './status.js'
 
 export default class Menu extends Phaser.Scene {
     constructor(parent){
