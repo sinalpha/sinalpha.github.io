@@ -1,8 +1,8 @@
 import Menu from "./menu.js"
 import Uniguri from "../gameObjects/uniguri.js"
-import { STATE } from "../gameObjects/uniguri-state.js"
 import eventsCenter from "./eventsCenter.js";
-
+import { STATE } from "../gameObjects/uniguri-state.js"
+import { FIGURES } from "./figures.js"
 
 export default class Game extends Phaser.Scene {
     constructor(){
@@ -41,7 +41,7 @@ export default class Game extends Phaser.Scene {
     }
     
     setWorld(){
-        this.physics.world.gravity.y = 150;
+        this.physics.world.gravity.y = FIGURES['GAME_GRAVITY'];
         this.physics.world.setBounds(
             0, 0, this.bound.width, this.bound.height
         );
