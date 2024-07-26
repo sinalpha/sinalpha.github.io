@@ -35,7 +35,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.scene.tirednessTimer = this.scene.time.addEvent({
             callback: ()=>{ 
                 this.tiredness-- },
-            delay: 30000,
+            delay: FIGURES['DEC_TIREDNESS_TIME'],
             loop:true
         });
     }
@@ -48,12 +48,12 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
             return;
         }
 
-        this.nextMoveTime = Phaser.Math.Between(5000, 10000);
+        this.nextMoveTime = Phaser.Math.Between(FIGURES['MIN_MOVE_TIME'], FIGURES['MAX_MOVE_TIME']);
         this.scene.physics.moveTo(
             this,
             Phaser.Math.Between(0, this.sceneSize.width),
             0,
-            Phaser.Math.Between(1, 40),
+            Phaser.Math.Between(FIGURES['MIN_MOVE_SPEED'], FIGURES['MAX_MOVE_SPEED']),
             this.nextMoveTime
         );
         this.setVelocityY(0);
@@ -101,7 +101,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
 
         //check uniguri state
-        if (this.tiredness >= 10){
+        if (this.tiredness >= FIGURES['MAX_TIREDNESS']){
             //debug
             console.log("tiredness is max");
             return;
@@ -121,13 +121,13 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         //fullfill tiredness
         this.scene.sleepTimer = this.scene.time.addEvent({
             callback: ()=>{
-                this.tiredness+=1;
+                this.tiredness+=FIGURES['CHARGED_TIREDNESS'];
 
-                if (this.tiredness >= 10){
+                if (this.tiredness >= FIGURES['MAX_TIREDNESS']){
                     this.unsetSleepState();
                 }
             },
-            delay: 10000,
+            delay: FIGURES['SLEEP_TIME'],
             loop: true
         });
 
@@ -149,7 +149,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
             return
         }
 
-        this.tiredness-=1;
+        this.tiredness-=FIGURES['DECREASED_TIREDNESS'];
         
         //debug
         console.log(this.tiredness);
