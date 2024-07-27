@@ -12,7 +12,7 @@ export default class SubScene extends Phaser.Scene
 
 		this.cameras.main.setBackgroundColor( backgroundColor);
 
-		this.this.bringToTop();
+		this.scene.bringToTop();
 
 		this.cameras.main.setViewport(
 			0, //the coner of top left
