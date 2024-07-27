@@ -5,7 +5,7 @@ export default class Status extends Phaser.Scene {
 	
 	preload(){
 		 this.gameSceneSize = {
-			widht: this.cameras.main.width,
+			width: this.cameras.main.width,
 			height: this.cameras.main.height
 		};
 		
@@ -18,6 +18,7 @@ export default class Status extends Phaser.Scene {
 	create(){
 		this.setStatusBackground();
 		this.setStatusCamera();
+		this.addCloseBtn();
 	}
 	
 	setStatusBackground(){
@@ -34,4 +35,8 @@ export default class Status extends Phaser.Scene {
        );
 
     }
+	
+	addCloseBtn(){
+		//this.closeBtn = this.add.nineslice()
+	}
 }
