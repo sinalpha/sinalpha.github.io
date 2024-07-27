@@ -4,7 +4,15 @@ export default class Status extends Phaser.Scene {
 	}
 	
 	preload(){
+		 this.gameSceneSize = {
+			widht: this.cameras.main.width,
+			height: this.cameras.main.height
+		};
 		
+		this.menuOrigin = {
+            x:0,
+            y:this.gameSceneSize.height
+        };
 	}
 	
 	create(){
@@ -19,10 +27,11 @@ export default class Status extends Phaser.Scene {
 	setStatusCamera(){
 		this.scene.bringToTop();
         this.cameras.main.setViewport(
-           this.parent.x, 
-           this.parent.height, 
-            this.parent.width, 
-            this.parent.height
+          	0, 
+          	this.gameSceneSize.height, 
+        	this.gameSceneSize.width, 
+			this.gameSceneSize.height
        );
+
     }
 }
