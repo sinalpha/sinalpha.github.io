@@ -26,6 +26,8 @@ export default class Menu extends Phaser.Scene {
             blankWidth: this.gameSceneSize.width / 25,
             blankHeight: this.gameSceneSize.height / 16
         }
+		
+		console.log(this.cameras.main);
     }
 
     create(){
