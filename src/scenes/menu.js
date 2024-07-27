@@ -6,7 +6,7 @@ import { STATE } from '../gameObjects/uniguri-state.js'
 
 export default class Menu extends SubScene {
     constructor(){
-        super({ key : "menu" });;
+        super("menu");
     }
 
     preload(){
@@ -16,7 +16,7 @@ export default class Menu extends SubScene {
     }
 
     create(){
-        this.addButtons();;
+        this.addButtons();
     }
 
     addButtons(){
