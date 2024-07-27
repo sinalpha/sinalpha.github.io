@@ -24,10 +24,10 @@ export default class Status extends SubScene {
 			width : (this.sceneSize.width / 12 ) * 10,
 			height : this.sceneSize.height / 7.5 };
 		const hungerBarPos = { 
-			x : this.sceneSize.height / 7,
+			x : this.sceneSize.width / 12,
 			y : (this.sceneSize.height / 7) + blank.height };
 		const tirednessBarPos = { 
-			x : this.sceneSize.height / 7,
+			x : this.sceneSize.width / 12,
 			y : hungerBarPos.y + blank.height };
 		//const barLinePos = {x1: , y1: , x2: ,y2};
 		
