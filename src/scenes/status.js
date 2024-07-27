@@ -21,6 +21,13 @@ export default class Status extends SubScene {
 		}
 		this.closeBtn = this.add.nineslice( this.sceneSize.width,  0,'testButton').
 		setOrigin(1,0).
-		setSize(closeBtnSize.width,closeBtnSize.height);
+		setSize(closeBtnSize.width,closeBtnSize.height).
+		setInteractive().
+		on('pointerdown', this.activeCloseBtn.bind(this));
+	}
+	
+	activeCloseBtn(){
+		this.scene.stop();
+		this.scene.run('menu');
 	}
 }
