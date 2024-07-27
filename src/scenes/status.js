@@ -4,8 +4,7 @@ export default class Status extends Phaser.Scene {
 	}
 	
 	preload(){
-		console.log('debug');
-		 this.gameSceneSize = {
+		this.gameSceneSize = {
 			width: this.cameras.main.width,
 			height: this.cameras.main.height
 		};
@@ -28,12 +27,12 @@ export default class Status extends Phaser.Scene {
 	
 	setStatusCamera(){
 		this.scene.bringToTop();
-        this.cameras.main.setViewport(
-			0, //the coner of top left
-            this.gameSceneSize.height,
-           	this.gameSceneSize.width,
-            this.gameSceneSize.height,
-        );
+			// this.cameras.main.setViewport(
+			// 0, //the coner of top left
+			// this.gameSceneSize.height,
+			// this.gameSceneSize.width,
+			// this.gameSceneSize.height,
+			// );
     }
 	
 	addCloseBtn(){
