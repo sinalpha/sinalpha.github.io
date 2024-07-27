@@ -13,14 +13,6 @@ export default class Menu extends SubScene {
 		
 		this.setSubScene(0xff0000)
 		
-        this.container = this.add.container(0, 0);
-        this.buttons = [];
-        this.buttonSize = {
-            width: this.SceneSize.width / 5,
-            height: this.SceneSize.height / 4,
-            blankWidth: this.SceneSize.width / 25,
-            blankHeight: this.SceneSize.height / 16
-        }
     }
 
     create(){
@@ -29,6 +21,14 @@ export default class Menu extends SubScene {
 
     addButtons(){
 
+		this.container = this.add.container(0, 0);
+        this.buttons = [];
+        this.buttonSize = {
+            width: this.SceneSize.width / 5,
+            height: this.SceneSize.height / 4,
+            blankWidth: this.SceneSize.width / 25,
+            blankHeight: this.SceneSize.height / 16
+        }
         const btnFn = [
             this.activeStatus.bind(this), this.activeClean, this.activeSleep, this.activeWork,
             this.activeStore, this.activeFood, this.activePlay, this.activeConcert,
