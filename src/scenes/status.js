@@ -1,8 +1,8 @@
-import { setSubScene } from './util.js'
+import SubScene from './subScene.js'
 
-export default class Status extends Phaser.Scene {
+export default class Status extends SubScene {
 	constructor() {
-		super({ key: 'status' });
+		super('status');
 	}
 	
 	preload(){
@@ -10,7 +10,7 @@ export default class Status extends Phaser.Scene {
 		// 	width: this.cameras.main.width,
 		// 	height: this.cameras.main.height / 2
 		// };
-		setSubScene(this, 0xffff00).bind(this);
+		this.setSubScene(0xffff00);
 		
 		this.menuOrigin = {
             x:0,
