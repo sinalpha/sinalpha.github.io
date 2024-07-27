@@ -26,8 +26,6 @@ export default class Menu extends Phaser.Scene {
             blankWidth: this.gameSceneSize.width / 25,
             blankHeight: this.gameSceneSize.height / 16
         }
-		
-		console.log(this.cameras.main);
     }
 
     create(){
@@ -43,12 +41,12 @@ export default class Menu extends Phaser.Scene {
 
     setMenuCamera(){
 		this.scene.bringToTop();
-        // this.cameras.main.setViewport(
-        //     0, //the coner of top left
-        //     this.gameSceneSize.height, 
-        //     this.gameSceneSize.width, 
-        //     this.gameSceneSize.height
-        // );
+        this.cameras.main.setViewport(
+           	this.gameSceneSize.width,
+            this.gameSceneSize.height, 
+            0, //the coner of top left
+            this.gameSceneSize.height
+        );
     }
 
     
