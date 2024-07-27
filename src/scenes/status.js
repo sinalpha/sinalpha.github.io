@@ -19,8 +19,8 @@ export default class Status extends SubScene {
 		
 		const blank = { widht : this.sceneSize.width, height : this.sceneSize.height / 10 };
 		const barSize = { width : (this.sceneSize.height / 7) * 6 , height : this.sceneSize.height / 7.5 };
-		const hungerBarPos = { x: this.closeBtnSize.width, y: this.closeBtnSize.width + blank.height };
-		const tirednessBarPos = { x: this.closeBtnSize.width, y: hungerBarPos.y + blank.height};
+		const hungerBarPos = { x: this.sceneSize.height / 7, y: (this.sceneSize.height / 7) + blank.height };
+		const tirednessBarPos = { x: this.sceneSize.height / 7, y: hungerBarPos.y + blank.height};
 		
 		//add hunger bar.		
 		//this.hungerText = this.add.text();
