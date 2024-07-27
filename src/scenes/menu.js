@@ -11,7 +11,7 @@ export default class Menu extends Phaser.Scene {
         this.buttons = [];
 		
         this.gameSceneSize = {
-			widht: this.cameras.main.width,
+			width: this.cameras.main.width,
 			height: this.cameras.main.height / 2
 		};
 		
@@ -35,17 +35,17 @@ export default class Menu extends Phaser.Scene {
     }
 
     setMenuBackground(){
-		
         this.cameras.main.setBackgroundColor(0xff0000);
     }
 
     setMenuCamera(){
 		this.scene.bringToTop();
         this.cameras.main.setViewport(
+			0, //the coner of top left
+            this.gameSceneSize.height,
            	this.gameSceneSize.width,
             this.gameSceneSize.height, 
-            0, //the coner of top left
-            this.gameSceneSize.height
+
         );
     }
 
