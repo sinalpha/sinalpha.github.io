@@ -29,8 +29,7 @@ export default class Status extends SubScene {
 			fillRect(
 				hungerBarPos.x, hungerBarPos.y,
 				barSize.width, barSize.height
-			).
-			setOrigin(0,0);
+			);
 		
 		//add tiredness bar.
 		//this.tirednessText = this.add.text();
@@ -39,8 +38,7 @@ export default class Status extends SubScene {
 			fillRect(
 				tirednessBarPos.x, tirednessBarPos.y,
 				barSize.width, barSize.height
-			).
-			setOrigin(0,0);
+			);
 	}
 
 	
