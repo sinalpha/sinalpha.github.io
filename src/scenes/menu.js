@@ -53,7 +53,7 @@ export default class Menu extends Phaser.Scene {
     addButtons(){
 
         const btnFn = [
-            this.activeStatus, this.activeClean, this.activeSleep, this.activeWork,
+            this.activeStatus.bind(this), this.activeClean, this.activeSleep, this.activeWork,
             this.activeStore, this.activeFood, this.activePlay, this.activeConcert,
             this.activeLib, this.activeBadge, this.activeCredit, this.activeConfig
         ];
