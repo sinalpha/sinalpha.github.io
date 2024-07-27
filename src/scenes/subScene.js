@@ -5,7 +5,7 @@ export default class SubScene extends Phaser.Scene
 	}
 	
 	setSubScene(backgroundColor){
-		this.SceneSize = {
+		this.sceneSize = {
 			width: this.cameras.main.width,
 			height: this.cameras.main.height / 2
 		};
@@ -16,14 +16,14 @@ export default class SubScene extends Phaser.Scene
 
 		this.cameras.main.setViewport(
 			0, //the coner of top left
-			this.SceneSize.height,
-			this.SceneSize.width,
-			this.SceneSize.height, 
+			this.sceneSize.height,
+			this.sceneSize.width,
+			this.sceneSize.height, 
 		);
 		
 		this.menuOrigin = {
             x:0,
-            y:this.SceneSize.height
+            y:this.sceneSize.height
         };
 	}
 }
