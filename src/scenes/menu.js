@@ -76,7 +76,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     activeStatus(){
-		this.scene.manager.start('status');
+		this.scene.launch('status');
     }
 
     activeClean(){
