@@ -1,55 +1,32 @@
-import { STATE } from '../gameObjects/uniguri-state.js'
 import eventsCenter from './eventsCenter.js';
+import SubScene from './subScene.js'
+import { STATE } from '../gameObjects/uniguri-state.js'
 
-export default class Menu extends Phaser.Scene {
+
+
+export default class Menu extends SubScene {
     constructor(){
         super({ key : "menu" });;
     }
 
     preload(){
+		
+		this.setSubScene(0xff0000)
+		
         this.container = this.add.container(0, 0);
         this.buttons = [];
-		
-        this.gameSceneSize = {
-			width: this.cameras.main.width,
-			height: this.cameras.main.height / 2
-		};
-		
-		this.menuOrigin = {
-            x:0,
-            y:this.gameSceneSize.height
-        };
-
         this.buttonSize = {
-            width: this.gameSceneSize.width / 5,
-            height: this.gameSceneSize.height / 4,
-            blankWidth: this.gameSceneSize.width / 25,
-            blankHeight: this.gameSceneSize.height / 16
+            width: this.SceneSize.width / 5,
+            height: this.SceneSize.height / 4,
+            blankWidth: this.SceneSize.width / 25,
+            blankHeight: this.SceneSize.height / 16
         }
     }
 
     create(){
-        this.setMenuBackground();
-        this.setMenuCamera();
         this.addButtons();;
     }
 
-    setMenuBackground(){
-        this.cameras.main.setBackgroundColor(0xff0000);
-    }
-
-    setMenuCamera(){
-		this.scene.bringToTop();
-        this.cameras.main.setViewport(
-			0, //the coner of top left
-            this.gameSceneSize.height,
-           	this.gameSceneSize.width,
-            this.gameSceneSize.height, 
-
-        );
-    }
-
-    
     addButtons(){
 
         const btnFn = [
