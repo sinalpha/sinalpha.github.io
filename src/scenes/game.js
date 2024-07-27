@@ -26,7 +26,7 @@ export default class Game extends Phaser.Scene {
         this.createMenu();
         this.addObjects();
         this.addEvent();
-		this.scene.launch('status', this);
+		
     }
 
     update(){
