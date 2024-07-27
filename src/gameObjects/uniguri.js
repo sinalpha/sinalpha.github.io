@@ -11,8 +11,15 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.tiredness = FIGURES['MAX_TIREDNESS'];
         this.nextMoveTime = FIGURES['FIRST_MOVE_TIME'];
         this.state = STATE["WAKE"]
-        this.isDoing = false;
-
+        this.hunger = STATE["MAX_HUNGER"]
+		this.isDoing = false;
+		this.coin = 0;
+		this.happiness = 0;
+		this.angriness = 0;
+		this.eatenLeek = {
+			red:0 ,yellow:0 ,blue:0 ,black:0 ,white:0 ,purple: 0
+		}
+		
         scene.physics.add.existing(this);
         scene.add.existing(this);
 
@@ -33,8 +40,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
     setTirednessTimer(){
         this.scene.tirednessTimer = this.scene.time.addEvent({
-            callback: ()=>{ 
-                this.tiredness-- },
+            callback: ()=>{ this.tiredness-- },
             delay: FIGURES['DEC_TIREDNESS_TIME'],
             loop:true
         });
@@ -43,8 +49,6 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     updateMove(){
 
         if(this.isDoing){
-            //debug
-            console.log("is doing something");
             return;
         }
 
@@ -102,17 +106,13 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
         //check uniguri state
         if (this.tiredness >= FIGURES['MAX_TIREDNESS']){
-            //debug
-            console.log("tiredness is max");
             return;
         }
         if (this.isDoing){
-            //debug
-            console.log("already doing something");
             return 
         }
 
-        //
+        
         this.isDoing = true;
         this.setTexture("uniguri-sleep");
         this.setSize(80, 100);
@@ -144,15 +144,10 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     clean(){
     
         if(this.isDoing){
-            //debug
-            console.log("already doing something");
             return
         }
 
         this.tiredness-=FIGURES['DECREASED_TIREDNESS'];
-        
-        //debug
-        console.log(this.tiredness);
 		
     }
 
