@@ -12,10 +12,7 @@ export default class Status extends SubScene {
 		// };
 		this.setSubScene(0xffff00);
 		
-		this.menuOrigin = {
-            x:0,
-            y:this.gameSceneSize.height
-        };
+
 	}
 	
 	create(){
