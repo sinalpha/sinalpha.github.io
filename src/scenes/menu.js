@@ -43,12 +43,12 @@ export default class Menu extends Phaser.Scene {
 
     setMenuCamera(){
 		this.scene.bringToTop();
-        this.cameras.main.setViewport(
-            0, //the coner of top left
-            this.gameSceneSize.height, 
-            this.gameSceneSize.width, 
-            this.gameSceneSize.height
-        );
+        // this.cameras.main.setViewport(
+        //     0, //the coner of top left
+        //     this.gameSceneSize.height, 
+        //     this.gameSceneSize.width, 
+        //     this.gameSceneSize.height
+        // );
     }
 
     
