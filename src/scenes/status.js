@@ -10,7 +10,7 @@ export default class Status extends Phaser.Scene {
 		// 	width: this.cameras.main.width,
 		// 	height: this.cameras.main.height / 2
 		// };
-		setSubScene(this, 0xffff00);
+		setSubScene(this, 0xffff00).bind(this);
 		
 		this.menuOrigin = {
             x:0,
