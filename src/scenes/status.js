@@ -35,7 +35,7 @@ export default class Status extends SubScene {
 			y : hungerBarPos.y + barSize.height + blank.height };
 		//const barLinePos = {x1: , y1: , x2: ,y2};
 		
-		//add hunger bar.		
+		//add hunger bar		
 		this.hungerText = this.add.text(
 			20,
 			hungerBarPos.y,
