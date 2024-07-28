@@ -38,12 +38,12 @@ export default class Status extends SubScene {
 			'hunger',
 			{ font : 'Georgia'}
 		);
-		this.hungerBar = this.add.graphics().
-			fillStyle(0xd40000, 1).
-			fillRect(
-				hungerBarPos.x, hungerBarPos.y,
-				barSize.width, barSize.height
-			);
+		// this.hungerBar = this.add.graphics().
+		// 	fillStyle(0xd40000, 1).
+		// 	fillRect(
+		// 		hungerBarPos.x, hungerBarPos.y,
+		// 		barSize.width, barSize.height
+		// 	);
 		//add lines
 		this.barLines = [];
 		for(let i = 1; i < 10; i++){
