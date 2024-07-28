@@ -42,14 +42,14 @@ export default class Status extends SubScene {
 			'hunger',
 			{color : 0x0000ff, fontSize: 40}
 		);
-		// this.hungerBar = this.add.graphics().
-		// 	fillStyle(0xd40000, 1).
-		// 	fillRect(
-		// 		hungerBarPos.x, hungerBarPos.y,
-		// 		barSize.width, barSize.height
-		// 	);
+		this.hungerBar = this.add.graphics().
+			fillStyle(0xd40000, 1).
+			fillRect(
+				hungerBarPos.x, hungerBarPos.y,
+				barSize.width, barSize.height
+			);
 		//add lines.
-		const graphics = this.add.graphics({lineStyle: {width: 5, color:0x0000ff}});
+		const graphics = this.add.graphics({lineStyle: {width: 5, color:0x000000}});
 		for(let i = 1; i < 10; i++){
 			 graphics.lineBetween(
 				cellSize.width * (3 + i),
@@ -62,7 +62,7 @@ export default class Status extends SubScene {
 		//add tiredness bar.
 		this.hungerText = this.add.text(
 			20,
-			hungerBarPos.y,
+			tirednessBarPos.y,
 			'tiredness',
 			{color : 0x0000ff, fontSize: 40}
 		);
