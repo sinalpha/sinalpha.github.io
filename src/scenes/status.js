@@ -19,7 +19,7 @@ export default class Status extends SubScene {
 	}
 	
 	update(){
-		
+		this.updateGuageBar(this.gameScene.uniguri.hunger, this.gameScene.uniguri.tiredness);
 	}
 	
 	addStatusBar(){
