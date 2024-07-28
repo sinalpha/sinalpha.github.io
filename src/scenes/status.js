@@ -33,7 +33,7 @@ export default class Status extends SubScene {
 		
 		//add hunger bar.		
 		this.hungerText = this.add.text(
-			hungerBarPos.x,
+			(this.sceneSize.width / 15),
 			hungerBarPos.y,
 			'hunger',
 			{ font : 'Georgia'}
