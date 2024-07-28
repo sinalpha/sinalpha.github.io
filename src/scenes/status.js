@@ -44,7 +44,7 @@ export default class Status extends SubScene {
 		// 		hungerBarPos.x, hungerBarPos.y,
 		// 		barSize.width, barSize.height
 		// 	);
-		//add lines
+		//add lines.
 		const graphics = this.add.graphics({lineStyle: {width: 5, color:0x0000ff}});
 		for(let i = 1; i < 10; i++){
 			graphics.beginPath();
