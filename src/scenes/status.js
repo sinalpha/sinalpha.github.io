@@ -7,6 +7,7 @@ export default class Status extends SubScene {
 	}
 	
 	preload(){
+		this.gameScene = this.scene.manager.getScene('game');
 		this.setSubScene(0xffff00);
 		this.addCloseBtn();
 		this.addStatusBar();
@@ -14,7 +15,11 @@ export default class Status extends SubScene {
 	}
 	
 	create(){
-
+		
+	}
+	
+	update(){
+		
 	}
 	
 	addStatusBar(){
@@ -83,8 +88,6 @@ export default class Status extends SubScene {
 			 );
 		}
 	}
-
-	
 	
 	updateGuageBar(hunger, tiredness){
 		const cellSize = {
