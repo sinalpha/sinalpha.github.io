@@ -32,13 +32,31 @@ export default class Status extends SubScene {
 		//const barLinePos = {x1: , y1: , x2: ,y2};
 		
 		//add hunger bar.		
-		//this.hungerText = this.add.text();
+		this.hungerText = this.add.text(
+			hungerBarPos.x,
+			hungerBarPos.y,
+			'hunger',
+			{ font : 'Georgia'}
+		);
 		this.hungerBar = this.add.graphics().
 			fillStyle(0xd40000, 1).
 			fillRect(
 				hungerBarPos.x, hungerBarPos.y,
 				barSize.width, barSize.height
 			);
+		//add lines
+		this.barLines = [];
+		for(let i = 1; i < 10; i++){
+			this.barLines.push(
+				this.add.line(
+					(this.sceneSize.width / 15) * (3 + i),
+					hungerBarPos.y,
+					(this.sceneSize.width / 15) * (3 + i),
+					hungerBarPos.y,
+					(this.sceneSize.width / 15) * (3 + i),
+					hungerBarPos.y + blank.height,
+					0xffffff
+		))}
 		
 		//add tiredness bar.
 		//this.tirednessText = this.add.text();
