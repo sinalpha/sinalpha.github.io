@@ -54,7 +54,7 @@ export default class Status extends SubScene {
 					hungerBarPos.y,
 					(this.sceneSize.width / 15) * (3 + i),
 					hungerBarPos.y + blank.height,
-					0xffffff
+					0x000000
 		))}
 		
 		//add tiredness bar.
