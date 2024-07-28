@@ -36,6 +36,7 @@ export default class Status extends SubScene {
 			(this.sceneSize.width / 15),
 			hungerBarPos.y,
 			'hunger',
+			{color : 0x000000}
 		);
 		// this.hungerBar = this.add.graphics().
 		// 	fillStyle(0xd40000, 1).
