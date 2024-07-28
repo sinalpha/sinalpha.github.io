@@ -39,7 +39,7 @@ export default class Status extends SubScene {
 		this.hungerText = this.add.text(
 			20,
 			hungerBarPos.y,
-			'hunger',
+			'허기',
 			{color : 0x0000ff, fontSize: 40}
 		);
 		this.hungerBar = this.add.graphics().
@@ -48,9 +48,9 @@ export default class Status extends SubScene {
 				hungerBarPos.x, hungerBarPos.y,
 				barSize.width, barSize.height
 			);
-		const graphics = this.add.graphics({lineStyle: {width: 2, color:0x000000}});
+		const hungerLines = this.add.graphics({lineStyle: {width: 2, color:0x000000}});
 		for(let i = 1; i < 10; i++){
-			 graphics.lineBetween(
+			 hungerLines.lineBetween(
 				cellSize.width * (3 + i),
 				hungerBarPos.y,
 				cellSize.width * (3 + i),
@@ -62,7 +62,7 @@ export default class Status extends SubScene {
 		this.hungerText = this.add.text(
 			20,
 			tirednessBarPos.y,
-			'tiredness',
+			'피로도',
 			{color : 0x0000ff, fontSize: 30}
 		);
 		this.tirednessBar = this.add.graphics().
@@ -71,8 +71,9 @@ export default class Status extends SubScene {
 				tirednessBarPos.x, tirednessBarPos.y,
 				barSize.width, barSize.height
 			);
+		const tirednessLines = this.add.graphics({lineStyle: {width: 2, color:0x000000}});
 		for(let i = 1; i < 10; i++){
-			 graphics.lineBetween(
+			 tirednessLines.lineBetween(
 				cellSize.width * (3 + i),
 				tirednessBarPos.y,
 				cellSize.width * (3 + i),
