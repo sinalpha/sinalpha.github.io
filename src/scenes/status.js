@@ -9,10 +9,12 @@ export default class Status extends SubScene {
 	preload(){
 		this.setSubScene(0xffff00);
 		this.addCloseBtn();
+		this.addStatusBar();
+		this.updateGuageBar(0, 0);
 	}
 	
 	create(){
-		this.addStatusBar();
+
 	}
 	
 	addStatusBar(){
@@ -33,7 +35,7 @@ export default class Status extends SubScene {
 		const tirednessBarPos = { 
 			x : hungerBarPos.x,
 			y : hungerBarPos.y + barSize.height + blank.height };
-		//const barLinePos = {x1: , y1: , x2: ,y2};
+
 		
 		//add hunger bar.		
 		this.hungerText = this.add.text(
@@ -82,5 +84,40 @@ export default class Status extends SubScene {
 		}
 	}
 
+	
+	
+	updateGuageBar(hunger, tiredness){
+		const cellSize = {
+			width : this.sceneSize.width / 15,
+			height : this.sceneSize.height / 20
+		};
+		const blank = { 
+			widht : this.sceneSize.width,
+			height :  cellSize.height};
+		const barSize = { 
+			width : cellSize.width * 10,
+			height : cellSize.height * 2};
+		const hungerBarPos = { 
+			x : cellSize.width * 3,
+			y : cellSize.height * 3};
+		const tirednessBarPos = { 
+			x : hungerBarPos.x,
+			y : hungerBarPos.y + barSize.height + blank.height };
+		
+		
+		this.hungerGaugeBar = this.add.graphics().
+			fillStyle(0x00d400, 1).
+			fillRect(
+				hungerBarPos.x, hungerBarPos.y,
+				cellSize.width * hunger, barSize.height
+			);
+		
+		this.tirednessGaugeBar = this.add.graphics().
+			fillStyle(0x00d400, 1).
+			fillRect(
+				tirednessBarPos.x, tirednessBarPos.y,
+				cellSize.width * tiredness, barSize.height
+			);
+	}
 	
 }
