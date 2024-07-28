@@ -45,18 +45,17 @@ export default class Status extends SubScene {
 		// 		barSize.width, barSize.height
 		// 	);
 		//add lines
-		this.barLines = [];
+		const graphics = this.add.graphics({lineStyle: {width: 3, color:0x000000}});
 		for(let i = 1; i < 10; i++){
-			this.barLines.push(
-				this.add.line(
-					(this.sceneSize.width / 15) * (3 + i),
-					hungerBarPos.y,
-					(this.sceneSize.width / 15) * (3 + i),
-					hungerBarPos.y,
-					(this.sceneSize.width / 15) * (3 + i),
-					hungerBarPos.y + blank.height,
-					0x000000
-		))}
+			graphics.beginPath();
+			graphics.moveTo(
+				(this.sceneSize.width / 15 ) * ( 3 + i ),
+				(this.sceneSize.height / 20) * 3,
+				(this.sceneSize.width / 15 ) * ( 3 + i ),
+				((this.sceneSize.height / 20) * 3) + barSize.height
+			);
+			graphics.beginPath();
+		}
 		
 		//add tiredness bar.
 		//this.tirednessText = this.add.text();
