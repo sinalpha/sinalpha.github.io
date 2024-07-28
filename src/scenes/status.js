@@ -36,7 +36,7 @@ export default class Status extends SubScene {
 			(this.sceneSize.width / 15),
 			hungerBarPos.y,
 			'hunger',
-			{color : 0x000000}
+			{color : 0x0000ff}
 		);
 		// this.hungerBar = this.add.graphics().
 		// 	fillStyle(0xd40000, 1).
@@ -45,7 +45,7 @@ export default class Status extends SubScene {
 		// 		barSize.width, barSize.height
 		// 	);
 		//add lines
-		const graphics = this.add.graphics({lineStyle: {width: 3, color:0x000000}});
+		const graphics = this.add.graphics({lineStyle: {width: 3, color:0x0000ff}});
 		for(let i = 1; i < 10; i++){
 			graphics.beginPath();
 			graphics.moveTo(
