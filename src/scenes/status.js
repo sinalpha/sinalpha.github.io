@@ -20,7 +20,7 @@ export default class Status extends SubScene {
 	}
 	
 	update(){
-		this.updateGuageBars(this.uniguri);
+		this.hungerBar.updateGuageBar(this.uniguri);
 	}
 	
 	addStatusBar(){
@@ -37,14 +37,15 @@ export default class Status extends SubScene {
 		// 	height : cellSize.height * 2};
 		this.hungerBar = new StatusBar(this);
 		//const tirednessBar = new StatusBar(this.scene);
-		
 		const hungerBarPos = { 
 			x : this.hungerBar.cellSize.width * 3,
 			y : this.hungerBar.cellSize.height * 3};
+		this.hungerBar.createBar('허기', 40, hungerBarPos);
+		
 		// const tirednessBarPos = { 
 		// 	x : hungerBarPos.x,
 		// 	y : hungerBarPos.y + tirednessBar.barSize.height + tirednessBar.blank.height };
-		this.hungerBar.createBar('허기', 40, hungerBarPos);
+		
 		
 		//add hunger bar.		
 		// this.hungerText = this.add.text(
