@@ -45,7 +45,7 @@ export default class Status extends SubScene {
 		// const tirednessBarPos = { 
 		// 	x : hungerBarPos.x,
 		// 	y : hungerBarPos.y + tirednessBar.barSize.height + tirednessBar.blank.height };
-
+		hungerBar.createBar('허기', 40, hungerBarPos);
 		
 		//add hunger bar.		
 		// this.hungerText = this.add.text(
