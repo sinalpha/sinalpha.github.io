@@ -3,8 +3,6 @@ export default class StatusBar {
 		
 		this.scene = scene;
 		
-		console.log(this.scene.sceneSize);
-		
 		this.cellSize = {
 			width : this.scene.sceneSize.width / 15,
 			height : this.scene.sceneSize.height / 20};
