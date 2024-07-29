@@ -26,7 +26,6 @@ export default class Status extends SubScene {
 	
 	addStatusBar(){
 		
-
 		this.hungerBar = new StatusBar(this);
 		const hungerBarPos = { 
 			x : this.hungerBar.cellSize.width * 3,

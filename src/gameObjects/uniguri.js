@@ -10,8 +10,8 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.sceneSize = sceneSize;
         this.tiredness = FIGURES['MAX_TIREDNESS'];
         this.nextMoveTime = FIGURES['FIRST_MOVE_TIME'];
+		this.hunger = FIGURES["MAX_HUNGER"]
         this.state = STATE["WAKE"]
-        this.hunger = STATE["MAX_HUNGER"]
 		this.isDoing = false;
 		this.coin = 0;
 		this.happiness = 0;
