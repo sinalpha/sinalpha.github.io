@@ -9,7 +9,7 @@ export default class Status extends SubScene {
 	
 	preload(){
 		this.gameScene = this.scene.manager.getScene('game');
-		this.uniguri = this.gameScene.uniguri;
+		
 		this.setSubScene(0xffff00);
 		this.addCloseBtn();
 		this.addStatusBar();
@@ -20,6 +20,7 @@ export default class Status extends SubScene {
 	}
 	
 	update(){
+		this.uniguri = this.gameScene.uniguri;
 		this.updateGuageBars(this.uniguri)
 		
 	}
