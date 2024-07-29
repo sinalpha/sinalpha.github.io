@@ -24,7 +24,7 @@ export default class StatusBar {
 		
 		this.createText();
 		this.createBaseBar();
-		this.lines();
+		this.createLines();
 	}
 	
 	createText(){
