@@ -17,7 +17,6 @@ export default class StatusBar {
 	}
 	
 	createBar(text, fontSize, pos){
-		
 		this.text = text;
 		this.fontSize = fontSize;
 		this.pos = pos;
