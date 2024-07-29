@@ -45,6 +45,14 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
             loop:true
         });
     }
+	
+	setHungerTimer(){
+		this.scene.hungerTimer = this.scene.time.addEvent({
+            callback: ()=>{ this.hunger-- },
+            delay: FIGURES['DEC_HUNGER_TIME'],
+            loop:true
+        });
+	}
 
     updateMove(){
 
@@ -72,15 +80,21 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     stopTirednessTimer(){
         this.scene.tirednessTimer.remove();
     }
+	
+	stopHungerTimer(){
+		this.scene.hungerTimer.remove();
+	}
 
     stopAll(){
         this.stopMove();
         this.stopTirednessTimer();
+		this.stopHungerTimer();
     }
 
     resumeAll(){
         this.setMoveTimer(this.nextMoveTime);
         this.setTirednessTimer();
+		this.setHungerTimer();
     }
 
     updateState(){
