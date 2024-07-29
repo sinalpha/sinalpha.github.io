@@ -13,7 +13,6 @@ export default class Status extends SubScene {
 		this.setSubScene(0xffff00);
 		this.addCloseBtn();
 		this.addStatusBar();
-		this.updateGuageBar(0, 0);
 	}
 	
 	create(){
@@ -40,8 +39,8 @@ export default class Status extends SubScene {
 		//const tirednessBar = new StatusBar(this.scene);
 		
 		const hungerBarPos = { 
-			x : hungerBar.cellSize.width * 3,
-			y : hungerBar.cellSize.height * 3};
+			x : this.hungerBar.cellSize.width * 3,
+			y : this.hungerBar.cellSize.height * 3};
 		// const tirednessBarPos = { 
 		// 	x : hungerBarPos.x,
 		// 	y : hungerBarPos.y + tirednessBar.barSize.height + tirednessBar.blank.height };
