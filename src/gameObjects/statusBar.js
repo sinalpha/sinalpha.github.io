@@ -58,7 +58,7 @@ export default class StatusBar {
 	}
 	
 	updateGuageBar(uniguri){
-		this.hungerGaugeBar = this.add.graphics().
+		this.hungerGaugeBar = this.scene.add.graphics().
 		fillStyle(0x00d400, 1).
 		fillRect(
 			this.pos.x, this.pos.y,
