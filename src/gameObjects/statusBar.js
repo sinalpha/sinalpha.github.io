@@ -46,7 +46,7 @@ export default class StatusBar {
 	}
 	
 	createLines(){
-		const lines = this.add.graphics({lineStyle: {width: 2, color:0x000000}});
+		const lines = this.scene.add.graphics({lineStyle: {width: 2, color:0x000000}});
 		for(let i = 1; i < 10; i++){
 			 lines.lineBetween(
 				this.cellSize.width * (3 + i),
