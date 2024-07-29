@@ -36,7 +36,7 @@ export default class Status extends SubScene {
 		// const barSize = { 
 		// 	width : cellSize.width * 10,
 		// 	height : cellSize.height * 2};
-		const hungerBar = new StatusBar(this.scene);
+		const hungerBar = new StatusBar(this);
 		//const tirednessBar = new StatusBar(this.scene);
 		
 		const hungerBarPos = { 
