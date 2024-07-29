@@ -20,6 +20,7 @@ export default class Status extends SubScene {
 	}
 	
 	update(){
+		console.log("do");
 		this.gameScene = this.scene.manager.getScene('game');
 		this.uniguri = this.gameScene.uniguri;
 		this.updateGuageBars(this.uniguri)
