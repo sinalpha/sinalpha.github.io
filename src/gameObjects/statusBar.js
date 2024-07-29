@@ -22,8 +22,7 @@ export default class StatusBar {
 		this.pos = pos;
 		
 		this.createText();
-		this.createBaseBar();
-		this.createLines();
+
 	}
 	
 	createText(){
@@ -57,6 +56,10 @@ export default class StatusBar {
 	}
 	
 	updateGuageBar(num){
+		
+		this.createBaseBar();
+		this.createLines();
+		
 		this.hungerGaugeBar = this.scene.add.graphics().
 		fillStyle(0x00d400, 1).
 		fillRect(
