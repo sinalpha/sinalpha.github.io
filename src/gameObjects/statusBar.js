@@ -1,16 +1,18 @@
 export default class StatusBar {
 	constructor(scene){
 		
+		this.scene = scene;
+		
 		this.cellSize = {
-			width : this.sceneSize.width / 15,
-			height : this.sceneSize.height / 20};
+			width : this.scene.sceneSize.width / 15,
+			height : this.scene.sceneSize.height / 20};
 		this.blank = { 
-			widht : this.sceneSize.width,
+			widht : this.scene.sceneSize.width,
 			height :  this.cellSize.height};
 		this.barSize = { 
 			width : this.cellSize.width * 10,
 			height : this.cellSize.height * 2};
-		this.scene = scene;
+	
 	
 	}
 	
