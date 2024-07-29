@@ -20,7 +20,7 @@ export default class Status extends SubScene {
 	}
 	
 	update(){
-		this.hungerBar.updateGuageBar(this.uniguri);
+		this.hungerBar.updateGuageBar(this.uniguri.hungerness);
 	}
 	
 	addStatusBar(){
