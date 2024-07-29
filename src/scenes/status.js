@@ -24,7 +24,7 @@ export default class Status extends SubScene {
 	}
 	
 	addStatusBar(){
-		//
+		
 		// const cellSize = {
 		// 	width : this.sceneSize.width / 15,
 		// 	height : this.sceneSize.height / 20
