@@ -20,8 +20,8 @@ export default class Status extends SubScene {
 	}
 	
 	update(){
-		this.hungerBar.updateGuageBar(this.uniguri.hunger);
-		this.tirednessBar.updateGuageBar(this.uniguri.tiredness);
+		this.updateGuageBars(this.uniguri)
+		
 	}
 	
 	addStatusBar(){
@@ -42,38 +42,9 @@ export default class Status extends SubScene {
 		
 	}
 	
-	updateGuageBar(uniguri){
-		// const cellSize = {
-		// 	width : this.sceneSize.width / 15,
-		// 	height : this.sceneSize.height / 20
-		// };
-		// const blank = { 
-		// 	widht : this.sceneSize.width,
-		// 	height :  cellSize.height};
-		// const barSize = { 
-		// 	width : cellSize.width * 10,
-		// 	height : cellSize.height * 2};
-		// const hungerBarPos = { 
-		// 	x : cellSize.width * 3,
-		// 	y : cellSize.height * 3};
-		// const tirednessBarPos = { 
-		// 	x : hungerBarPos.x,
-		// 	y : hungerBarPos.y + barSize.height + blank.height };
-		
-		
-		// this.hungerGaugeBar = this.add.graphics().
-		// 	fillStyle(0x00d400, 1).
-		// 	fillRect(
-		// 		hungerBarPos.x, hungerBarPos.y,
-		// 		cellSize.width * this.hunger, barSize.height
-		// 	);
-		
-		// this.tirednessGaugeBar = this.add.graphics().
-		// 	fillStyle(0x00d400, 1).
-		// 	fillRect(
-		// 		tirednessBarPos.x, tirednessBarPos.y,
-		// 		cellSize.width * this.tiredness, barSize.height
-		// 	);
+	updateGuageBars(uniguri){
+		this.hungerBar.updateGuageBar(uniguri.hunger);
+		this.tirednessBar.updateGuageBar(uniguri.tiredness);
 	}
 	
 }
