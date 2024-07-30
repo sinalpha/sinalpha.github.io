@@ -14,7 +14,7 @@ export default class Food extends SubScene {
 	}
 	
 	scrollCamera(event){
-		console.log("do");
-		//console.log(event.deltaY);
+
+		console.log(event.deltaY);
 	}
 }
