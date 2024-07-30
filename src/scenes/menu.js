@@ -31,7 +31,7 @@ export default class Menu extends SubScene {
         }
         const btnFn = [
             this.activeStatus.bind(this), this.activeClean, this.activeSleep, this.activeWork,
-            this.activeStore, this.activeFood, this.activePlay, this.activeConcert,
+            this.activeStore, this.activeFood.bind(this), this.activePlay, this.activeConcert,
             this.activeLib, this.activeBadge, this.activeCredit, this.activeConfig
         ];
 
