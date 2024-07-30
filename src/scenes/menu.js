@@ -74,7 +74,8 @@ export default class Menu extends SubScene {
     }
 
     activeFood(){
-
+		this.scene.launch('food');
+		this.scene.pause();
     }
 
     activePlay(){
