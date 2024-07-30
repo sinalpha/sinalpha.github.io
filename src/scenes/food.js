@@ -18,7 +18,7 @@ export default class Food extends SubScene {
 	
 	scrollCamera(event){
 
-		console.log(game.input.y);	
+		console.log(this.game.input.y);	
 		
 	
 	}
