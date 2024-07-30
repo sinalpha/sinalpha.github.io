@@ -8,6 +8,7 @@ export default class Food extends SubScene {
 	preload(){}
 	
 	create(){
+		this.setSubScene(0xffff00);
 		this.addCloseBtn();
 		this.input.on("POINTER_WHEEL", this.scrollCamera);
 	}
