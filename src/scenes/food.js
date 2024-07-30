@@ -10,7 +10,7 @@ export default class Food extends SubScene {
 	create(){
 		this.setSubScene(0xffff00);
 		this.addCloseBtn();
-		this.input.on("POINTER_UP", this.scrollCamera);
+		this.input.on("wheel", this.scrollCamera);
 	}
 	
 	scrollCamera(event){
