@@ -5,5 +5,13 @@ export default class Food extends SubScene {
         super("Food");
 	}
 	
+	preload(){}
 	
+	create(){
+		this.input.on("POINTER_WHEEL",scrollCamera);
+	}
+	
+	scrollCamera(event){
+		console.log(event.deltaY);
+	}
 }
