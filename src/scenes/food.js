@@ -11,11 +11,11 @@ export default class Food extends SubScene {
 	
 	create(){
 		
-
-
 		this.setSubScene(0xffff00);
 		this.addCloseBtn();
 		
+		console.log(this.cameras.main.centerX);
+		console.log(this.cameras.main.centerY);
 	}
 	
 	update(){
@@ -29,7 +29,7 @@ export default class Food extends SubScene {
 
 			this.cameras.main.pan(
 				this.cameras.main.centerX, 
-				this.cameras.main.centerY,
+				this.cameras.main.centerY + deltaY,
 				10000
 			);
 
