@@ -5,21 +5,25 @@ export default class Food extends SubScene {
         super("food");
 	}
 	
-	preload(){}
-	
-	create(){
-		this.setSubScene(0xffff00);
-		this.addCloseBtn();
-		this.input.on("pointerdown", this.scrollCamera.bind(this));
-		// this.input.on("pointermove", (pointer)=>{
-			
-		// });
+	preload(){
+		this.pointer = this.scene.input.activePointer;
 	}
 	
-	scrollCamera(event){
-
-		console.log(this.game.input.y);	
+	create(){
 		
+
+
+		this.setSubScene(0xffff00);
+		this.addCloseBtn();
+		
+	}
+	
+	update(){
+		if(this.pointer.isDown)
+			console.log(this.game.input.y);	
+	}
+
+	scrollCamera(event){		
 	
 	}
 }
