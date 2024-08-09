@@ -6,7 +6,7 @@ export default class Food extends SubScene {
 	}
 	
 	preload(){
-		this.pointer = this.scene.input.activePointer;
+		
 	}
 	
 	create(){
@@ -19,6 +19,7 @@ export default class Food extends SubScene {
 	}
 	
 	update(){
+		this.pointer = this.scene.input.activePointer;
 		if(this.pointer.isDown)
 			console.log(this.game.input.y);	
 	}
