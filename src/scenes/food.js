@@ -25,8 +25,10 @@ export default class Food extends SubScene {
 
 	detectScroll(){		
 		if(this.pointer.isDown){
-			downY, curY = this.pointer.getDistanceY();
-			
+			const { downY, curY} = this.pointer.getDistanceY();
+			const deltaY = curY - downY;
+
+
 		}
 	}
 }
