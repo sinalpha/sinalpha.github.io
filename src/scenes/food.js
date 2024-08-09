@@ -20,11 +20,13 @@ export default class Food extends SubScene {
 	
 	update(){
 
-		if(this.pointer.isDown)
-			console.log(this.game.input.y);	
+		this.detectScroll()
 	}
 
-	scrollCamera(event){		
-	
+	detectScroll(){		
+		if(this.pointer.isDown){
+			downY, curY = this.pointer.getDistanceY();
+			
+		}
 	}
 }
