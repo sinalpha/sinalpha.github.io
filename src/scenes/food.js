@@ -23,11 +23,11 @@ export default class Food extends SubScene {
 
 	detectScroll(){		
 		if(this.pointer.isDown){
-			const deltaY = this.pointer.getDistanceY();
+			const deltaY = this.pointer.y - this.pointer.downY;
 
 			console.log(deltaY);
 
-			
+
 			// this.cameras.main.pan(
 			// 	this.cameras.main.centerX, 
 			// 	this.cameras.main.centerY + deltaY,
