@@ -35,7 +35,7 @@ export default class StatusBar {
 	}
 	
 	createBaseBar(){
-		this.hungerBar = this.scene.add.graphics().
+		this.bar = this.scene.add.graphics().
 			fillStyle(0xd40000, 1).
 			fillRect(
 				this.pos.x, this.pos.y,
@@ -44,14 +44,15 @@ export default class StatusBar {
 	}
 	
 	createLines(){
-		const lines = this.scene.add.graphics({lineStyle: {width: 2, color:0x000000}});
+		this.lines = this.scene.add.graphics({lineStyle: {width: 2, color:0x000000}});
+		
 		for(let i = 1; i < 10; i++){
-			 lines.lineBetween(
+			this.lines.lineBetween(
 				this.cellSize.width * (3 + i),
 				this.pos.y,
 				this.cellSize.width * (3 + i),
 				this.pos.y + this.barSize.height
-			 );
+			);
 		}
 	}
 	
@@ -60,7 +61,8 @@ export default class StatusBar {
 		this.createBaseBar();
 		this.createLines();
 		
-		this.hungerGaugeBar = this.scene.add.graphics().
+		this.gaugeBar = this.scene.add.graphics().
+		
 		fillStyle(0x00d400, 1).
 		fillRect(
 			this.pos.x, this.pos.y,
