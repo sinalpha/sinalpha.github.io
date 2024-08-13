@@ -25,6 +25,9 @@ export default class Food extends SubScene {
 		if(this.pointer.isDown){
 			const deltaY = this.pointer.getDistanceY();
 
+			console.log(deltaY);
+
+			
 			// this.cameras.main.pan(
 			// 	this.cameras.main.centerX, 
 			// 	this.cameras.main.centerY + deltaY,
