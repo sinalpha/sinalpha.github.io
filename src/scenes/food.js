@@ -18,7 +18,8 @@ export default class Food extends SubScene {
 	
 	update(){
 
-		this.detectScroll()
+		this.detectScroll();
+
 	}
 
 	detectScroll(){		
@@ -28,11 +29,11 @@ export default class Food extends SubScene {
 			console.log(deltaY);
 
 
-			// this.cameras.main.pan(
-			// 	this.cameras.main.centerX, 
-			// 	this.cameras.main.centerY + deltaY,
-			// 	10000
-			// );
+			this.cameras.main.pan(
+				this.cameras.main.centerX, 
+				this.cameras.main.centerY + deltaY,
+				10000
+			);
 			
 		}
 	}
