@@ -24,21 +24,19 @@ export default class Food extends SubScene {
 
 	detectScroll(){		
 		if(this.pointer.isDown){
-			const deltaY = this.pointer.y - this.pointer.downY;
+			this.isDetecting = true;
+		}
 
-			console.log("deltaY ==");
-			console.log(deltaY);
-			console.log("centerY ==");
-			console.log(this.cameras.main.centerY);
-			console.log("centerY + centerY ==");
-			console.log(this.cameras.main.centerY + deltaY);
+		if(!this.pointer.isDown && this.isDetecting){
+			
+			this.isDetecting = false;
+			const deltaY = this.pointer.y - this.pointer.downY;
 
 			this.cameras.main.pan(
 				this.cameras.main.centerX, 
 				deltaY,
 				1000
 			);
-			
 		}
 	}
 }
