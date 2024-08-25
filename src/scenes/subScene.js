@@ -15,7 +15,7 @@ export default class SubScene extends Phaser.Scene
 		this.scene.bringToTop();
 
 		this.cameras.main.setViewport(
-			0, //the coner of top left
+			0, //the coner of top leftt
 			this.sceneSize.height,
 			this.sceneSize.width * 2,
 			this.sceneSize.height * 2, 
