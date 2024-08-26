@@ -29,7 +29,7 @@ export default class Food extends SubScene {
 			this.isDetecting = true;
 		}
 
-		if(!this.pointer.isDown && this.isDetecting){
+		if(this.isDetecting){
 			
 			
 			const deltaY = this.pointer.y - this.pointer.downY;
