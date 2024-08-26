@@ -7,7 +7,6 @@ export default class Food extends SubScene {
 	
 	preload(){
 		this.pointer = this.input.activePointer;
-		this.preDeltaY = this.sceneSize.height / 2;
 		this.isDetecting = false;
 	}
 	

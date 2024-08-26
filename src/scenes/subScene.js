@@ -25,6 +25,9 @@ export default class SubScene extends Phaser.Scene
             x:0,
             y:this.sceneSize.height
         };
+
+		//property for scroll menu
+		this.preDeltaY = this.sceneSize.height / 2;
 	}
 	
 	addCloseBtn(){
