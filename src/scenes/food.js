@@ -5,7 +5,7 @@ export default class Food extends SubScene {
         super("food");
 
 		this.isDetecting = false;
-		this.pre
+		this.preDeltaY = this.sceneSize / 2;
 	}
 	
 	preload(){
@@ -35,12 +35,20 @@ export default class Food extends SubScene {
 
 
 			const deltaY = this.pointer.y - this.pointer.downY;
-			
+			let movedY; //변수명 다시 지어야 됨.
+
+			if (deltaY == 0){
+				movedY = this.preDeltaY;
+			}
+			else{
+				movedY = deltaY;
+				this.preDeltaY = deltaY;
+			}
 
 
 			this.cameras.main.pan(
 				this.cameras.main.centerX, 
-				100,
+				movedY,
 				50
 			);
 
