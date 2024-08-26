@@ -2,8 +2,9 @@ import SubScene from './subScene.js'
 
 export default class Food extends SubScene {
     constructor(){
-		this.isDetecting = false;
         super("food");
+
+		this.isDetecting = false;
 	}
 	
 	preload(){
