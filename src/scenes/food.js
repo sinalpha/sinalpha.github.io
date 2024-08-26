@@ -40,7 +40,7 @@ export default class Food extends SubScene {
 
 			this.cameras.main.pan(
 				this.cameras.main.centerX, 
-				0,
+				100,
 				50
 			);
 
