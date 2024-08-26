@@ -30,7 +30,8 @@ export default class Game extends Phaser.Scene {
     }
 
     update(){
-       this.checkTiredness();
+        this.checkTiredness();
+        this.checkHunger();
     }
     
     adjustCamera(){
@@ -80,9 +81,15 @@ export default class Game extends Phaser.Scene {
     }
 
     checkTiredness(){
-            if(this.uniguri.tiredness <= 0){
-                this.uniguri.state = STATE["SLEEP"];
-                this.uniguri.updateState();
-            }
+        if(this.uniguri.tiredness <= 0){
+            this.uniguri.state = STATE["SLEEP"];
+            this.uniguri.updateState();
+        }
+    }
+
+    checkHunger(){
+        if(this.uniguri.hunger <= 0){
+            this.uniguri.stopAll();
+        }
     }
 }
