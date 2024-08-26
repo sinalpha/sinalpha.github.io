@@ -31,14 +31,16 @@ export default class Food extends SubScene {
 
 		if(!this.pointer.isDown && this.isDetecting){
 			
-			this.isDetecting = false;
+			
 			const deltaY = this.pointer.y - this.pointer.downY;
 
 			this.cameras.main.pan(
 				this.cameras.main.centerX, 
 				deltaY,
-				500
+				100
 			);
+
+			setTimeout(()=>{ this.isDetecting = true; }, 100);
 
 			console.log(deltaY);
 		}
