@@ -40,9 +40,11 @@ export default class Food extends SubScene {
 				100
 			);
 
-			setTimeout(()=>{ this.isDetecting = true; }, 100);
+			setTimeout(()=>{ this.isDetecting = true; }
+			console.log(this.isDetecting)
+			, 100);
 
-			console.log(deltaY);
+			console.log(this.isDetecting);
 		}
 	}
 }
