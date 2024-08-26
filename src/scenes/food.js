@@ -32,8 +32,6 @@ export default class Food extends SubScene {
 
 		if(this.isDetecting){
 			
-
-
 			const deltaY = this.pointer.y - this.pointer.downY;
 			let movedY; //변수명 다시 지어야 됨.
 
@@ -44,7 +42,6 @@ export default class Food extends SubScene {
 				movedY = deltaY;
 				this.preDeltaY = deltaY;
 			}
-
 
 			this.cameras.main.pan(
 				this.cameras.main.centerX, 
