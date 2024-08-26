@@ -35,12 +35,12 @@ export default class Food extends SubScene {
 
 
 			const deltaY = this.pointer.y - this.pointer.downY;
-			let movedCameraY = this.cameras.main.centerY + deltaY;
+			
 
 
 			this.cameras.main.pan(
 				this.cameras.main.centerX, 
-				movedCameraY,
+				0,
 				50
 			);
 
