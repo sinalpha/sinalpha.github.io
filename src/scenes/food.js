@@ -5,7 +5,7 @@ export default class Food extends SubScene {
         super("food");
 
 		this.isDetecting = false;
-		this.preDonwY = 0;
+		this.pre
 	}
 	
 	preload(){
@@ -32,15 +32,15 @@ export default class Food extends SubScene {
 
 		if(this.isDetecting){
 			
+
+
 			const deltaY = this.pointer.y - this.pointer.downY;
-			this.preDownY = this.pointer.downY;
-			console.log(deltaY);
-			console.log(this.preDonwY);
-		
+			let movedCameraY = this.cameras.main.centerY + deltaY;
+
 
 			this.cameras.main.pan(
 				this.cameras.main.centerX, 
-				deltaY + (this.sceneSize.height / 2), //camera origin is center
+				movedCameraY,
 				50
 			);
 
