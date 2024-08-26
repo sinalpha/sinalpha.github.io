@@ -5,7 +5,7 @@ export default class Food extends SubScene {
         super("food");
 
 		this.isDetecting = false;
-		this.preDeltaY = this.sceneSize / 2;
+		this.preDeltaY = this.sceneSize.height / 2;
 	}
 	
 	preload(){
