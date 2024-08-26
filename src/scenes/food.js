@@ -25,7 +25,7 @@ export default class Food extends SubScene {
 	}
 
 	detectScroll(){		
-		if(this.pointer.isDown && !this.isDetecting){
+		if(this.pointer.isDown){
 			this.isDetecting = true;
 		}
 
