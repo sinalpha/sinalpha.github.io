@@ -39,6 +39,8 @@ export default class Food extends SubScene {
 				deltaY,
 				500
 			);
+
+			console.log(deltaY);
 		}
 	}
 }
