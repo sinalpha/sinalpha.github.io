@@ -2,6 +2,7 @@ import SubScene from './subScene.js'
 
 export default class Food extends SubScene {
     constructor(){
+		this.isDetecting = false;
         super("food");
 	}
 	
@@ -23,7 +24,7 @@ export default class Food extends SubScene {
 	}
 
 	detectScroll(){		
-		if(this.pointer.isDown){
+		if(this.pointer.isDown && !this.isDetecting){
 			this.isDetecting = true;
 		}
 
