@@ -37,10 +37,10 @@ export default class Food extends SubScene {
 			this.cameras.main.pan(
 				this.cameras.main.centerX, 
 				deltaY,
-				100
+				500
 			);
 
-			setTimeout(()=>{ this.isDetecting = false; }, 100);
+			setTimeout(()=>{ this.isDetecting = false; }, 500);
 
 			console.log(this.isDetecting);
 		}
