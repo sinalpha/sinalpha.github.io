@@ -3,13 +3,12 @@ import SubScene from './subScene.js'
 export default class Food extends SubScene {
     constructor(){
         super("food");
-
-		this.isDetecting = false;
-		this.preDeltaY = this.sceneSize.height / 2;
 	}
 	
 	preload(){
 		this.pointer = this.input.activePointer;
+		this.preDeltaY = this.sceneSize.height / 2;
+		this.isDetecting = false;
 	}
 	
 	create(){
