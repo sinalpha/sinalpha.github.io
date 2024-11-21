@@ -73,7 +73,7 @@ export default class Game extends Phaser.Scene {
     addEvent(){
         
         this.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {
-           if (gameSize != displaySize){
+           if (gameSize.width != displaySize.width){
                this.scale.setGameSize(displaySize.width, displaySize.height);
            }
         }.bind(this));
