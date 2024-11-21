@@ -1,3 +1,1 @@
-loading씬 우니구리가 달려가는 걸로 바꾸기
-능동적 full screen https://stackoverflow.com/questions/66191191/how-to-create-a-responsive-game-for-any-screen-size-with-phaser-3
-★커뮤니티의 힘을 빌리자★
+화면변화를 감지하여 게임 사이즈를 바꾸는 기능
