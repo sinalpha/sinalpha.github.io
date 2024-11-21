@@ -32,7 +32,6 @@ export default class Game extends Phaser.Scene {
     update(){
         this.checkTiredness();
         this.checkHunger();
-        //scene.scale.setGameSize(width, height);
     }
     
     adjustCamera(){
@@ -73,9 +72,9 @@ export default class Game extends Phaser.Scene {
 
     addEvent(){
         
-        // scene.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {
-        //     scene.scale.setGameSize(width, height);
-        // });
+        scene.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {
+            scene.scale.setGameSize(displaySize.width, displaySize.height);
+        });
         
         eventsCenter.on('sleep', this.detectSleep, this);
         eventsCenter.on('clean', this.uniguri.clean.bind(this.uniguri), this);
