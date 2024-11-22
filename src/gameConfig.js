@@ -1,9 +1,28 @@
 import { gameScenes } from './gameScenes.js'
-import { gameScale } from './gameScale.js'
-import { gamePhysics } from './gamePhysics.js'
 
 const gameScreenSize = { width:window.innerWidth , height:window.innerHeight };
 const gameParent = "container";
+/*
+
+    config scale.
+
+*/
+const gameScale = {
+    mode:Phaser.Scale.FIT,
+    autoCenter:Phaser.Scale.CENTER_BOTH,
+}
+
+/*
+
+    config physics.
+
+*/
+const gamePhysics = {
+    default: 'arcade',
+    arcade: {
+        debug: false
+    }
+}
 
 export const config = {
     width:gameScreenSize.width,
