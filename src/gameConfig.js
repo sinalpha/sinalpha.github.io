@@ -5,13 +5,12 @@ import Status from './scenes/status.js'
 import Menu from './scenes/menu.js'
 import Food from './scenes/food.js'
 
-const game_width = window.innerWidth;
 
-const game_height = window.innerHeight;
+const gameScreenSize = { width:window.innerWidth, height:window.innerHeight};
 
 export const config = {
-    width:game_width,
-    height:game_height,
+    width:gameScreenSize.width,
+    height:gameScreenSize.height,
     type:Phaser.WEBGL,
     parent: 'container',
     scene: [BootLoader, Splash, Game, Status, Menu, Food],
