@@ -1,3 +1,10 @@
+import Splash from './scenes/splash.js';
+import Game from './scenes/game.js';
+import BootLoader from './scenes/bootLoader.js';
+import Status from './scenes/status.js';
+import Menu from './scenes/menu.js';
+import Food from './scenes/food.js';
+
 const gameScreenSize = { width:window.innerWidth , height:window.innerHeight };
 
 /*
@@ -6,19 +13,6 @@ const gameScreenSize = { width:window.innerWidth , height:window.innerHeight };
 
 */
 const gameParent = "container";
-
-/*
-
-    config game Scenes
-
- */
-import Splash from './scenes/splash.js';
-import Game from './scenes/game.js';
-import BootLoader from './scenes/bootLoader.js';
-import Status from './scenes/status.js';
-import Menu from './scenes/menu.js';
-import Food from './scenes/food.js';
-let gameScenes = [Splash, Game, BootLoader, Status, Menu, Food];
 
 /*
 
@@ -47,7 +41,7 @@ export const config = {
     height:gameScreenSize.height,
     type:Phaser.WEBGL,
     parent: gameParent,
-    scene: gameScenes,
+    scene: [Splash, Game, BootLoader, Status, Menu, Food],
     scale:gameScale,
     physics: gamePhysics
 }
