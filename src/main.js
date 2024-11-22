@@ -51,13 +51,4 @@ const config = {
     postBoot: addResizeEvnetListener
 }
 
-
 const game = new Phaser.Game(config);
-
-
-/*
-
-    add resize event Listener
-
-*/
-
