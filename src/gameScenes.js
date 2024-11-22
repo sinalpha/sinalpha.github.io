@@ -5,4 +5,4 @@ import Status from './scenes/status.js'
 import Menu from './scenes/menu.js'
 import Food from './scenes/food.js'
 
-export const gameScenes = [Splash, Game, BootLoader, Status, Menu, Food];
+export let gameScenes = [Splash, Game, BootLoader, Status, Menu, Food];
