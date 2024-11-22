@@ -5,6 +5,11 @@ import Status from './scenes/status.js';
 import Menu from './scenes/menu.js';
 import Food from './scenes/food.js';
 
+/*
+
+    game Screen Size.
+
+*/
 const gameScreenSize = { width:window.innerWidth , height:window.innerHeight };
 
 /*
@@ -14,36 +19,22 @@ const gameScreenSize = { width:window.innerWidth , height:window.innerHeight };
 */
 const gameParent = "container";
 
-/*
-
-    config scale.
-
-*/
-const gameScale = {
-    mode:Phaser.Scale.FIT,
-    autoCenter:Phaser.Scale.CENTER_BOTH,
-}
-
-/*
-
-    config physics.
-
-*/
-const gamePhysics = {
-    default: 'arcade',
-    arcade: {
-        debug: false
-    }
-}
-
 const config = {
     width:gameScreenSize.width,
     height:gameScreenSize.height,
     type:Phaser.WEBGL,
     parent: gameParent,
     scene: [Splash, Game, BootLoader, Status, Menu, Food],
-    scale:gameScale,
-    physics: gamePhysics
+    scale:{
+        mode:Phaser.Scale.FIT,
+        autoCenter:Phaser.Scale.CENTER_BOTH,
+    },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            debug: false
+        }
+    }
 }
 
 const game = new Phaser.Game(config);
