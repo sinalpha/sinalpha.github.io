@@ -22,6 +22,18 @@ const gamePhysics = {
     }
 }
 
+const  gamePostBoot = function(game){
+
+    let myGameCanvas = document.getElementsByTagName("canvas")[0];
+
+    window.addEventListener('resize', function(event) {
+        
+        myGameCanvas.width = window.screen.width;
+        myGameCanvas.height = window.screen.height;
+
+    }, true);
+}
+
 export const config = {
     width:gameScreenSize.width,
     height:gameScreenSize.height,
@@ -29,5 +41,6 @@ export const config = {
     parent: gameParent,
     scene: [BootLoader, Splash, Game, Status, Menu, Food],
     scale:gameScale,
-    physics:gamePhysics
+    physics:gamePhysics,
+    postBoot:gamePostBoot
 }
