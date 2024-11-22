@@ -36,7 +36,7 @@ const gamePhysics = {
     }
 }
 
-export const config = {
+const config = {
     width:gameScreenSize.width,
     height:gameScreenSize.height,
     type:Phaser.WEBGL,
