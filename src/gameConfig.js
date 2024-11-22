@@ -1,6 +1,6 @@
-import { game_scenes } from './gameScenes.js'
-import { game_scale } from './gameScale.js'
-import { game_physics } from './gamePhysics.js'
+import { gameScenes } from './gameScenes.js'
+import { gameScale } from './gameScale.js'
+import { gamePhysics } from './gamePhysics.js'
 
 const gameScreenSize = { width:window.innerWidth , height:window.innerHeight };
 const gameParent = "container";

@@ -1,4 +1,4 @@
-export const config_physics = {
+export const gamePhysics = {
     default: 'arcade',
     arcade: {
         debug: false
