@@ -19,6 +19,19 @@ const gameScreenSize = { width:window.innerWidth , height:window.innerHeight };
 */
 const gameParent = "container";
 
+function addResizeEvnetListener(game){
+
+    let myGameCanvas = document.getElementsByTagName("canvas")[0];
+
+    window.addEventListener('resize', function(event) {
+        
+        myGameCanvas.width = window.screen.width;
+        myGameCanvas.height = window.screen.height;
+
+    }, true);
+
+}
+
 const config = {
     width:gameScreenSize.width,
     height:gameScreenSize.height,
@@ -34,8 +47,10 @@ const config = {
         arcade: {
             debug: false
         }
-    }
+    },
+    postBoot: addResizeEvnetListener
 }
+
 
 const game = new Phaser.Game(config);
 
@@ -45,10 +60,4 @@ const game = new Phaser.Game(config);
     add resize event Listener
 
 */
-let myGameCanvas = document.getElementsByTagName("canvas")[0];
-window.addEventListener('resize', function(event) {
-    
-    myGameCanvas.width = window.screen.width;
-    myGameCanvas.height = window.screen.height;
 
-}, true);
