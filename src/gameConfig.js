@@ -5,7 +5,8 @@ import Status from './scenes/Status.js'
 import Menu from './scenes/Menu.js'
 import Food from './scenes/Food.js'
 
-const gameScreenSize = { width:window.innerWidth, height:window.innerHeight};
+const gameScreenRation = 3/7; //가로:세로
+const gameScreenSize = { width:window.innerHeight * gameScreenRation, height:window.innerHeight};
 
 const gameType = Phaser.WEBGL;
 
