@@ -5,7 +5,7 @@ import Status from './scenes/Status.js'
 import Menu from './scenes/Menu.js'
 import Food from './scenes/Food.js'
 
-const gameScreenRation = 3/7; //가로:세로
+const gameScreenRation = 3/7; //horizon:vertical
 const gameScreenSize = { width:window.innerHeight * gameScreenRation, height:window.innerHeight};
 
 const gameType = Phaser.WEBGL;
@@ -15,7 +15,7 @@ const gameParent = "container";
 const gameScenes = [BootLoader, Splash, Game, Status, Menu, Food];
 
 const gameScale = {
-    mode:Phaser.Scale.RESIZE,
+    mode:Phaser.Scale.FIT,
     autoCenter:Phaser.Scale.CENTER_BOTH,
 } 
 
