@@ -1,4 +1,4 @@
-import EventsCenter from "./EventsCenter.js";
+import EventsCenter from "./eventsCenter.js";
 
 
 export default class Game extends Phaser.Scene {
@@ -9,9 +9,9 @@ export default class Game extends Phaser.Scene {
 
     init(){
 
-        this.upScreenSize = { widht : ,height: }; 
-        this.downScreenSize = { widht : ,height: };
-        
+        //this.upScreenSize = { widht : ,height: }; 
+        //this.downScreenSize = { widht : ,height: };
+
     }
 
     preload(){
