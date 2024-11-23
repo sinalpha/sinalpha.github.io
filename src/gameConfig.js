@@ -38,8 +38,8 @@ const  gamePostBoot = function(game){
 
     window.addEventListener('resize', function(event) {
         
-        myGameCanvas.width = window.screen.width;
         myGameCanvas.height = window.screen.height;
+        myGameCanvas.width = myGameCanvas * gameScreenRation;
 
     }, true);
     
