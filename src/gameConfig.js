@@ -28,6 +28,11 @@ const gamePhysics = {
 
 const  gamePostBoot = function(game){
 
+    /*
+    
+        add resize evnet listener
+    
+    */
     let myGameCanvas = document.getElementsByTagName("canvas")[0];
 
     window.addEventListener('resize', function(event) {
