@@ -1,11 +1,9 @@
 export default class DownScene extends Phaser.Scene {
-	constructor(key, downSceneScreenSize){
-		super({ key : key });
 	
+	setCameraViewPort(downSceneScreenSize){
+
 		this.downSceneScreenSize = downSceneScreenSize;
-	}
-	
-	setCameraViewPort(){
+
 		this.cameras.main.setViewport(
 			this.scale.gameSize.height - this.downSceneScreenSize,
 			0, 
@@ -13,6 +11,7 @@ export default class DownScene extends Phaser.Scene {
 			this.downSceneScreenSize.height);
 
 		this.cameras.main.setBackgroundColor(0x111111);
+
 	}
 
 }
