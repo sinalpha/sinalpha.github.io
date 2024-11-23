@@ -1,4 +1,4 @@
-import eventsCenter from './eventsCenter.js';
+import EventsCenter from './EventsCenter.js';
 import SubScene from './subScene.js'
 import { STATE } from '../gameObjects/uniguri-state.js'
 
@@ -58,11 +58,11 @@ export default class Menu extends SubScene {
     }
 
     activeClean(){
-        eventsCenter.emit('clean');
+        EventsCenter.emit('clean');
     }
 
     activeSleep(){
-        eventsCenter.emit('sleep');
+        EventsCenter.emit('sleep');
     }
 
     activeWork(){
