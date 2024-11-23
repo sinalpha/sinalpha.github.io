@@ -7,8 +7,8 @@ export default class Menu extends DownScene {
     }
 
     init(){
-
         
+        this.setCameraViewPort();
 
     }
 

@@ -10,6 +10,8 @@ export default class Home extends UpScene{
 
     init(){
 
+        this.setCameraViewPort();
+    
     }
 
     preload(){
