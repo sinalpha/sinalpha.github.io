@@ -1,10 +1,6 @@
 import Splash from './scenes/Splash.js'
 import Game from './scenes/Game.js'
 import BootLoader from './scenes/BootLoader.js';
-import Status from './scenes/Status.js'
-import Menu from './scenes/Menu.js'
-import Food from './scenes/Food.js'
-import Home from './scenes/Home.js'
 
 const isMobile = /Mobi/i.test(window.navigator.userAgent); 
 const gameScreenRation = isMobile 
@@ -16,7 +12,7 @@ const gameType = Phaser.WEBGL;
 
 const gameParent = "container";
 
-const gameScenes = [BootLoader, Splash, Game, Home, Status, Menu, Food];
+const gameScenes = [BootLoader, Splash, Game];
 
 const gameScale = {
     mode:Phaser.Scale.FIT,

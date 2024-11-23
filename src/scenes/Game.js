@@ -1,4 +1,7 @@
+import Home from './Home.js';
+import Menu from './Menu.js';
 import EventsCenter from "./EventsCenter.js";
+
 
 export default class Game extends Phaser.Scene {
     constructor(){
@@ -30,8 +33,8 @@ export default class Game extends Phaser.Scene {
         const upScreenSize = { width:gameScreenSize.width, height:gameScreenSize.height * ratioOfScreen.up }; 
         const downScreenSize = { width:gameScreenSize.width, height: gameScreenSize.height * ratioOfScreen.down };
     
-        this.scene.launch('Home');
-        this.scene.launch('Menu');
+        this.game.add("Home", new Home(upScreenSize), true);
+        this.game.add("Menu", new Menu(downScreenSizeScreenSize), true);
     
     }
 }
