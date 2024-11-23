@@ -1,4 +1,4 @@
-export const FIGURES = {
+export const GAME_FIGURES = {
 	SLEEP_TIME: 10000,
 	GAME_GRAVITY: 150,
 	MAX_TIREDNESS: 10,
