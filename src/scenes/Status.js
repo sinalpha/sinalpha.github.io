@@ -3,7 +3,7 @@ import StatusBar from '../gameObjects/statusBar.js'
 
 export default class Status extends DownScene {
 	constructor() {
-		super('status');
+		super('Status');
 		
 	}
 	

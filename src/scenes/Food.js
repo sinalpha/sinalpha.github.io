@@ -2,7 +2,7 @@ import DownScene from './DownScene.js'
 
 export default class Food extends DownScene {
     constructor(){
-        super("food");
+        super("Food");
 	}
 	
 	preload(){

@@ -2,7 +2,7 @@ import SceneEffect from "../gameObjects/sceneEffect.js"
 
 export default class Splash extends Phaser.Scene {
     constructor(){
-        super({ key : "splash" });
+        super({ key : "Splash" });
     }
 
     preload(){
@@ -33,7 +33,7 @@ export default class Splash extends Phaser.Scene {
     }
 
     startGame() {
-        this.time.delayedCall(500, () => this.scene.start("game"), null, this);
+        this.time.delayedCall(500, () => this.scene.start("Game"), null, this);
     }
 
     setBackground(){

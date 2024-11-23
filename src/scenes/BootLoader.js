@@ -1,6 +1,6 @@
 export default class BootLoader extends Phaser.Scene {
     constructor() {
-        super({ key: "bootloader" });
+        super({ key: "Bootloader" });
     }
 
     preload(){
@@ -45,7 +45,7 @@ export default class BootLoader extends Phaser.Scene {
         this.load.on(
             "complete",
             () => {
-                this.scene.start("splash");
+                this.scene.start("Splash");
             },
             this
         );
