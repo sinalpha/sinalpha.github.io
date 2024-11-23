@@ -1,4 +1,4 @@
-import EventsCenter from "./eventsCenter.js";
+import EventsCenter from "./EventsCenter.js";
 
 
 export default class Game extends Phaser.Scene {

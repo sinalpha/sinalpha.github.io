@@ -1,9 +1,9 @@
-import Splash from './scenes/splash.js'
-import Game from './scenes/game.js'
-import BootLoader from './scenes/bootLoader.js';
-import Status from './scenes/status.js'
-import Menu from './scenes/menu.js'
-import Food from './scenes/food.js'
+import Splash from './scenes/Splash.js'
+import Game from './scenes/Game.js'
+import BootLoader from './scenes/BootLoader.js';
+import Status from './scenes/Status.js'
+import Menu from './scenes/Senu.js'
+import Food from './scenes/Food.js'
 
 const gameScreenSize = { width:window.innerWidth, height:window.innerHeight};
 
