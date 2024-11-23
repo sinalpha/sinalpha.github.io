@@ -5,8 +5,11 @@ import Status from './scenes/Status.js'
 import Menu from './scenes/Menu.js'
 import Food from './scenes/Food.js'
 
-const gameScreenRation = 3/7; //horizon:vertical
-const gameScreenSize = { width:window.innerHeight * gameScreenRation, height:window.innerHeight};
+const isMobile = /Mobi/i.test(window.navigator.userAgent); 
+const gameScreenRation = isMobile 
+    ? window.innerWidth/window.innerHeight //horizon:vertical
+    : 3/7
+const gameScreenSize = { width:  window.innerHeight * gameScreenRation, height:window.innerHeight};
 
 const gameType = Phaser.WEBGL;
 
@@ -34,12 +37,12 @@ const  gamePostBoot = function(game){
         add resize evnet listener
     
     */
-    let myGameCanvas = document.getElementsByTagName("canvas")[0];
+    let container = document.getElementById('container');
 
     window.addEventListener('resize', function(event) {
         
-        myGameCanvas.height = window.screen.height;
-        myGameCanvas.width = myGameCanvas.height * gameScreenRation;
+        container.height = window.screen.height;
+        container.width = myGameCanvas.height * gameScreenRation;
 
     }, true);
     
