@@ -9,6 +9,8 @@ const gameScreenSize = { width:window.innerWidth, height:window.innerHeight};
 
 const gameParent = "container";
 
+const gameScenes = [BootLoader, Splash, Game, Status, Menu, Food];
+
 const gameScale = {
     mode:Phaser.Scale.FIT,
     autoCenter:Phaser.Scale.CENTER_BOTH,
@@ -39,7 +41,7 @@ export const config = {
     height:gameScreenSize.height,
     type:Phaser.WEBGL,
     parent: gameParent,
-    scene: [BootLoader, Splash, Game, Status, Menu, Food],
+    scene: gameScenes,
     scale:gameScale,
     physics:gamePhysics,
     postBoot:gamePostBoot
