@@ -1,6 +1,6 @@
+import BootLoader from './scenes/BootLoader.js';
 import Splash from './scenes/Splash.js'
 import Game from './scenes/Game.js'
-import BootLoader from './scenes/BootLoader.js';
 
 const isMobile = /Mobi/i.test(window.navigator.userAgent); 
 const gameScreenRation = isMobile 
