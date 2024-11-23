@@ -2,7 +2,7 @@
 
 현재 작업:
 game.js 리펙토링
-Home.js 개발
+separate game screen into up and down
 
 완료한 작업:
 화면이 변경 되었을 때, .7:3 비율로 바뀌게 만들어야 함
