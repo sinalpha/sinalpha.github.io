@@ -1,3 +1,5 @@
+import { GAME_FIGURES } from './gameFigures.js';
+
 import BootLoader from './scenes/BootLoader.js';
 import Splash from './scenes/Splash.js'
 import Game from './scenes/Game.js'
@@ -5,7 +7,7 @@ import Game from './scenes/Game.js'
 const isMobile = /Mobi/i.test(window.navigator.userAgent); 
 const gameScreenRation = isMobile 
     ? window.innerWidth/window.innerHeight //horizon:vertical
-    : 3/7
+    : GAME_FIGURES["GAME_RATIO"];
 const gameScreenSize = { width:  window.innerHeight * gameScreenRation, height:window.innerHeight};
 
 const gameType = Phaser.WEBGL;
