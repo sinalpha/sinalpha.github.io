@@ -5,6 +5,14 @@ export default class Splash extends Phaser.Scene {
         super({ key : "Splash" });
     }
 
+    init(){
+
+
+        this.addResizeEventListner();
+        
+
+    }
+
     preload(){
         const {x,y,width,height} = this.cameras.main;
         this.center = {
@@ -24,6 +32,22 @@ export default class Splash extends Phaser.Scene {
     }
 
     update(){
+    }
+
+    addResizeEventListner(){
+
+        this.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {
+            
+            const parentSize = this.scale.parentSize;
+            
+            if(gameSize.width != parentSize.width && gameSize.height != parentSize.height){
+
+                this.scale.setGameSize(parentSize.width, parentSize.height);
+                
+            }
+
+        }.bind(this));
+    
     }
 
     startTrigger(){
