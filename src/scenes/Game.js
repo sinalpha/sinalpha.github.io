@@ -9,8 +9,7 @@ export default class Game extends Phaser.Scene {
 
     init(){
 
-        //this.upScreenSize = { widht : ,height: }; 
-        //this.downScreenSize = { widht : ,height: };
+       this.divideGameScreen();
 
     }
 
@@ -26,5 +25,10 @@ export default class Game extends Phaser.Scene {
       
     }
     
- 
+    divideGameScreen(){
+        const gameScreenSize = this.scale.gameSize;
+        const ratioOfScreen = { up:3/5, down:2/5 };
+        const upScreenSize = { widht:gameScreenSize.width, height:gameScreenSize.height * ratioOfScreen.up }; 
+        const downScreenSize = { widht:gameScreenSize.width, height: gameScreenSize.height * ratioOfScreen.down };
+    }
 }
