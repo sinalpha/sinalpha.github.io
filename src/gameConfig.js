@@ -14,7 +14,7 @@ const gameParent = "container";
 const gameScenes = [BootLoader, Splash, Game, Status, Menu, Food];
 
 const gameScale = {
-    mode:Phaser.Scale.FIT,
+    mode:Phaser.Scale.RESIZE,
     autoCenter:Phaser.Scale.CENTER_BOTH,
 } 
 
