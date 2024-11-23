@@ -41,6 +41,7 @@ const  gamePostBoot = function(game){
         myGameCanvas.height = window.screen.height;
 
     }, true);
+    
 }
 
 export const config = {
