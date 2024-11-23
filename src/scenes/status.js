@@ -1,7 +1,7 @@
-import SubScene from './subScene.js'
+import DownScene from './DownScene.js'
 import StatusBar from '../gameObjects/statusBar.js'
 
-export default class Status extends SubScene {
+export default class Status extends DownScene {
 	constructor() {
 		super('status');
 		
@@ -11,7 +11,7 @@ export default class Status extends SubScene {
 		
 		this.gameScene = this.scene.manager.getScene('game');
 		this.uniguri = this.gameScene.uniguri;
-		this.setSubScene(0xffff00);
+		this.setDownScene(0xffff00);
 		this.addCloseBtn();
 		this.addStatusBar();
 	}

@@ -1,10 +1,10 @@
-export default class SubScene extends Phaser.Scene 
+export default class DownScene extends Phaser.Scene 
 {
 	constructor(key){
 		super({ key : key });
 	}
 	
-	setSubScene(backgroundColor){
+	setDownScene(backgroundColor){
 		this.sceneSize = {
 			width: this.cameras.main.width,
 			height: this.cameras.main.height / 2

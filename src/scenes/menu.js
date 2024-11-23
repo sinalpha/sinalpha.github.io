@@ -1,17 +1,17 @@
 import EventsCenter from './EventsCenter.js';
-import SubScene from './subScene.js'
+import DownScene from './DownScene.js'
 import { STATE } from '../gameObjects/uniguri-state.js'
 
 
 
-export default class Menu extends SubScene {
+export default class Menu extends DownScene {
     constructor(){
         super("menu");
     }
 
     preload(){
 		
-		this.setSubScene(0xff0000)
+		this.setDownScene(0xff0000)
 		
     }
 

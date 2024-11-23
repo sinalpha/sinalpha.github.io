@@ -1,6 +1,6 @@
-import SubScene from './subScene.js'
+import DownScene from './DownScene.js'
 
-export default class Food extends SubScene {
+export default class Food extends DownScene {
     constructor(){
         super("food");
 	}
@@ -12,7 +12,7 @@ export default class Food extends SubScene {
 	
 	create(){
 		
-		this.setSubScene(0xffff00);
+		this.setDownScene(0xffff00);
 		this.addCloseBtn();
 		
 	}

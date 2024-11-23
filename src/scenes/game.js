@@ -9,8 +9,9 @@ export default class Game extends Phaser.Scene {
 
     init(){
 
-
-
+        this.upScreenSize = { widht : ,height: }; 
+        this.downScreenSize = { widht : ,height: };
+        
     }
 
     preload(){
