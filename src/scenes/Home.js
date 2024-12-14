@@ -22,7 +22,26 @@ export default class Home extends UpScene{
     }
 
     create(){
-        this.uniguri = new Uniguri(this, 100, 100, 'uniguri-default');
+        
+        this.addOBJs();
+    }
+
+    addOBJs(){
+
+        /*
+        
+            add Uniguri.
+
+        */
+        this.uniguri = new Uniguri(
+            this,
+            this.upSceneScreenSize.width / 2,
+            this.upSceneScreenSize.height,
+            'uniguri-default')
+        .setOrigin( 0.5, 1);
+
+
+    
     }
 
 
