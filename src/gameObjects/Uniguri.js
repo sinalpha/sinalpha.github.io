@@ -7,13 +7,15 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         super(scene, x, y, texture);
 
         this.scene = scene;
-        this.setCollideWorldBounds(true);
 
         scene.add.existing(this);
         scene.physics.add.existing(this, 0);
 
-        
-
     }
+
+    preUpdate(){
+        this.setCollideWorldBounds(true);
+    }
+
 
 }
