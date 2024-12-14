@@ -25,7 +25,11 @@ const gamePhysics = {
     default: 'arcade',
     
     arcade: {
-        debug: false
+        debug: false,
+        gravity: {
+            x: 0,
+            y: 10
+        },
     }
 }
 
