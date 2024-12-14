@@ -6,7 +6,9 @@ export default class Home extends UpScene{
     init(data){
 
         this.setCameraViewPort(data.screenSize);
-        this.uniguri = new Uniguri(this, 0, 0).setOrigin(0, 1);
+        this.uniguri = new Uniguri(this, 100, 100, 'uniguri-default');
+
+
 
     }
 
