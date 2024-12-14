@@ -11,7 +11,7 @@ export default class Home extends UpScene{
             this.upSceneScreenSize.width,
             this.upSceneScreenSize.height);
         
-        this.uniguri = new Uniguri(this, 100, 100, 'uniguri-default');
+        
 
 
 
@@ -22,7 +22,7 @@ export default class Home extends UpScene{
     }
 
     create(){
-
+        this.uniguri = new Uniguri(this, 100, 100, 'uniguri-default');
     }
 
 
