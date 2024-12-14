@@ -7,11 +7,9 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         super(scene, x, y, 'uniguri-default');
 
         this.scene = scene;
-		this.isDoing = false;
 
         scene.physics.add.existing(this);
         scene.add.existing(this);
-
         
     }
 
