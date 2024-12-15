@@ -7,6 +7,8 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         super(scene, x, y, texture);
 
         this.scene = scene;
+        this.preTime = 0;
+
 
         scene.add.existing(this);
         scene.physics.add.existing(this, 0);
@@ -15,7 +17,19 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
     preUpdate(){
         this.setCollideWorldBounds(true);
+        this.addMove();
     }
 
+    addMove(){
 
+        this.scene.add.timeline([   
+            {
+                from: GAME_FIGURES["MOVE_TIME"],
+                loop(){
+                    uniguri.setVelocityY(10);
+                }
+            }
+        ]).repeat().play();
+    
+    }
 }
