@@ -27,7 +27,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
                 from: GAME_FIGURES["MOVE_TIME"],
                 loop(){
                     console.log("test");
-                    this.scene.uniguri.setVelocityY(10);
+                    this.setVelocityY(10);
                 }
             }
         ]).repeat().play();
