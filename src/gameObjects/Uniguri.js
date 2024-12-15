@@ -25,7 +25,13 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.scene.time.addEvent({
             delay: 500,
             callback: ()=>{
-                this.setVelocityX(10);
+
+                const speed = Phaser.Math.Between(
+                -GAME_FIGURES["MAX_MOVE_ABS_SPEED"], 
+                GMAE_FIGURES["MAX_MOVE_ABS_SPEED"]
+                )
+
+                this.setVelocityX(speed);
             },
             loop: true,
         });
