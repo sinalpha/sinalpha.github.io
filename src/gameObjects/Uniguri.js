@@ -28,7 +28,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
                 const speed = Phaser.Math.Between(
                 -GAME_FIGURES["MAX_MOVE_ABS_SPEED"], 
-                GMAE_FIGURES["MAX_MOVE_ABS_SPEED"]
+                GAME_FIGURES["MAX_MOVE_ABS_SPEED"]
                 )
 
                 this.setVelocityX(speed);
