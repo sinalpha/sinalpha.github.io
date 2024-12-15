@@ -7,8 +7,6 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         super(scene, x, y, texture);
 
         this.scene = scene;
-        this.preTime = 0;
-
 
         scene.add.existing(this);
         scene.physics.add.existing(this, 0);
@@ -23,7 +21,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
     addMove(){
 
         this.scene.time.addEvent({
-            delay: 500,
+            delay: GAME_FIGURES["MOVE_TIME"],
             callback: ()=>{
 
                 const speed = Phaser.Math.Between(
