@@ -22,15 +22,13 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
     addMove(){
 
-        this.scene.add.timeline([   
-            {
-                from: GAME_FIGURES["MOVE_TIME"],
-                loop(){
-                    console.log("test");
-                    this.setVelocityY(10);
-                }
-            }
-        ]).repeat().play();
+        this.scene.time.addEvent({
+            delay: 500,
+            callback: ()=>{
+                this.setVeloctyX(10);
+            },
+            loop: true,
+        });
     
     }
 }
