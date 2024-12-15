@@ -25,7 +25,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
         this.scene.time.addEvent({
             delay: 500,
             callback: ()=>{
-                this.setVeloctyX(10);
+                this.setVelocityX(10);
             },
             loop: true,
         });
