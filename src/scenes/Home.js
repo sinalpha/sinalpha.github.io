@@ -1,6 +1,6 @@
 import UpScene from "./UpScene.js";
 import Uniguri from "../gameObjects/Uniguri.js"
-import { GAME_FIGURES } from "../../gameFigures.js"
+import { GAME_FIGURES } from "../gameFigures.js"
 
 export default class Home extends UpScene{
 
