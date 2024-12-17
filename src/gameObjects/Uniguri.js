@@ -23,7 +23,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
         this.scene.add.timeline([
             {
-                at: GAME_FIGURES["MOVE_TIME"],
+                at: 0,
                 run: () => {
 
                     const speed = Phaser.Math.Between(
@@ -33,7 +33,11 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
                     this.setVelocity(speed)
 
-                }, 
+                }
+            },
+            {
+                at:GAME_FIGURES["MOVE_TIME"],
+                stop:true
             }
         ]).repeat().play();
     
