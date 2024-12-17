@@ -31,7 +31,7 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
                         GAME_FIGURES["MAX_MOVE_ABS_SPEED"]
                     )
 
-                    this.setVelocity(speed)
+                    this.setVelocityX(speed)
 
                 }
             },
