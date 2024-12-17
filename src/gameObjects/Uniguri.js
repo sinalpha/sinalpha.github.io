@@ -30,6 +30,9 @@ export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
                 )
 
                 this.setVelocityX(speed);
+
+
+                console.log("test");
             },
             loop: true,
         });
