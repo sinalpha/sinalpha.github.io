@@ -1,6 +1,5 @@
 # sinalpha.github.io   
-https://www.notion.so/sinalpha/ 
-c26a51910ead4244896f23c99ce79a5e   
+https://www.notion.so/sinalpha/c26a51910ead4244896f23c99ce79a5e   
 ADD#n: 새로운 기능 n 개발  
 FOL#n: 기능 n 테스트  
 FIN#n: 기능 n 개발 완료  
