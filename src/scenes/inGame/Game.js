@@ -48,7 +48,7 @@ export default class Game extends Phaser.Scene {
 
         this.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {
             
-            
+            console.log(gameSize, baseSize, displaySize)
             
             
 
