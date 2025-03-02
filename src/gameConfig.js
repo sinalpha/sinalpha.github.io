@@ -1,7 +1,7 @@
 import { GAME_FIGURES } from './gameFigures.js';
 
 import BootLoader from './scenes/BootLoader.js';
-import Splash from './scenes/Splash.js'
+import Splash from './scenes/loading/Splash.js'
 import Game from './scenes/Game.js'
 
 const isMobile = /Mobi/i.test(window.navigator.userAgent); 
