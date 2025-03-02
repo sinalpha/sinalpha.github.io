@@ -1,7 +1,5 @@
 import Home from './Home.js';
 import Menu from './Menu.js';
-import EventsCenter from "./EventsCenter.js";
-
 
 export default class Game extends Phaser.Scene {
     constructor(){
