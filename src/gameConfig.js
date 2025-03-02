@@ -35,25 +35,23 @@ const gamePhysics = {
     }
 }
 
-const  gamePostBoot = function(game){
 
-    /*
-    
-        add resize evnet listener
-    
-    */
+function addResizeEventListner(){
+
+    // debug     
+    console.log("added Event Listenr");
+
     let container = document.getElementById('container');
 
     window.addEventListener('resize', function(event) {
         
         container.height = window.screen.height;
         container.width = myGameCanvas.height * gameScreenRation;
-        // debug     
-        console.log(container);
+
     }, true);
 
-
 }
+const  gamePostBoot = addResizeEventListner;
 
 export const config = {
     width:gameScreenSize.width,
