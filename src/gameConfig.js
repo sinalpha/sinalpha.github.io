@@ -48,9 +48,11 @@ const  gamePostBoot = function(game){
         
         container.height = window.screen.height;
         container.width = myGameCanvas.height * gameScreenRation;
-
+        // debug     
+        console.log(container);
     }, true);
-    
+
+
 }
 
 export const config = {
