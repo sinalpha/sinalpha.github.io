@@ -1,8 +1,8 @@
 import { GAME_FIGURES } from './gameFigures.js';
 
-import BootLoader from './scenes/BootLoader.js';
+import BootLoader from './scenes/preGame/BootLoader.js';
 import Splash from './scenes/preGame/Splash.js'
-import Game from './scenes/Game.js'
+import Game from './scenes/inGame/Game.js'
 
 const isMobile = /Mobi/i.test(window.navigator.userAgent); 
 const gameScreenRation = isMobile 

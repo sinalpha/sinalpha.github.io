@@ -1,4 +1,4 @@
-import SceneEffect from "../gameObjects/sceneEffect.js"
+import SceneEffect from "./gameObjects/sceneEffect.js"
 
 export default class Splash extends Phaser.Scene {
     constructor(){
