@@ -12,7 +12,7 @@ export default class Game extends Phaser.Scene {
         this.initScreenSize();
         this.divideGameScreen();
         this.addResizeEventListner()
-        console.log("added Event Listenr");
+
     }
 
     preload(){
@@ -47,14 +47,14 @@ export default class Game extends Phaser.Scene {
     addResizeEventListner(){
 
         this.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {
-            
+            console.log("detect resize from Game.js");
             const parentSize = this.scale.parentSize;
             
             if(gameSize.width != parentSize.width && gameSize.height != parentSize.height){
 
                 this.scale.setGameSize(parentSize.width, parentSize.height);
                 
-                console.log("detect resize from Game.js");
+               
             }
 
         }.bind(this));
