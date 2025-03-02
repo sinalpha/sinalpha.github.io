@@ -52,7 +52,5 @@ export const config = {
     scene: DebugGameScenes,
     scale:gameScale,
     physics:gamePhysics,
-    preBoot: function (game) {
-        console.log("debug");
-    }
+    postBoot: gamePostBoot
 }
