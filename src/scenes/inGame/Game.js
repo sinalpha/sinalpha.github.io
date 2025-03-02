@@ -11,6 +11,7 @@ export default class Game extends Phaser.Scene {
 
     init(){
 
+        this.initScreenSize();
         this.divideGameScreen();
         this.addResizeEventListner()
 
@@ -28,17 +29,22 @@ export default class Game extends Phaser.Scene {
       
     }
     
-    divideGameScreen(){
-     
-        const gameScreenSize = this.scale.gameSize;
-        const ratioOfScreen = { up:3/5, down:2/5 };
-        const upScreenSize = { width:gameScreenSize.width, height:gameScreenSize.height * ratioOfScreen.up }; 
-        const downScreenSize = { width:gameScreenSize.width, height: gameScreenSize.height * ratioOfScreen.down };
-    
-        this.game.scene.add("Home", Home, true, {screenSize : upScreenSize});
-        this.game.scene.add("Menu", Menu, true, {screenSize : downScreenSize});
+    initScreenSize(){
+
+        this.gameScreenSize = this.scale.gameSize;
+        this.ratioOfScreen = { up:3/5, down:2/5 };
+        this.upScreenSize = { width:gameScreenSize.width, height:gameScreenSize.height * ratioOfScreen.up }; 
+        this.downScreenSize = { width:gameScreenSize.width, height: gameScreenSize.height * ratioOfScreen.down };
     
     }
+
+    divideGameScreen(){
+    
+        this.game.scene.add("Home", Home, true, {screenSize : this.upScreenSize});
+        this.game.scene.add("Menu", Menu, true, {screenSize : this.downScreenSize});
+    
+    }
+
 
     addResizeEventListner(){
 
@@ -50,6 +56,7 @@ export default class Game extends Phaser.Scene {
 
                 this.scale.setGameSize(parentSize.width, parentSize.height);
                 
+                console.log("detect resize from Game.js");
             }
 
         }.bind(this));
