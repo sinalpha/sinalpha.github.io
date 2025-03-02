@@ -1,5 +1,6 @@
 import Home from './Home.js';
 import Menu from './Menu.js';
+import { GAME_FIGURES } from '../../gameFigures.js';
 
 export default class Game extends Phaser.Scene {
     constructor(){
@@ -48,10 +49,13 @@ export default class Game extends Phaser.Scene {
 
         this.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {
             
-            console.log(gameSize, baseSize, displaySize)
-            
-            
-
+            console.log(gameSize);
+            console.log(baseSize);
+            console.log(displaySize);
+            this.scale.setGameSize( baseSize.height * GAME_FIGURES["GAME_RATIO"], baseSize.height);
+            console.log(gameSize);
+            console.log(baseSize);
+            console.log(displaySize);
         }.bind(this));
     
     }
