@@ -36,7 +36,7 @@ const gamePhysics = {
 }
 
 
-function addResizeEventListner(){
+function addResizeEventListner(game){
 
     // debug     
     console.log("added Event Listenr");
@@ -51,7 +51,7 @@ function addResizeEventListner(){
     }, true);
 
 }
-const  gamePostBoot = addResizeEventListner;
+const gamePostBoot = addResizeEventListner;
 
 export const config = {
     width:gameScreenSize.width,
