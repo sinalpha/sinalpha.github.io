@@ -41,15 +41,6 @@ function addResizeEventListner(game){
     // debug     
     console.log("added Event Listenr");
 
-    let container = document.getElementById('container');
-
-    window.addEventListener('resize', function(event) {
-        
-        container.height = window.screen.height;
-        container.width = myGameCanvas.height * gameScreenRation;
-
-    }, true);
-
 }
 const gamePostBoot = addResizeEventListner;
 
