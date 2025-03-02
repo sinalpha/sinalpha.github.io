@@ -12,7 +12,7 @@ export default class Game extends Phaser.Scene {
         this.initScreenSize();
         this.divideGameScreen();
         this.addResizeEventListner()
-
+        console.log("added Event Listenr");
     }
 
     preload(){
