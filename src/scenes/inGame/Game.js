@@ -37,9 +37,9 @@ export default class Game extends Phaser.Scene {
     }
 
     divideGameScreen(){
-    
-        this.game.scene.add("Home", Home, true, {screenSize : this.upScreenSize});
-        this.game.scene.add("Menu", Menu, true, {screenSize : this.downScreenSize});
+
+        this.runningUpScene = this.game.scene.add("Home", Home, true, {screenSize : this.upScreenSize});
+        this.runningDownScene = this.game.scene.add("Menu", Menu, true, {screenSize : this.downScreenSize});
     
     }
 
@@ -47,15 +47,10 @@ export default class Game extends Phaser.Scene {
     addResizeEventListner(){
 
         this.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {
-            console.log("detect resize from Game.js");
-            const parentSize = this.scale.parentSize;
             
-            if(gameSize.width != parentSize.width && gameSize.height != parentSize.height){
-
-                this.scale.setGameSize(parentSize.width, parentSize.height);
-                
-               
-            }
+            
+            
+            
 
         }.bind(this));
     
