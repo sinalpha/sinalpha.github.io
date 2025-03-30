@@ -19,7 +19,7 @@ const gameScenes = [BootLoader, Splash, Game];
 const DebugGameScenes = [ Game ];
 
 const gameScale = {
-    mode:Phaser.Scale.NONE,
+    mode:Phaser.Scale.FIT,
     autoCenter:Phaser.Scale.CENTER_BOTH,
 } 
 
