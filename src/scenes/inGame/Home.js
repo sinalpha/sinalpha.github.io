@@ -16,6 +16,7 @@ export default class Home extends UpScene{
 
     create(){
         
+        this.createUniguri();
 
     }
 
