@@ -5,7 +5,6 @@ export default class BootLoader extends Phaser.Scene {
 
     preload(){
 
-        this.addResizeEventListner();
         this.createBars();
         this.setLoadEvents();
         this.loadFonts();
@@ -14,22 +13,6 @@ export default class BootLoader extends Phaser.Scene {
         this.loadSpritesheets();
         this.setRegistry();
         
-    }
-
-    addResizeEventListner(){
-
-        this.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {
-            
-            const parentSize = this.scale.parentSize;
-            
-            if(gameSize.width != parentSize.width && gameSize.height != parentSize.height){
-
-                this.scale.setGameSize(parentSize.width, parentSize.height);
-                
-            }
-
-        }.bind(this));
-    
     }
 
     createBars() {
