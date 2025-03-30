@@ -1,4 +1,3 @@
-import "../../gamePaths.js"
 import { GAME_PATHS } from "../../gamePaths.js";
 
 export default class BootLoader extends Phaser.Scene {
