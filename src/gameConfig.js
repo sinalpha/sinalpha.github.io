@@ -40,7 +40,7 @@ export const config = {
     height:gameScreenSize.height,
     type:gameType,
     parent: gameParent,
-    scene: DebugGameScenes,
+    scene: gameScenes,
     scale:gameScale,
     physics:gamePhysics,
 }
