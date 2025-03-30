@@ -74,12 +74,15 @@ export default class BootLoader extends Phaser.Scene {
     }
 
     loadImages(){
-        this.load.image("uniguri-default", "../../assets/img/uniguri-default.png");
-        this.load.image("uniguri-splash", "../../assets/img/uniguri-splash.png");
-        this.load.image("uniguri-sleep", "../../assets/img/uniguri-sleep.png");
-        this.load.image("poop", "../../assets/img/poop.png")
-        this.load.image("background-splash", "../../assets/img/background-splash.png");
-        this.load.image("testButton", "../../assets/img/testbutton.png");
+
+        const imgAssetsPath = "../../../assets/img/";
+
+        this.load.image("uniguri-default", imgAssetsPath + "uniguri-default.png");
+        this.load.image("uniguri-splash", imgAssetsPath + "uniguri-splash.png");
+        this.load.image("uniguri-sleep", imgAssetsPath +  "uniguri-sleep.png");
+        this.load.image("poop", imgAssetsPath + "poop.png")
+        this.load.image("background-splash", imgAssetsPath + "background-splash.png");
+        this.load.image("testButton", imgAssetsPath + "testbutton.png");
     }
 
     loadAudios(){
