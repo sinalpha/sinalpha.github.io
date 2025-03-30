@@ -1,5 +1,3 @@
-import { GAME_PATHS } from "../../gamePaths.js";
-
 export default class BootLoader extends Phaser.Scene {
     constructor() {
         super({ key: "Bootloader" });
@@ -60,12 +58,14 @@ export default class BootLoader extends Phaser.Scene {
 
     loadImages(){
 
-        this.load.image("uniguri-default", GAME_PATHS["IMAGE_ASSETS"] + "uniguri-default.png");
-        this.load.image("uniguri-splash", GAME_PATHS["IMAGE_ASSETS"] + "uniguri-splash.png");
-        this.load.image("uniguri-sleep", GAME_PATHS["IMAGE_ASSETS"] +  "uniguri-sleep.png");
-        this.load.image("poop", GAME_PATHS["IMAGE_ASSETS"] + "poop.png")
-        this.load.image("background-splash", GAME_PATHS["IMAGE_ASSETS"] + "background-splash.png");
-        this.load.image("testButton", GAME_PATHS["IMAGE_ASSETS"] + "testbutton.png");
+        const assetsImgPath = "../../../assets/img/";
+
+        this.load.image("uniguri-default", assetsImgPath + "uniguri-default.png");
+        this.load.image("uniguri-splash", assetsImgPath + "uniguri-splash.png");
+        this.load.image("uniguri-sleep", assetsImgPath +  "uniguri-sleep.png");
+        this.load.image("poop", assetsImgPath + "poop.png")
+        this.load.image("background-splash", assetsImgPath + "background-splash.png");
+        this.load.image("testButton", assetsImgPath + "testbutton.png");
         
     }
 
