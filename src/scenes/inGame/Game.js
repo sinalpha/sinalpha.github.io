@@ -12,7 +12,6 @@ export default class Game extends Phaser.Scene {
 
         this.initScreenSize();
         this.divideGameScreen();
-        this.addResizeEventListner()
 
     }
 
@@ -44,19 +43,4 @@ export default class Game extends Phaser.Scene {
     
     }
 
-
-    addResizeEventListner(){
-
-        this.scale.on('resize', function(gameSize, baseSize, displaySize, previousWidth, previousHeight) {
-            
-            if (baseSize.width != previousWidth){
-
-                this.scale.setGameSize( baseSize.height * GAME_FIGURES["GAME_RATIO"], baseSize.height);
-
-                
-            }
-
-        }.bind(this));
-    
-    }
 }
