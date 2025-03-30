@@ -1,3 +1,3 @@
 export const GAME_FIGURES = {
-	GAME_RATIO: 9/25
+	GAME_RATIO: 11/25
 }
