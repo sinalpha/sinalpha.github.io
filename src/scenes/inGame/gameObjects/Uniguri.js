@@ -1,4 +1,4 @@
-import { GAME_FIGURES } from '../gameFigures.js'
+import { GAME_FIGURES } from '../../../gameFigures.js'
 
 export default class Uniguri extends Phaser.Physics.Arcade.Sprite{
 
