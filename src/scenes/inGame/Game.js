@@ -1,5 +1,8 @@
 import Home from './Home.js';
 import Menu from './Menu.js';
+
+
+
 import { GAME_FIGURES } from '../../gameFigures.js';
 
 export default class Game extends Phaser.Scene {
@@ -13,14 +16,6 @@ export default class Game extends Phaser.Scene {
         this.initScreenSize();
         this.divideGameScreen();
 
-    }
-
-    create(){
-		
-    }
-
-    update(){
-      
     }
     
     initScreenSize(){
