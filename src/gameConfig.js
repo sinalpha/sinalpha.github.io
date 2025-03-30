@@ -19,7 +19,7 @@ const gameScenes = [BootLoader, Splash, Game];
 const DebugGameScenes = [ Game ];
 
 const gameScale = {
-    mode:Phaser.Scale.RESIZE,
+    mode:Phaser.Scale.NONE,
     autoCenter:Phaser.Scale.CENTER_BOTH,
 } 
 
@@ -35,15 +35,6 @@ const gamePhysics = {
     }
 }
 
-
-function addResizeEventListner(game){
-
-    // debug     
-    console.log("added Event Listenr");
-
-}
-const gamePostBoot = addResizeEventListner;
-
 export const config = {
     width:gameScreenSize.width,
     height:gameScreenSize.height,
@@ -52,5 +43,4 @@ export const config = {
     scene: DebugGameScenes,
     scale:gameScale,
     physics:gamePhysics,
-    postBoot: gamePostBoot
 }
