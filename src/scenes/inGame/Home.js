@@ -22,7 +22,11 @@ export default class Home extends UpScene{
 
     createUniguri(){
 
-        const uniguri = this.add.existing(new Uniguri);
+        const uniguri = this.add.existing(new Uniguri(
+            this,
+            this.upSceneScreenSize.width / 2,
+            this.upSceneScreenSize.height,
+            'uniguri-default'));
 
         this.physics.add.existing(uniguri, 0);
         uniguri.setCollideWorldBounds(true);
